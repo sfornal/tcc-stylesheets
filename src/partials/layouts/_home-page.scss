@@ -1,0 +1,102 @@
+@import 'home-page/home-page-common-blocks';
+@import 'home-page/home-page-actions';
+@import 'home-page/home-page-hubs';
+@import 'home-page/home-page-request-info';
+@import 'home-page/home-page-calendar';
+@import 'home-page/home-page-feeds';
+
+.homePage {
+    .main-callToAction {
+        margin-bottom: 60px;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            bottom: -18px;
+            left: 0;
+            right: 20px;
+            left: 20px;
+            content: '';
+            display: block;
+            height: 15px;
+            @extend %diagonal-bg;
+            opacity: 0.5;
+        }
+    }
+
+    section[class|='feeds'] {
+        padding: 20px 10px 40px 10px;
+
+        @include bp(medium) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        &:not(:last-of-type) {
+            margin-bottom: 20px;
+
+            &:after {
+                display: block;
+                width: 100%;
+                content: '';
+                height: 15px;
+                @extend %diagonal-bg;
+                opacity: 0.5;
+            }
+        }
+    }
+
+}
+
+.learnMoreWrap {
+    @include clearfix();
+    padding: 20px 10px;
+    width: 100%;
+
+    @include bp(medium) {
+        padding: 20px;
+    }
+}
+
+.main-identifier {
+    width: 100%;
+    text-align: center;
+    @include font(2rem, black, normal);
+    // text-transform: uppercase;
+    margin: 0 auto 0 auto;
+    line-height: 1.1;
+    @include bp(medium) {
+        @include font(3rem);
+    }
+
+    .sub-identifier {
+        @include font(0.65em, regular);
+        margin: 0;
+        text-transform: none;
+    }
+}
+
+.backgroundIcon {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-attachment: scroll;
+    padding: 20px 0;
+}
+
+.backgroundIcon--calendar {
+    background-image: url(/_resources/images/icons/calendar.svg);
+}
+.backgroundIcon--news {
+    background-image: url(/_resources/images/icons/news.svg);
+}
+.backgroundIcon--reach {
+    background-image: url(/_resources/images/icons/reach-logo.svg);
+}
+.backgroundIcon--announcements {
+    background-image: url(/_resources/images/icons/announcements.svg);
+}
+.backgroundIcon--videos {
+    background-image: url(/_resources/images/icons/videos.svg);
+}

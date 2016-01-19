@@ -1,0 +1,13 @@
+// *** Include after 'partials/variables' and 'partials/toolkit' ***
+
+// This import includes modules related to various page layouts used in the site
+
+@import 'layouts/common-header';
+@import 'layouts/common-footer';
+@import 'layouts/all-pages';
+@import 'layouts/section-nav';
+@import 'layouts/mobile-menu-overlay';
+@import 'layouts/details-page';
+@import 'layouts/section-front';
+@import 'layouts/hub-pages';
+// @import 'layouts/home-page'; //Factoring out to a separate style sheet

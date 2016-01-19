@@ -1,0 +1,68 @@
+.homePage {
+
+    .prospectiveStudents-buttons {
+        width: 100%;
+        padding: 20px 10px 40px 10px;
+
+        // max-width: 400px;
+        margin: 0 auto;
+
+        position: relative;
+
+        .flexbox & {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .no-flexbox & {
+            @include clearfix();
+        }
+
+        @include bp(medium) {
+            // max-width: 800px;
+            .flexbox & {
+                flex-direction: row;
+            }
+        }
+
+        // @include bp(large) {
+        //     max-width: 1024px;
+        // }
+    }
+
+    .bigButton-wrap {
+        width: 100%;
+        margin:0;
+        padding: 10px;
+
+        @include bp(medium) {
+            .no-flexbox & { width: 50%; float: left; }
+
+            .flexbox & {
+                justify-content: space-between;
+                flex: 1 1 50%;
+            }
+        }
+
+        @include bp(large) {
+
+            .no-flexbox & { width: 33.3333%; }
+
+            .flexbox & {
+                justify-content: flex-end;
+                flex: 0 1 33.3333%;
+                &:nth-of-type(1), &:nth-of-type(2) { flex: 1 1 50%; }
+            }
+        }
+
+        .bigButton {
+            display: block;
+            border-radius: 8px;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    }
+}

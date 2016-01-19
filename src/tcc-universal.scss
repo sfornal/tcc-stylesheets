@@ -1,0 +1,17 @@
+@charset 'utf-8';
+
+// The universal stylesheet is created from SCSS partials taht are imported
+// in the following order:
+// 1. Variables
+// 2. Toolkit
+// 3. Typography
+// 4. Layouts
+// 5. Interface styles (buttons, etc.)
+// These partials are actually collections of import statements as well, that
+// combine the many submodules.
+
+@import 'partials/variables';   //Core variables
+@import 'partials/toolkit';     //Core functions, mixins, and tools
+@import 'partials/typography';  //Core content typography
+@import 'partials/layouts';     //Core layouts for standard templates
+@import 'partials/interface';   //Core interface elements for standard templates

@@ -1,0 +1,14 @@
+
+// Font stack definitions, currently using a single font in a variety of weights
+$primary-font: 'Gotham Narrow SSm A', 'Gotham Narrow SSm B', sans-serif !default;
+
+$font-weights: (
+    thin: 300,
+    regular: 400,
+    bold: 700,
+    black: 800
+);
+
+// Base value for font-size and line-height
+$base-font-size-px: 16px !default;
+$base-line-height: 1.4 !default;

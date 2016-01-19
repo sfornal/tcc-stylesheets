@@ -1,0 +1,228 @@
+// Typographic styles
+
+// .main-content is the "scoping class" for all of the content selectors
+// It helps ensure a little higher specificity, so that content is consistently
+// styled, but also limits that styling to the main content area (less accidental
+// breakage of layout styles)
+.main-content {
+
+    // General selector for consistent vertical spacing. Any element preceded by
+    // another element
+    * + * {
+        margin-top: 1.5rem;
+    }
+
+    // All main content gets a tiny bit bigger at the desktop sizes
+    @include bp(large) {
+        font-size: 1.1rem;
+    }
+    @include bp(x-large) {
+        font-size: 1.3rem;
+    }
+
+    // // In super-wide desktop mode, all of the .main-content is floated left, and
+    // // the sidebar is floated right
+    // @include bp(x-large) {
+    //     float: left;
+    // }
+
+    // All elements inside .main-content share these styles
+    & > * {
+        //Left and right gutter
+        margin-left: 20px;
+        margin-right: 20px;
+
+        color: $text-black;
+
+        // Once we have side navigation showing, the gutters need to change
+        @include bp(medium) {
+            margin-left: 40px;
+            margin-right: 30px;
+            max-width: 35rem; // Max width for controlling measure
+        }
+
+        @include bp(large) {
+            max-width: 45rem; // The font-size increased, so the measure is different
+        }
+    }
+
+    // For pages without a section front, this controls the appearance of the main
+    // heading
+    h1 {
+        color: $tcc-blue-darker;
+        @include font(2em, black);
+        text-transform: uppercase;
+        line-height: 1.0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .image--pullLeft {
+        float: right;
+        margin: 0 1rem 1rem 0;
+    }
+
+    .image--pullRight {
+        float: right;
+        margin: 0 0 1rem 1rem;
+    }
+}
+
+// Scoping class for sidebar content, used for the same reasons as the
+// main-content class above
+.main-sideBar {
+
+    border-top: 1px solid $light-gray;
+    margin-top: 60px;
+    color: $text-black;
+
+    //Consistent vertical spacing
+    * + * {
+        margin-top: 1.5rem;
+    }
+
+    // Gutters match main content
+    & > * {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        // Again for consistency with main content
+        @include bp(medium) {
+            margin-left: 40px;
+            margin-right: 30px;
+            max-width: 35rem; // Max width for controlling measure
+        }
+
+        @include bp(large) {
+            max-width: 45rem; // The font-size increased, so the measure is different
+        }
+
+        // @include bp(x-large) {
+        //     // Remove margins on elements edges, because the side-bar
+        //     // acquires padding
+        //     margin-left: 0;
+        //     margin-right: 0;
+        // }
+    }
+
+    // // Float the sidebar to the right at the largest breakpoint
+    // @include bp(x-large) {
+    //    float: right;
+    //    padding: 20px;
+    //    background-color: lighten($tcc-teal, 60%);
+    // }
+}
+
+// Link colors for content areas
+// .main-content, .main-sideBar {
+//     a {
+//         color: $tcc-blue-lighter;
+//     }
+// }
+
+
+//Special styling for lists of step-by-step instructions
+ol.steps {
+    padding: 0;
+    list-style-type: none;
+    // Custom counter for labelling steps in a process
+    counter-reset: step;
+
+    & > li {
+        // Increment the counter on each top-level list item, but
+        // not nested lists (child selector)
+        counter-increment: step;
+
+        // Uses generated content to label the steps
+        &:before {
+            content: 'Step ' counter(step) ': ';
+            text-transform: uppercase;
+            color: $tcc-burgundy;
+            // Em, not rem, to increase from whatever the font size is currently
+            @include font(1.1em, black);
+        }
+    }
+
+    ol, ul {
+        padding-left: 40px;
+    }
+}
+
+.sideBar--relatedLinks {
+    & > ul, & > ol {
+        list-style-type: none;
+        padding: 0;
+    }
+}
+
+.tile-transform {
+    width: 90%;
+    border-collapse: collapse;
+    border: 2px solid #003b76;
+    margin: 3rem auto;
+
+    tr {
+        width: 100%;
+    }
+
+    td {
+        padding: 8px 12px;
+        border: 1px solid $light-gray;
+
+        &:nth-of-type(1) {
+            background-color: $tcc-blue;
+            color: $pure-white;
+            @include font($weight: 700);
+            width: 33%;
+        }
+
+        &:nth-of-type(2) {
+            background-color: $pure-white;
+            color: $text-black;
+            @include font($weight: 400);
+            width: 67%;
+        }
+    }
+}
+
+.tile-transform-alternate {
+    width: 90%;
+    border-collapse: collapse;
+    border: 2px solid $tcc-blue;
+    margin: 3rem auto;
+
+    thead {
+        background-color: $tcc-blue;
+        color: $pure-white;
+
+        th, tr {
+            border: none;
+        }
+    }
+
+    tr {
+        width: 100%;
+    }
+
+    tbody {
+        tr {
+            &:nth-of-type(even) {
+                background-color: #e0e0e0;
+                color: $pure-black;
+                @include font($weight: 400);
+                width: 33%;
+            }
+
+            &:nth-of-type(odd) {
+                background-color: $pure-white;
+                color: $text-black;
+                @include font($weight: 400);
+                width: 67%;
+            }
+        }
+        td {
+            padding: 8px 12px;
+            border: 1px solid $light-gray;
+        }
+    }
+}

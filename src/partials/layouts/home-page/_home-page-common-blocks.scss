@@ -1,0 +1,62 @@
+%main-identifier-styles {
+    margin-bottom: 60px;
+}
+
+%feed-list-styles {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    @include clearfix();
+}
+
+%feed-list-item-styles {
+    padding: 10px;
+    width: 100%;
+    float: left;
+
+    @include bp(medium) {
+        padding: 20px;
+    }
+}
+
+%feed-item-link-styles {
+    text-decoration: none;
+    color: $tcc-blue;
+    display: block;
+}
+
+%feed-item-title-styles {
+    width: 100%;
+    padding: 10px 0 5px 0;
+    @include font(1.1rem, bold);
+    line-height: 1.15;
+    margin: 0;
+
+    @include bp(medium) {
+        @include font(1.25rem);
+    }
+    // @include bp(large) { // Just keep medium size
+    //     @include font(1.25rem);
+    // }
+    @include bp(x-large) {
+        @include font(1.5rem);
+    }
+}
+
+%feed-item-excerpt-styles {
+    width: 100%;
+    padding: 0 0 10px 0;
+    margin: 0;
+    @include font(1rem, regular);
+    color: $text-black;
+
+    @include bp(medium) {
+        @include font(1.1rem);
+    }
+    @include bp(large) {
+        @include font(1.2rem);
+    }
+    @include bp(x-large) {
+        @include font(1.35rem);
+    }
+}

@@ -1,0 +1,10 @@
+// The variables partial contains declarations of the variables that control
+// consistency across the site design, such as branding colors and type faces.
+// Each submodules contains documentation about the purpose of that file.
+
+@import 'variables/colors';
+@import 'variables/section-nav-overlay-colors';
+@import 'variables/fonts';
+@import 'variables/breakpoints';
+@import 'variables/z-index-map';
+@import 'variables/base64';

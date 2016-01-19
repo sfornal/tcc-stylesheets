@@ -1,0 +1,10 @@
+.countdownBlock {
+    .countdown {
+        @include font(2rem, 700);
+        text-align: center;
+
+        &.expired {
+            color: $tcc-burgundy-lighter;
+        }
+    }
+}

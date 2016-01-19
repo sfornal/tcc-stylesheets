@@ -1,0 +1,10 @@
+// *** Toolkit should be loaded after _partials/_variables.scss module ***
+
+// This import includes partials that provide comon functions and mixins,
+// or things like CSS resets and global rules like box-sizing
+
+@import 'toolkit/functions';
+@import 'toolkit/mixins';
+@import 'toolkit/normalize';
+@import 'toolkit/globals';
+

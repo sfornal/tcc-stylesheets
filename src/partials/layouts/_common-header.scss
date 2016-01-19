@@ -1,0 +1,292 @@
+.pageHeader {
+    position: relative;
+    padding-top: 57px; //Using padding so that the box doesn't collapse when all content is absolute/floating
+    background-color: $tcc-blue;
+    // background-image: url(/_resources/images/textures/dark-texture-1.png);
+
+
+    @include bp(medium) {
+        padding-top: 100px; //Little more room when the quick links move up
+    }
+}
+
+.pageHeader-navWrap {
+    width: 100%;
+
+    background-color: $nav-background;
+    background-image: url(/_resources/images/textures/dark-texture-1.png);
+
+    border-bottom: 3px solid $pure-white;
+    @include clearfix();
+}
+
+.mainMenu, .quickLinks {
+    display: none;
+
+    .no-overlay & {
+        display: block;
+    }
+
+    @include bp(medium) {
+        display: block;
+    }
+
+    width: 50%;
+
+    h5 {
+        @include font($weight: bold);
+        text-transform: uppercase;
+        padding: 5px 20px;
+        background-color: $medium-gray;
+        color: $pure-white;
+        margin: 0;
+        line-height: 1;
+
+        @include bp(medium) {
+            @include visuallyhidden();
+        }
+    }
+
+    li {
+        margin-bottom: 0.45rem;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 20px;
+        margin: 8px 0 1rem 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: $pure-white;
+    }
+}
+
+.mainMenu {
+    float: left;
+    padding-right: 20px;
+
+    @include bp(medium) {
+        float: none;
+        position: absolute;
+        // bottom: 27px;
+        top: 103px;
+        left: 0;
+        @include clearfix();
+        width: 100%;
+        height: 42px;
+        padding: 0;
+        margin: 0;
+        background-color: $nav-background;
+        z-index: z(HIGHEST);
+        box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.6);
+
+        // @include bp(large) {
+        //     height: 65px;
+        // }
+
+        ul {
+            display: table;
+            margin: 0 auto;
+            padding: 6px 0px;
+            width: 100%;
+            height: 42px;
+            max-width: 1280px;
+
+            // @include bp(large) {
+            //     height: 65px;
+            // }
+        }
+
+        li {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0;
+            padding: 0;
+            width: (100% / 7);
+            @include font(1rem, bold);
+            // text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            //text-transform: uppercase;
+            border-right: 1px solid lighten($medium-gray, 20%);
+            &:last-child {
+                border-right: none;
+            }
+
+
+            @include bp(large) {
+                @include font(1.15rem);
+            }
+
+            @include bp(x-large) {
+                @include font(1.3rem);
+            }
+
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding: 3px 0px;
+
+                @include bp(large) {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+.quickLinks {
+    float: right;
+
+    @include bp(medium) {
+        float: none;
+        position: absolute;
+        top: 0;
+        // left: 0;
+        right: 0;
+        width: 50%;
+        max-width: 370px;
+        height: 65px;
+        padding-right: 20px;
+        padding-top: 10px;
+        text-align: right;
+        @include clearfix();
+        ul {
+            margin: 0;
+            width: 100%;
+            height: 60px;
+            padding-top: 5px;
+        }
+        li {
+            display: inline-block;
+            padding: 0px 5px;
+            margin: 0;
+            @include font(0.8rem, light);
+            float: right;
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    @include bp(x-large) {
+        right: 0;
+        right: calc((100% - #{$max-container-width}) / 2); //SASS string interpolation required in calc() expressions
+    }
+}
+
+.siteSearch {
+
+    display: block;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: z(HIGHEST);
+
+    width: 100%;
+    padding: 12px 20px;
+    @include clearfix();
+
+    @include bp(medium) {
+        width: 50%;
+        max-width: 326px;
+        padding-top: 16px;
+        top: 30px;
+    }
+
+    @include bp(x-large) {
+        right: 0;
+        right: calc((100% - #{$max-container-width}) / 2); //SASS string interpolation necessary in calc() functions
+    }
+
+    input[type='text'] {
+        width: calc(100% - 80px);
+        margin: 0;
+        padding: 3px 5px;
+        height: 30px;
+        border: 2px solid $pure-white;
+        display: block;
+        float: left;
+        -webkit-appearance: none;
+        border-radius: 0;
+    }
+
+    input[type='submit'] {
+        width: 80px;
+        height: 30px;
+        border: 2px solid $pure-white;
+        margin: 0;
+        background-color: $tcc-blue;
+        color: $pure-white;
+        display: block;
+        float: right;
+        -webkit-appearance: none;
+        border-radius: 0;
+        text-align: center;
+    }
+}
+
+.banner {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    top: 84px;
+    position: absolute;
+    z-index: z(HIGH);
+
+    @include bp(medium) {
+        width: 50%;
+        max-width: 380px;
+        top: 21px;
+        left: 20px;
+    }
+
+    @include bp(large) {
+        max-width: 512px;
+        top: 12px;
+    }
+
+    @include bp(x-large) {
+        left: 20px;
+        left: calc((100% - #{$max-container-width}) / 2);
+    }
+
+    .banner-logoWrap {
+        width: 100%;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+        padding: 0 10px;
+
+        @include bp(medium) {
+            padding: 0;
+            margin: 0;
+            max-width: 100%;
+        }
+    }
+}
+
+// Styling for Placeholder text
+::-webkit-input-placeholder {
+   @include font($style: italic);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   @include font($style: italic);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   @include font($style: italic);
+}
+
+:-ms-input-placeholder {
+   @include font($style: italic);
+}

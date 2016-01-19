@@ -1,0 +1,174 @@
+.feeds-calendar {
+    .main-identifier {
+        @extend %main-identifier-styles;
+    }
+
+    .calendarFeed {
+         @extend %feed-list-styles;
+    }
+
+    .event {
+        @extend %feed-list-item-styles;
+
+        @include bp($custom: $bp-medium-only) {
+            width: 50%;
+            &:nth-of-type(2n+1) { clear: both; }
+        }
+        @include bp(large) {
+            width: 33%;
+            &:nth-of-type(3n+1) { clear: both; }
+        }
+
+
+        &.today {
+            position: relative;
+
+            &:before {
+                content: 'Today';
+                text-transform: uppercase;
+                background-color: $tcc-green;
+                color: $pure-white;
+                padding: 0.1em 0.5em;
+                position: absolute;
+                top: -3px;
+                right: 5px;
+                z-index: z(HIGH);
+                @include font(1.7rem, black);
+
+                box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.8);
+
+                @include bp(medium) {
+                    @include font(2rem);
+                }
+
+                @include bp(x-large) {
+                    @include font(2.25rem);
+                }
+            }
+        }
+    }
+
+    .eventLink {
+        @extend %feed-item-link-styles;
+        padding-top: 40%;
+        position: relative;
+        overflow: hidden;
+
+        &:before {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 28%;
+            background-color: $tcc-blue;
+            z-index: z(UNDER);
+        }
+
+        &:after {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: $light-gray;
+            z-index: z(LOWEST);
+        }
+    }
+
+    .eventImage {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 80%;
+        z-index: z(LOW);
+    }
+
+    .eventTitle {
+        background-color: $pure-white;
+        @extend %feed-item-title-styles;
+    }
+
+    .eventDetails {
+        background-color: $pure-white;
+        @extend %feed-item-excerpt-styles;
+    }
+
+    .eventTime-month, .eventTime-day {
+        color: $pure-white;
+        position: absolute;
+        left: 0;
+        width: 28%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .eventTime-month {
+        top: 10px;
+        @include font(1.5rem, thin);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        @include bp(medium) {
+            @include font(2.1rem);
+            top: 10px;
+        }
+
+        @include bp(large) {
+            @include font(2rem);
+            top: 10px;
+        }
+
+        @include bp(x-large) {
+            @include font(2.5rem);
+            top: 10px;
+        }
+
+    }
+
+    .eventTime-day {
+        top: 36px;
+        @include font(3.4rem, black);
+
+        @include bp(medium) {
+            top: 46px;
+            @include font(4.4rem);
+        }
+
+        @include bp(large) {
+            top: 44px;
+            @include font(3.6rem);
+        }
+
+        @include bp(x-large) {
+            top: 50px;
+            @include font(5rem);
+        }
+    }
+
+    .eventLocation {
+        @include font($style: italic);
+    }
+
+    .eventTime-time {
+        @include font($style: italic);
+    }
+}
+
+.newsFeed .feedItem {
+    @include bp(medium) {
+        width: 33%;
+        &:nth-of-type(3n+1) { clear: both; }
+    }
+}
+
+.magazineFeed .feedItem {
+    @include bp(medium) {
+        width: 50%;
+        &:nth-of-type(2n+1) { clear: both; }
+    }
+}

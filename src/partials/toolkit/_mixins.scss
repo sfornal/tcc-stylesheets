@@ -1,0 +1,77 @@
+// Mixins
+// Requires _partials/variables.scss to be imported first!
+
+// Clearfix mixin
+// Uses Nicolas Gallagher Micro-clearfix syntax, IE9+
+@mixin clearfix() {
+    &:after {
+        display: table;
+        content: '';
+        clear: both;
+    }
+}
+
+// Typography block
+// Creates a complete set of font-* properties from one line
+@mixin font($size: '', $weight: '', $style: '', $face: '') {
+    font: {
+        @if ($face != '') {
+            family: $face;
+        }
+
+        @if ($size != '') {
+            size: $size;
+        }
+
+        @if ($weight != '') {
+            @if (map-has-key($font-weights, $weight)) {
+                weight: map-get($font-weights, $weight);
+            }
+            @else {
+                weight: $weight;
+            }
+        }
+
+        @if ($style != '') {
+            style: $style;
+        }
+    }
+}
+
+// Media Queries
+@mixin bp($breakpoint: medium, $custom: '') {
+    @if ($custom != '') {
+        @media #{$custom} { @content; }
+    }
+    @else if ($breakpoint == medium) {
+        @media #{$bp-medium} { @content; }
+    }
+    @else if ($breakpoint == large) {
+        @media #{$bp-large} { @content; }
+    }
+    @else if ($breakpoint == x-large) {
+        @media #{$bp-x-large} { @content; }
+    }
+}
+
+// Screen Reader Text mixin
+// For use when @extend won't work for some reason, or
+// the class name can't be added in mark-up
+@mixin visuallyhidden() {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+// This is an extend-only selector for the diagonal hashed background image
+// used throughout the site
+%diagonal-bg {
+    background-image: url($diagonalStripeSmall);
+    background-color: $pure-white;
+    background-size: 15px 15px;
+}

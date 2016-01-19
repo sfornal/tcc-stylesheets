@@ -1,0 +1,47 @@
+//Global Defaults
+//Things like box-sizing and base font set on body, or utility
+//classes like hidden, visuallyhidden, etc.
+
+//Requires _partials/variables.scss to be imported first!
+//Requires _partials/toolkit/_functions.scss to be imported first!
+//Requires _partials/toolkit/_mixins.scss to be imported first!
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    overflow-y: scroll;         //Keeps spacing for scrollbar consistent
+    text-rendering: optimizeLegibility;     //Dubious... for enhanced font features
+    font-feature-settings:"zero" 1, "kern" 1, "liga" 1, "dlig" 1, "hlig" 1, "clig" 1; //Only for OpenType fonts
+}
+
+body {
+    @include font(1rem, 400, normal, $primary-font);
+    line-height: $base-line-height;
+}
+// Stolen shamelessly from HTML5 Boilerplate, visual styling for selected text
+::-moz-selection { background: $tcc-blue-lighter; color: $pure-white; text-shadow: none; }
+::selection { background: $tcc-blue-lighter; color: $pure-white; text-shadow: none; }
+img { -ms-interpolation-mode: bicubic; }
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+// Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+//Default outline style for keyboard navigation
+
+a:focus {
+    outline: 0;
+    box-shadow: 0px 0px 4px 3px transparentize($tcc-blue-lighter, 0.3);
+}

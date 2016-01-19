@@ -1,0 +1,88 @@
+.main-tiles {
+
+    .flexbox & {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .no-flexbox & {
+        @include clearfix(); //Floated columns used in flexbox unavailable
+    }
+}
+
+.tile {
+    width: 100%;
+    padding: 30px 20px 0px 20px;
+
+    .flexbox & {
+        display: flex;
+    }
+
+    .no-flexbox & {
+        float: none;
+    }
+
+    @include bp(medium) {
+        width: 50%;
+        // border-bottom: 1px solid $light-gray;
+        padding: 60px 40px;
+
+        .no-flexbox & {
+            float: left;
+            // border-bottom: none;
+        }
+
+        .no-flexbox &:nth-of-type(2n+1) {
+            clear: both;
+        }
+    }
+
+    // @include bp($custom:$bp-medium-only) {
+    //     &:nth-of-type(2n+1):last-child,
+    //     &:nth-of-type(2n+1):nth-last-of-type(2),
+    //     &:nth-of-type(2n+1):nth-last-of-type(2) + & {
+    //         border-bottom: none;
+    //     }
+    // }
+
+    @include bp(large) {
+        width: 33.33333%;
+
+        // &:nth-of-type(3n+1):last-of-type,
+        // &:nth-of-type(3n+1):nth-last-of-type(2),
+        // &:nth-of-type(3n+1):nth-last-of-type(2) + &,
+        // &:nth-of-type(3n+1):nth-last-of-type(3),
+        // &:nth-of-type(3n+1):nth-last-of-type(3) + &,
+        // &:nth-of-type(3n+1):nth-last-of-type(3) + & + & {
+        //     border-bottom: none;
+        // }
+
+        .no-flexbox &:nth-of-type(2n+1) {
+            clear: none;
+        }
+
+        .no-flexbox &:nth-of-type(3n+1) {
+            clear: both;
+        }
+    }
+}
+
+.tile-wrap {
+    padding-bottom: 30px;
+    border-bottom: 1px solid $light-gray; //Create vertical separation in mobile
+    width: 100%;
+
+    .tile:last-of-type & {
+        border-bottom: 0;
+    }
+
+    @include bp(medium) {
+        padding-bottom: 0;
+        border-bottom: 0; //Remove vertical separation from mobile layout
+    }
+
+    .no-flexbox & {
+        @include clearfix();
+    }
+
+}

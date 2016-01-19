@@ -1,0 +1,18 @@
+// To create consistency in z-indices, this map defines several layers
+// with names that mirror the position in the vertical stack
+// (e.g. HIGH<-->LOW, OVER<-->UNDER)
+// This map is not used directly, but is part of the under-the-hood of a
+// z-index mixin defined in the toolkit
+
+$z-indices: (
+    LOWEST: -8000,
+    LOW: -5000,
+    UNDER: -1000,
+    BACKGROUND: -100,
+    CONTENT: 0,
+    FOREGROUND: 100,
+    OVER: 1000,
+    HIGH: 5000,
+    HIGHEST: 8000,
+    MODAL: 9000
+);

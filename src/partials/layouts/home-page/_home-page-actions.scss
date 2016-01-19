@@ -1,0 +1,70 @@
+.homePage {
+
+    .callToAction-buttons {
+        width: 100%;
+        padding: 20px 10px 20px 10px;
+
+        margin: 0 auto;
+
+        .flexbox & {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: center;
+        }
+        .no-flexbox & {
+            @include clearfix();
+        }
+    }
+
+    .button-wrap {
+        margin: 0;
+        padding: 10px;
+        .flexbox & {
+            flex: 1 1 100%;
+        }
+
+        .no-flexbox & {
+            width: 100%;
+        }
+
+        @include bp(medium) {
+            max-width: none;
+            .no-flexbox & { float: left;  width: 25%; }
+            .flexbox & {
+                flex: 1 1 25%;
+            }
+        }
+
+        @include bp(large) {
+            .no-flexbox & { width: 25%; }
+            .flexbox & {
+                flex: 1 1 25%;
+            }
+        }
+    }
+
+    .tile-button {
+
+        padding: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: block;
+        border-radius: 8px;
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: 246px;
+            margin: 0 auto;
+            border: 0;
+            outline: 0;
+
+            @include bp(medium) {
+                max-width: 100%;
+            }
+        }
+    }
+}

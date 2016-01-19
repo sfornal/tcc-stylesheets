@@ -1,0 +1,42 @@
+// Functions
+// Requires _partials/variables.scss to be imported first!
+
+// Unit conversions
+
+// px2rem converts pixel units to rem units
+//  $target - pixel based CSS unit string to convert
+//  $context - The base font-size
+//  @returns - The rem CSS unit string equivalent to $target in $context
+@function px2rem($target, $context: $base-font-size-px) {
+    @return $target / $context * 1rem;
+}
+
+// rem2px converts rem units to px units
+//  $target - rem based CSS unit string to convert
+//  $context - The base font-size
+//  @returns - The px CSS unit string equivalent to $target in $context
+@function rem2px($target, $context: $base-font-size-px) {
+    @return $target / 1rem * $context;
+}
+
+// px2em converts pixel units to em units
+//  $target - pixel based CSS unit string to convert
+//  $context - The base font-size
+//  @returns - The em CSS unit string equivalent to $target in $context
+@function px2em($target, $context: $base-font-size-px) {
+    @return $target / $context * 1em;
+}
+
+// em2px converts em units to px units
+//  $target - em based CSS unit string to convert
+//  $context - The base font-size
+//  @returns - The px CSS unit string equivalent to $target in $context
+@function em2px($target, $context: $base-font-size-px) {
+    @return $target / 1em * $context;
+}
+
+// z gets a consistent z-index value from a named list
+//  See 'partials/variables/z-index-map' for the names
+@function z($layer: CONTENT) {
+    @return map-get($z-indices, $layer);
+}

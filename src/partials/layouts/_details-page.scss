@@ -1,0 +1,12 @@
+.cbMapFrame {
+    max-width: 100%;
+    &.cbMapFrame--noEmbed {
+        height: auto;
+        width: auto;
+    }
+
+    iframe {
+        width: 100%;
+        height: 600px;
+    }
+}

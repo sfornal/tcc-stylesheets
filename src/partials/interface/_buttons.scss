@@ -1,0 +1,73 @@
+.button--blue {
+    background-color: $tcc-blue;
+    background-image: linear-gradient(to bottom, $tcc-blue, darken($tcc-blue, 10%));
+    color: $pure-white;
+}
+.button--teal {
+    background-color: $tcc-teal;
+    background-image: linear-gradient(to bottom, $tcc-teal, darken($tcc-teal, 10%));
+    color: $pure-white;
+}
+.button--burgundy {
+    background-color: $tcc-burgundy;
+    background-image: linear-gradient(to bottom, $tcc-burgundy, darken($tcc-burgundy, 10%));
+    color: $pure-white;
+}
+.button--orange {
+    background-color: $tcc-orange;
+    background-image: linear-gradient(to bottom, $tcc-orange, darken($tcc-orange, 10%));
+    color: $pure-white;
+}
+.button--green {
+    background-color: $tcc-green;
+    background-image: linear-gradient(to bottom, $tcc-green, darken($tcc-green, 10%));
+    color: $pure-white;
+}
+
+.button--submit, input[type='submit'].button--submit { //Bah, the reset has too much specificity, so this got convoluted
+    border: 0;
+    -webkit-appearance: none;
+    border-radius: 4px;
+    padding: 5px 12px;
+    @include font(1rem, bold);
+    display: inline-block;
+}
+
+// Anchors with the learn more class are used at the end of tiles that have
+// links in the heading, to give a visual cue that more info is available
+.learn-more {
+    display: block;
+    float: right;
+    padding: 5px 8px;
+    border: 1px solid;
+    border-radius: 5px;
+    @include font(1rem, 300, italic);
+    color: $tcc-teal;
+    text-decoration: none;
+}
+
+// The Print Button appears at the top of all content pages
+#printButton {
+    display: none;
+
+    position: absolute;
+    top: 0;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+
+    .main-sectionFront + & {
+        position: static;
+        float: right;
+        padding-right: 20px;
+    }
+
+    @include bp(large) {
+        display: block;
+    }
+
+    a {
+        @extend .learn-more;
+        @include font(0.8rem);
+    }
+}
