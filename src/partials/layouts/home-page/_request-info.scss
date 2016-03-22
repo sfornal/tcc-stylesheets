@@ -1,0 +1,64 @@
+// Disable linting on this file, vendor provided
+// scss-lint:disable all
+
+#requestInfoForm {
+	background: #eef2f7;
+	-webkit-border-radius: 6px;
+	border: 1px solid #536376;
+	padding: 14px 22px;
+	width: 440px;
+}
+
+#requestInfoForm input {
+	display: block;
+	width: 393px;
+	font-size: 1.2em;
+	line-height: 31px;
+}
+
+.showForm {
+	width: 25%;
+	margin: 0 auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+
+.requestInfo-formResponse .response--error,
+.requestInfo-formResponse .response--success {
+  	font-family: "Gotham Narrow SSm A", "Gotham Narrow SSm B", "Franklin Gothic", sans-serif;
+  	font-size: 0.825rem;
+  	font-weight: 400;
+  	font-style: normal;
+  	border-radius: 4px;
+  	-webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+          	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  	padding: 10px 20px;
+
+	width: 50%;
+	margin: 0 auto;
+}
+
+.requestInfo-formResponse .response--error {
+  background: #cc003f;
+  border: 1px solid #99002f;
+  color: #fff;
+}
+
+.requestInfo-formResponse .response--success {
+  background: #bcdd8e;
+  border: 1px solid #8dc63f;
+}
+
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.requestButtonInvisible{
+    display: none !important;
+}
