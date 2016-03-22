@@ -1175,24 +1175,24 @@ a:focus {
   display: none;
 }
 
+@media only screen and (min-width: 700px) {
+  .sectionNav {
+    border-right: 2px solid #e6e7e9;
+    display: block;
+    float: left;
+    padding-bottom: 60px;
+    width: 240px;
+  }
+}
+
 .no-overlay .sectionNav {
   display: block;
 }
 
-@media only screen and (min-width: 700px) {
-  .sectionNav {
-    display: block;
-    float: left;
-    width: 240px;
-    padding-bottom: 60px;
-    border-right: 2px solid #e6e7e9;
-  }
-}
-
 .sectionNav a {
-  text-decoration: none;
   color: inherit;
   display: block;
+  text-decoration: none;
   width: 100%;
 }
 
@@ -1202,8 +1202,8 @@ a:focus {
 
 .sectionNav ul {
   list-style-type: none;
-  padding: 0;
   margin: 1rem 0;
+  padding: 0;
 }
 
 .sectionNav ul ul {
@@ -1211,15 +1211,15 @@ a:focus {
 }
 
 .sectionNav ul li {
-  margin-bottom: 0.25rem;
-  padding: 0;
+  border-bottom: 1px solid #e6e7e9;
   color: #58585a;
   line-height: 1.2;
-  border-bottom: 1px solid #e6e7e9;
+  margin-bottom: 0.25rem;
+  padding: 0;
 }
 
 .sectionNav ul li:last-child {
-  border-bottom: 0;
+  border-bottom: none;
 }
 
 .sectionNav ul li a {
@@ -1227,10 +1227,10 @@ a:focus {
 }
 
 .sectionNav ul li.currentPage > a {
-  background-color: #e6e7e9;
-  color: #000;
   font-weight: 700;
+  background-color: #e6e7e9;
   border-left: 6px solid #8dc63f;
+  color: #000;
   padding-left: 24px;
 }
 
@@ -1241,17 +1241,17 @@ a:focus {
 }
 
 .sectionNav-sectionTop {
-  padding: 0 20px 0 20px;
-  color: #292a29;
-  text-transform: uppercase;
   font-size: 1.3rem;
   font-weight: "black";
+  color: #292a29;
+  padding: 0 20px;
+  text-transform: uppercase;
 }
 
 .sectionNav-sectionTop:nth-of-type(n + 2) {
+  border-top: 4px dotted #e6e7e9;
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 4px dotted #e6e7e9;
 }
 
 .mobileOverlay {
@@ -1387,18 +1387,18 @@ a:focus {
   padding-left: 80px;
 }
 
-.mobileNav ul li.currentPage {
+.mobileNav ul .currentPage {
   font-weight: 800;
 }
 
-.mobileNav ul li.currentPage > a {
-  position: relative;
+.mobileNav ul .currentPage > a {
+  background-color: #e6e7e9;
   border-left: 6px solid #8dc63f;
   padding-left: 14px;
-  background-color: #e6e7e9;
+  position: relative;
 }
 
-.mobileNav ul li.currentPage li {
+.mobileNav ul .currentPage li {
   font-weight: 300;
   font-style: italic;
 }
@@ -1479,63 +1479,63 @@ a:focus {
 
 .sectionFront--blue {
   background-color: #003b76;
-  background-image: url(/_resources/images/textures/diagonal-texture-2.png), -webkit-gradient(linear, left top, left bottom, from(#003b76), to(#002243));
-  background-image: url(/_resources/images/textures/diagonal-texture-2.png), linear-gradient(to bottom, #003b76, #002243);
+  background-image: url("/_resources/images/textures/diagonal-texture-2.png"), -webkit-gradient(linear, left top, left bottom, from(#003b76), to(#002243));
+  background-image: url("/_resources/images/textures/diagonal-texture-2.png"), linear-gradient(to bottom, #003b76, #002243);
 }
 
 .sectionFront--teal {
   background-color: #007b97;
-  background-image: url(/_resources/images/textures/diagonal-texture-2.png), -webkit-gradient(linear, left top, left bottom, from(#007b97), to(#005164));
-  background-image: url(/_resources/images/textures/diagonal-texture-2.png), linear-gradient(to bottom, #007b97, #005164);
+  background-image: url("/_resources/images/textures/diagonal-texture-2.png"), -webkit-gradient(linear, left top, left bottom, from(#007b97), to(#005164));
+  background-image: url("/_resources/images/textures/diagonal-texture-2.png"), linear-gradient(to bottom, #007b97, #005164);
 }
 
 .sectionFront--burgundy {
   background-color: #99002b;
-  background-image: url(/_resources/images/textures/diagonal-texture-2.png), -webkit-gradient(linear, left top, left bottom, from(#99002b), to(#66001d));
-  background-image: url(/_resources/images/textures/diagonal-texture-2.png), linear-gradient(to bottom, #99002b, #66001d);
+  background-image: url("/_resources/images/textures/diagonal-texture-2.png"), -webkit-gradient(linear, left top, left bottom, from(#99002b), to(#66001d));
+  background-image: url("/_resources/images/textures/diagonal-texture-2.png"), linear-gradient(to bottom, #99002b, #66001d);
 }
 
 .sectionFront--beige {
   background-color: #d0c391;
-  background-image: url(/_resources/images/textures/diagonal-texture-2.png), -webkit-gradient(linear, left top, left bottom, from(#d0c391), to(#c1b06d));
-  background-image: url(/_resources/images/textures/diagonal-texture-2.png), linear-gradient(to bottom, #d0c391, #c1b06d);
+  background-image: url("/_resources/images/textures/diagonal-texture-2.png"), -webkit-gradient(linear, left top, left bottom, from(#d0c391), to(#c1b06d));
+  background-image: url("/_resources/images/textures/diagonal-texture-2.png"), linear-gradient(to bottom, #d0c391, #c1b06d);
 }
 
 .sectionFront--green {
   background-color: #8dc63f;
-  background-image: url(/_resources/images/textures/diagonal-texture-2.png), -webkit-gradient(linear, left top, left bottom, from(#8dc63f), to(#72a230));
-  background-image: url(/_resources/images/textures/diagonal-texture-2.png), linear-gradient(to bottom, #8dc63f, #72a230);
+  background-image: url("/_resources/images/textures/diagonal-texture-2.png"), -webkit-gradient(linear, left top, left bottom, from(#8dc63f), to(#72a230));
+  background-image: url("/_resources/images/textures/diagonal-texture-2.png"), linear-gradient(to bottom, #8dc63f, #72a230);
 }
 
 .sectionFront--orange {
   background-color: #f05a28;
-  background-image: url(/_resources/images/textures/diagonal-texture-2.png), -webkit-gradient(linear, left top, left bottom, from(#f05a28), to(#d6410f));
-  background-image: url(/_resources/images/textures/diagonal-texture-2.png), linear-gradient(to bottom, #f05a28, #d6410f);
+  background-image: url("/_resources/images/textures/diagonal-texture-2.png"), -webkit-gradient(linear, left top, left bottom, from(#f05a28), to(#d6410f));
+  background-image: url("/_resources/images/textures/diagonal-texture-2.png"), linear-gradient(to bottom, #f05a28, #d6410f);
 }
 
 .sectionFront--purple {
   background-color: #662d91;
-  background-image: url(/_resources/images/textures/diagonal-texture-2.png), -webkit-gradient(linear, left top, left bottom, from(#662d91), to(#4b216a));
-  background-image: url(/_resources/images/textures/diagonal-texture-2.png), linear-gradient(to bottom, #662d91, #4b216a);
+  background-image: url("/_resources/images/textures/diagonal-texture-2.png"), -webkit-gradient(linear, left top, left bottom, from(#662d91), to(#4b216a));
+  background-image: url("/_resources/images/textures/diagonal-texture-2.png"), linear-gradient(to bottom, #662d91, #4b216a);
 }
 
 .sectionFront--gray {
   background-color: #58585a;
-  background-image: url(/_resources/images/textures/diagonal-texture-2.png), -webkit-gradient(linear, left top, left bottom, from(#58585a), to(#3f3f40));
-  background-image: url(/_resources/images/textures/diagonal-texture-2.png), linear-gradient(to bottom, #58585a, #3f3f40);
+  background-image: url("/_resources/images/textures/diagonal-texture-2.png"), -webkit-gradient(linear, left top, left bottom, from(#58585a), to(#3f3f40));
+  background-image: url("/_resources/images/textures/diagonal-texture-2.png"), linear-gradient(to bottom, #58585a, #3f3f40);
 }
 
 .main-content .main-sectionFront,
 .main-tiles .main-sectionFront {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 0 40px 0;
-  padding: 15px 20px;
-  position: relative;
   color: #fff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
   line-height: 1.1;
+  margin: 0 0 40px;
+  max-width: 100%;
+  padding: 15px 20px;
   padding-left: 10px;
+  position: relative;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  width: 100%;
 }
 
 @media only screen and (min-width: 700px) {
@@ -1562,13 +1562,13 @@ a:focus {
 
 .main-content .main-sectionFront::after,
 .main-tiles .main-sectionFront::after {
-  position: absolute;
   bottom: -15px;
-  left: 0;
-  display: block;
-  width: 100%;
   content: '';
+  display: block;
   height: 15px;
+  left: 0;
+  position: absolute;
+  width: 100%;
 }
 
 .flexbox .main-tiles {
@@ -1712,23 +1712,23 @@ a:focus {
 
 #printButton {
   display: none;
-  position: absolute;
-  top: 0;
-  right: 20px;
   margin: 0;
   padding: 0;
-}
-
-.main-sectionFront + #printButton {
-  position: static;
-  float: right;
-  padding-right: 20px;
+  position: absolute;
+  right: 20px;
+  top: 0;
 }
 
 @media only screen and (min-width: 1024px) {
   #printButton {
     display: block;
   }
+}
+
+.main-sectionFront + #printButton {
+  float: right;
+  padding-right: 20px;
+  position: static;
 }
 
 #printButton a {
@@ -1741,18 +1741,18 @@ a:focus {
 }
 
 .videoWrapper {
-  width: 100%;
   height: 0;
   position: relative;
+  width: 100%;
 }
 
 .videoWrapper iframe {
   display: block;
+  height: 100% !important;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100% !important;
-  height: 100% !important;
 }
 
 .videoWrapper.videoWrapper--16-9 {
@@ -1788,19 +1788,19 @@ a:focus {
 }
 
 .tabPanel {
-  padding: 0;
   margin: 0;
+  padding: 0;
   position: relative;
 }
 
 .tabPanel-tabs {
-  text-align: center;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .tabPanel-tabs .tab {
-  float: none;
   display: inline-block;
+  float: none;
   margin-right: 1em;
 }
 
@@ -1809,16 +1809,16 @@ a:focus {
 }
 
 .tabPanel-tabs .tab.active {
-  border-color: #f05a28;
-  background-color: #f05a28;
-  color: #fff;
   font-weight: 700;
   font-style: normal;
+  background-color: #f05a28;
+  border-color: #f05a28;
+  color: #fff;
 }
 
 .tabPanel-panel {
-  padding: 0;
   margin: 0;
+  padding: 0;
   width: 100%;
 }
 /*# sourceMappingURL=tcc-universal.css.map */
