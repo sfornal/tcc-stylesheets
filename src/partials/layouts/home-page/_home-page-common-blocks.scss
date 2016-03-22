@@ -3,16 +3,16 @@
 }
 
 %feed-list-styles {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
     @include clearfix();
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 %feed-list-item-styles {
+    float: left;
     padding: 10px;
     width: 100%;
-    float: left;
 
     @include bp(medium) {
         padding: 20px;
@@ -20,17 +20,17 @@
 }
 
 %feed-item-link-styles {
-    text-decoration: none;
     color: $tcc-blue;
     display: block;
+    text-decoration: none;
 }
 
 %feed-item-title-styles {
-    width: 100%;
-    padding: 10px 0 5px 0;
     @include font(1.1rem, bold);
     line-height: 1.15;
     margin: 0;
+    padding: 10px 0 5px;
+    width: 100%;
 
     @include bp(medium) {
         @include font(1.25rem);
@@ -44,18 +44,20 @@
 }
 
 %feed-item-excerpt-styles {
-    width: 100%;
-    padding: 0 0 10px 0;
-    margin: 0;
     @include font(1rem, regular);
     color: $text-black;
+    margin: 0;
+    padding: 0 0 10px;
+    width: 100%;
 
     @include bp(medium) {
         @include font(1.1rem);
     }
+
     @include bp(large) {
         @include font(1.2rem);
     }
+
     @include bp(x-large) {
         @include font(1.35rem);
     }

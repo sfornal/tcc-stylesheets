@@ -1,6 +1,6 @@
 # Default application configuration that all configurations inherit from.
 
-scss_files: "src/**/*.scss"
+scss_files: ['src/**/*.scss', '!src/partials/toolkit/_normalize.scss']
 plugin_directories: ['.scss-linters']
 
 # List of gem names to load custom linters from (make sure they are already
@@ -198,11 +198,11 @@ linters:
         allow_element_with_class: false
         allow_element_with_id: false
 
-    # Maximum depth of applicability for selectors should be 3, but
-    # ideally 2
+    # Maximum depth of applicability for selectors should be 4, but
+    # ideally 3
     SelectorDepth:
         enabled: true
-        max_depth: 3
+        max_depth: 4
 
     # The TCC standard for selector names is hyphenated-lowercase, and
     # classes in particular should follow our modified BEM format,
@@ -219,7 +219,7 @@ linters:
 
     # One property per line, or everything including braces on one line
     # Example of everything on one line:
-    # a { padding: 0; margin: 0; }
+    # a { margin: 0; padding: 0; }
     SingleLinePerProperty:
         enabled: true
         allow_single_line_rule_sets: true

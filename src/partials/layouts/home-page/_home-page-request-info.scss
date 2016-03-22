@@ -1,26 +1,26 @@
 .requestInfo {
+    background-color: $light-gray;
+    margin: 31px 0 61px;
+    position: relative;
 
     .contentWrap { padding: 20px 0; }
 
-    background-color: $light-gray;
-    position: relative;
-    margin: 31px 0 61px 0;
-
-    &:before, &:after {
-        display: block;
-        width: 100%;
-        content: '';
-        height: 21px;
+    &::before,
+    &::after {
         @extend %diagonal-bg;
+        content: '';
+        display: block;
+        height: 21px;
         position: absolute;
+        width: 100%;
     }
 
-    &:after {
+    &::after {
         border-top: 6px solid $tcc-burgundy;
         bottom: -27px;
     }
 
-    &:before {
+    &::before {
         border-bottom: 6px solid $tcc-burgundy;
         top: -27px;
     }
@@ -36,13 +36,11 @@
     margin: 2rem 0;
 
     .flexbox & {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
         align-content: flex-start;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
-
-        .button--submit { float: right; }
 
         @include bp(medium) {
             padding-left: 10px;
@@ -63,6 +61,8 @@
                 &:last-of-type { flex: 0 0 auto; margin-left: auto; }
             }
         }
+
+        .button--submit { float: right; }
     }
 
     .no-flexbox & {
@@ -70,12 +70,15 @@
 
         .fieldWrap {
             float: left;
-            &:last-of-type {
-                width: auto; float: right; margin-left: auto;
-            }
 
             @include bp(medium) { width: 50%; }
             @include bp(large) { width: 33%; }
+
+            &:last-of-type {
+                float: right;
+                margin-left: auto;
+                width: auto;
+            }
         }
 
 
@@ -83,25 +86,26 @@
     }
 
     .fieldWrap {
-        padding: 10px;
-        width: 100%;
-        position: relative;
         margin-bottom: 10px;
+        padding: 10px;
+        position: relative;
+        width: 100%;
     }
 
     label {
         @include visuallyhidden();
     }
 
-    input:not([type='submit']), select {
+    input:not([type='submit']),
+    select {
+        @include font(1rem, thin);
+        // -webkit-appearance: none;
+        background-color: $pure-white;
+        border: 1px solid $medium-gray;
+        border-radius: 4px;
+        color: $text-black;
         display: block;
         width: 100%;
-        border-radius: 4px;
-        background-color: $pure-white;
-        color: $text-black;
-        // -webkit-appearance: none;
-        border: 1px solid $medium-gray;
-        @include font(1rem, thin);
 
     }
 
@@ -110,6 +114,6 @@
     }
 
     select {
-        padding: 3px 12px 3px 12px;
+        padding: 3px 12px;
     }
 }

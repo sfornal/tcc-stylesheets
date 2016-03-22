@@ -10,22 +10,21 @@
         margin-bottom: 60px;
         position: relative;
 
-        &:after {
-            position: absolute;
+        &::after {
+            @extend %diagonal-bg;
             bottom: -18px;
-            left: 0;
-            right: 20px;
-            left: 20px;
             content: '';
             display: block;
             height: 15px;
-            @extend %diagonal-bg;
+            left: 20px;
             opacity: 0.5;
+            position: absolute;
+            right: 20px;
         }
     }
 
-    section[class|='feeds'] {
-        padding: 20px 10px 40px 10px;
+    [class|='feeds'] {
+        padding: 20px 10px 40px;
 
         @include bp(medium) {
             padding-left: 0;
@@ -35,13 +34,13 @@
         &:not(:last-of-type) {
             margin-bottom: 20px;
 
-            &:after {
-                display: block;
-                width: 100%;
-                content: '';
-                height: 15px;
+            &::after {
                 @extend %diagonal-bg;
+                content: '';
+                display: block;
+                height: 15px;
                 opacity: 0.5;
+                width: 100%;
             }
         }
     }
@@ -59,12 +58,13 @@
 }
 
 .main-identifier {
-    width: 100%;
-    text-align: center;
-    @include font(2rem, black, normal);
+    @include font(2rem, 'black', normal);
     // text-transform: uppercase;
-    margin: 0 auto 0 auto;
     line-height: 1.1;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+
     @include bp(medium) {
         @include font(3rem);
     }
@@ -77,26 +77,30 @@
 }
 
 .backgroundIcon {
-    background-size: contain;
+    background-attachment: scroll;
+    background-color: transparent;
     background-position: center center;
     background-repeat: no-repeat;
-    background-color: transparent;
-    background-attachment: scroll;
+    background-size: contain;
     padding: 20px 0;
 }
 
 .backgroundIcon--calendar {
-    background-image: url(/_resources/images/icons/calendar.svg);
+    background-image: url('/_resources/images/icons/calendar.svg');
 }
+
 .backgroundIcon--news {
-    background-image: url(/_resources/images/icons/news.svg);
+    background-image: url('/_resources/images/icons/news.svg');
 }
+
 .backgroundIcon--reach {
-    background-image: url(/_resources/images/icons/reach-logo.svg);
+    background-image: url('/_resources/images/icons/reach-logo.svg');
 }
+
 .backgroundIcon--announcements {
-    background-image: url(/_resources/images/icons/announcements.svg);
+    background-image: url('/_resources/images/icons/announcements.svg');
 }
+
 .backgroundIcon--videos {
-    background-image: url(/_resources/images/icons/videos.svg);
+    background-image: url('/_resources/images/icons/videos.svg');
 }

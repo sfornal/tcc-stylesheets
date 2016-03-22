@@ -1,47 +1,50 @@
 .sectionNav {
     display: none; //Hidden by default on mobile...
 
+    @include bp(medium) {
+        border-right: 2px solid $light-gray;
+        display: block;  //Or we have a big enough screen.
+        float: left;
+        padding-bottom: 60px;
+        width: 240px;
+    }
+
     .no-overlay & {
         display: block;  //Unless the mobile overlay feature isn't on...
     }
 
-    @include bp(medium) {
-        display: block;  //Or we have a big enough screen.
-        float: left;
-        width: 240px;
-        padding-bottom: 60px;
-        border-right: 2px solid $light-gray;
-    }
-
     a {
-        text-decoration: none;
         color: inherit;
         display: block;
+        text-decoration: none;
         width: 100%;
 
-        &:hover, &:focus, &:active {
+        &:hover,
+        &:focus,
+        &:active {
             text-decoration: underline;
         }
     }
 
     ul {
         list-style-type: none;
-        padding: 0;
         margin: 1rem 0;
+        padding: 0;
 
         ul {
             margin-left: 1rem;
         }
 
         li {
-            margin-bottom: 0.25rem;
-            padding: 0;
-            color: $medium-gray;
-            line-height: 1.2;
 
             //Separators
             border-bottom: 1px solid $light-gray;
-            &:last-child { border-bottom: 0; }
+            color: $medium-gray;
+            line-height: 1.2;
+            margin-bottom: 0.25rem;
+            padding: 0;
+
+            &:last-child { border-bottom: none; }
 
             a {
                 padding: 8px 20px 8px 30px;
@@ -49,11 +52,11 @@
 
             &.currentPage {
 
-                & > a {
-                    background-color: $light-gray;
-                    color: $pure-black;
+                > a {
                     @include font($weight: 700);
+                    background-color: $light-gray;
                     border-left: 6px solid $tcc-green;
+                    color: $pure-black;
                     padding-left: 24px; //Because of border offset
                 }
 
@@ -67,14 +70,14 @@
 }
 
 .sectionNav-sectionTop {
-    padding: 0 20px 0 20px;
+    @include font(1.3rem, 'black');
     color: $dark-gray;
+    padding: 0 20px;
     text-transform: uppercase;
-    @include font(1.3rem, black);
 
     &:nth-of-type(n + 2) {
+        border-top: 4px dotted $light-gray;
         margin-top: 2rem;
         padding-top: 2rem;
-        border-top: 4px dotted $light-gray;
     }
 }

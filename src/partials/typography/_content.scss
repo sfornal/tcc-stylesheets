@@ -6,16 +6,11 @@
 // breakage of layout styles)
 .main-content {
 
-    // General selector for consistent vertical spacing. Any element preceded by
-    // another element
-    * + * {
-        margin-top: 1.5rem;
-    }
-
     // All main content gets a tiny bit bigger at the desktop sizes
     @include bp(large) {
         font-size: 1.1rem;
     }
+
     @include bp(x-large) {
         font-size: 1.3rem;
     }
@@ -25,14 +20,18 @@
     // @include bp(x-large) {
     //     float: left;
     // }
+    // General selector for consistent vertical spacing. Any element preceded by
+    // another element
+    * + * {
+        margin-top: 1.5rem;
+    }
 
     // All elements inside .main-content share these styles
-    & > * {
+    > * {
         //Left and right gutter
+        color: $text-black;
         margin-left: 20px;
         margin-right: 20px;
-
-        color: $text-black;
 
         // Once we have side navigation showing, the gutters need to change
         @include bp(medium) {
@@ -49,12 +48,13 @@
     // For pages without a section front, this controls the appearance of the main
     // heading
     h1 {
+        @include font(2em, 'black');
+
         color: $tcc-blue-darker;
-        @include font(2em, black);
-        text-transform: uppercase;
-        line-height: 1.0;
-        margin-top: 0;
+        line-height: 1;
         margin-bottom: 0;
+        margin-top: 0;
+        text-transform: uppercase;
     }
 
     .image--pullLeft {
@@ -73,8 +73,8 @@
 .main-sideBar {
 
     border-top: 1px solid $light-gray;
-    margin-top: 60px;
     color: $text-black;
+    margin-top: 60px;
 
     //Consistent vertical spacing
     * + * {
@@ -82,7 +82,7 @@
     }
 
     // Gutters match main content
-    & > * {
+    > * {
         margin-left: 20px;
         margin-right: 20px;
 
@@ -122,80 +122,83 @@
 
 
 //Special styling for lists of step-by-step instructions
-ol.steps {
-    padding: 0;
-    list-style-type: none;
+.steps {
     // Custom counter for labelling steps in a process
     counter-reset: step;
+    list-style-type: none;
+    padding: 0;
 
-    & > li {
+    > li {
         // Increment the counter on each top-level list item, but
         // not nested lists (child selector)
         counter-increment: step;
 
         // Uses generated content to label the steps
-        &:before {
+        &::before {
+            @include font(1.1em, 'black');
+            // Em, not rem, to increase from whatever the font size is currently
+            color: $tcc-burgundy;
             content: 'Step ' counter(step) ': ';
             text-transform: uppercase;
-            color: $tcc-burgundy;
-            // Em, not rem, to increase from whatever the font size is currently
-            @include font(1.1em, black);
         }
     }
 
-    ol, ul {
+    ol,
+    ul {
         padding-left: 40px;
     }
 }
 
 .sideBar--relatedLinks {
-    & > ul, & > ol {
+    > ul,
+    > ol {
         list-style-type: none;
         padding: 0;
     }
 }
 
 .tile-transform {
-    width: 90%;
+    border: 2px solid $tcc-blue;
     border-collapse: collapse;
-    border: 2px solid #003b76;
     margin: 3rem auto;
+    width: 90%;
 
     tr {
         width: 100%;
     }
 
     td {
-        padding: 8px 12px;
         border: 1px solid $light-gray;
+        padding: 8px 12px;
 
         &:nth-of-type(1) {
+            @include font($weight: 700);
             background-color: $tcc-blue;
             color: $pure-white;
-            @include font($weight: 700);
             width: 33%;
         }
 
         &:nth-of-type(2) {
+            @include font($weight: 400);
             background-color: $pure-white;
             color: $text-black;
-            @include font($weight: 400);
             width: 67%;
         }
     }
 }
 
 .tile-transform-alternate {
-    width: 90%;
-    border-collapse: collapse;
     border: 2px solid $tcc-blue;
+    border-collapse: collapse;
     margin: 3rem auto;
+    width: 90%;
 
     thead {
         background-color: $tcc-blue;
         color: $pure-white;
 
-        th, tr {
+        th,
+        tr {
             border: none;
         }
     }
@@ -207,22 +210,23 @@ ol.steps {
     tbody {
         tr {
             &:nth-of-type(even) {
-                background-color: #e0e0e0;
-                color: $pure-black;
                 @include font($weight: 400);
+                background-color: $light-gray;
+                color: $pure-black;
                 width: 33%;
             }
 
             &:nth-of-type(odd) {
+                @include font($weight: 400);
                 background-color: $pure-white;
                 color: $text-black;
-                @include font($weight: 400);
                 width: 67%;
             }
         }
+
         td {
-            padding: 8px 12px;
             border: 1px solid $light-gray;
+            padding: 8px 12px;
         }
     }
 }

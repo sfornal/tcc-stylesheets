@@ -21,3 +21,10 @@ module.exports =
     'publish:patch': ['lint', 'compile', 'bump:patch']
     'publish:minor': ['lint', 'compile', 'bump:minor']
     'publish:major': ['lint', 'compile', 'bump:major']
+
+    'test':
+        description: 'Copy the current dist files to the redesign production
+            server directly'
+        tasks: [
+            'copy:publish'
+        ]

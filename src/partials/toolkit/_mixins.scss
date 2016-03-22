@@ -4,37 +4,35 @@
 // Clearfix mixin
 // Uses Nicolas Gallagher Micro-clearfix syntax, IE9+
 @mixin clearfix() {
-    &:after {
-        display: table;
-        content: '';
+    &::after {
         clear: both;
+        content: '';
+        display: table;
     }
 }
 
 // Typography block
 // Creates a complete set of font-* properties from one line
 @mixin font($size: '', $weight: '', $style: '', $face: '') {
-    font: {
-        @if ($face != '') {
-            family: $face;
-        }
+    @if ($face != '') {
+        font-family: $face;
+    }
 
-        @if ($size != '') {
-            size: $size;
-        }
+    @if ($size != '') {
+        font-size: $size;
+    }
 
-        @if ($weight != '') {
-            @if (map-has-key($font-weights, $weight)) {
-                weight: map-get($font-weights, $weight);
-            }
-            @else {
-                weight: $weight;
-            }
+    @if ($weight != '') {
+        @if (map-has-key($font-weights, $weight)) {
+            font-weight: map-get($font-weights, $weight);
         }
+        @else {
+            font-weight: $weight;
+        }
+    }
 
-        @if ($style != '') {
-            style: $style;
-        }
+    @if ($style != '') {
+        font-style: $style;
     }
 }
 
@@ -58,7 +56,7 @@
 // For use when @extend won't work for some reason, or
 // the class name can't be added in mark-up
 @mixin visuallyhidden() {
-    border: 0;
+    border: none;
     clip: rect(0 0 0 0);
     height: 1px;
     margin: -1px;
@@ -71,7 +69,7 @@
 // This is an extend-only selector for the diagonal hashed background image
 // used throughout the site
 %diagonal-bg {
-    background-image: url($diagonalStripeSmall);
     background-color: $pure-white;
+    background-image: url($diagonal-stripe-small);
     background-size: 15px 15px;
 }

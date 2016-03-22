@@ -1,6 +1,7 @@
 module.exports =
     allFiles: [
         'src/'
+        '!src/partials/toolkit/_normalize.scss'
     ]
     options:
         bundleExec: false

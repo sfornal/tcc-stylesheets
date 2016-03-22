@@ -42,7 +42,11 @@ $dark-gray: #292a29 !default;
 $medium-gray: #58585a !default;
 $light-gray: #e6e7e9 !default;
 
-$pure-white: #ffffff !default;
-$pure-black: #000000 !default;
+$pure-white: #fff !default;
+$pure-black: #000 !default;
 
 $text-black: #404041 !default; //aka 90% black
+
+//Translucent shadows
+$shadow-light: rgba(0, 0, 0, 0.4);
+$shadow-dark: rgba(0, 0, 0, 0.8);

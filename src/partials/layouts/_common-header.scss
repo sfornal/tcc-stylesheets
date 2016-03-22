@@ -1,9 +1,8 @@
 .pageHeader {
-    position: relative;
-    padding-top: 57px; //Using padding so that the box doesn't collapse when all content is absolute/floating
     background-color: $tcc-blue;
+    padding-top: 57px; //Using padding so that the box doesn't collapse when all content is absolute/floating
+    position: relative;
     // background-image: url(/_resources/images/textures/dark-texture-1.png);
-
 
     @include bp(medium) {
         padding-top: 100px; //Little more room when the quick links move up
@@ -11,36 +10,34 @@
 }
 
 .pageHeader-navWrap {
-    width: 100%;
-
-    background-color: $nav-background;
-    background-image: url(/_resources/images/textures/dark-texture-1.png);
-
-    border-bottom: 3px solid $pure-white;
     @include clearfix();
+    background-color: $nav-background;
+    background-image: url('/_resources/images/textures/dark-texture-1.png');
+    border-bottom: 3px solid $pure-white;
+    width: 100%;
 }
 
-.mainMenu, .quickLinks {
+.mainMenu,
+.quickLinks {
     display: none;
-
-    .no-overlay & {
-        display: block;
-    }
+    width: 50%;
 
     @include bp(medium) {
         display: block;
     }
 
-    width: 50%;
+    .no-overlay & {
+        display: block;
+    }
 
     h5 {
         @include font($weight: bold);
-        text-transform: uppercase;
-        padding: 5px 20px;
         background-color: $medium-gray;
         color: $pure-white;
-        margin: 0;
         line-height: 1;
+        margin: 0;
+        padding: 5px 20px;
+        text-transform: uppercase;
 
         @include bp(medium) {
             @include visuallyhidden();
@@ -53,13 +50,13 @@
 
     ul {
         list-style-type: none;
+        margin: 8px 0 1rem;
         padding-left: 20px;
-        margin: 8px 0 1rem 0;
     }
 
     a {
-        text-decoration: none;
         color: $pure-white;
+        text-decoration: none;
     }
 }
 
@@ -68,19 +65,19 @@
     padding-right: 20px;
 
     @include bp(medium) {
-        float: none;
-        position: absolute;
-        // bottom: 27px;
-        top: 103px;
-        left: 0;
         @include clearfix();
-        width: 100%;
-        height: 42px;
-        padding: 0;
-        margin: 0;
+        // bottom: 27px;
         background-color: $nav-background;
+        box-shadow: 0 4px 4px -2px transparentize($pure-black, 0.6);
+        float: none;
+        height: 42px;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 103px;
+        width: 100%;
         z-index: z(HIGHEST);
-        box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.6);
 
         // @include bp(large) {
         //     height: 65px;
@@ -88,11 +85,11 @@
 
         ul {
             display: table;
-            margin: 0 auto;
-            padding: 6px 0px;
-            width: 100%;
             height: 42px;
+            margin: 0 auto;
             max-width: 1280px;
+            padding: 6px 0;
+            width: 100%;
 
             // @include bp(large) {
             //     height: 65px;
@@ -100,20 +97,16 @@
         }
 
         li {
-            display: table-cell;
-            text-align: center;
-            vertical-align: middle;
-            margin: 0;
-            padding: 0;
-            width: (100% / 7);
             @include font(1rem, bold);
             // text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
             //text-transform: uppercase;
             border-right: 1px solid lighten($medium-gray, 20%);
-            &:last-child {
-                border-right: none;
-            }
-
+            display: table-cell;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            vertical-align: middle;
+            width: (100% / 7);
 
             @include bp(large) {
                 @include font(1.15rem);
@@ -123,11 +116,15 @@
                 @include font(1.3rem);
             }
 
+            &:last-child {
+                border-right: none;
+            }
+
             a {
                 display: block;
-                width: 100%;
                 height: 100%;
-                padding: 3px 0px;
+                padding: 3px 0;
+                width: 100%;
 
                 @include bp(large) {
                     padding: 0;
@@ -141,30 +138,32 @@
     float: right;
 
     @include bp(medium) {
-        float: none;
-        position: absolute;
-        top: 0;
+        @include clearfix();
         // left: 0;
-        right: 0;
-        width: 50%;
-        max-width: 370px;
+        float: none;
         height: 65px;
+        max-width: 370px;
         padding-right: 20px;
         padding-top: 10px;
+        position: absolute;
+        right: 0;
         text-align: right;
-        @include clearfix();
+        top: 0;
+        width: 50%;
+
         ul {
-            margin: 0;
-            width: 100%;
             height: 60px;
-            padding-top: 5px;
-        }
-        li {
-            display: inline-block;
-            padding: 0px 5px;
             margin: 0;
+            padding-top: 5px;
+            width: 100%;
+        }
+
+        li {
             @include font(0.8rem, light);
+            display: inline-block;
             float: right;
+            margin: 0;
+            padding: 0 5px;
 
             a {
                 text-decoration: underline;
@@ -179,23 +178,20 @@
 }
 
 .siteSearch {
-
+    @include clearfix();
     display: block;
-
+    padding: 12px 20px;
     position: absolute;
-    top: 0;
     right: 0;
+    top: 0;
+    width: 100%;
     z-index: z(HIGHEST);
 
-    width: 100%;
-    padding: 12px 20px;
-    @include clearfix();
-
     @include bp(medium) {
-        width: 50%;
         max-width: 326px;
         padding-top: 16px;
         top: 30px;
+        width: 50%;
     }
 
     @include bp(x-large) {
@@ -203,46 +199,46 @@
         right: calc((100% - #{$max-container-width}) / 2); //SASS string interpolation necessary in calc() functions
     }
 
-    input[type='text'] {
-        width: calc(100% - 80px);
-        margin: 0;
-        padding: 3px 5px;
-        height: 30px;
+    [type='text'] {
+        -webkit-appearance: none;
         border: 2px solid $pure-white;
+        border-radius: 0;
         display: block;
         float: left;
-        -webkit-appearance: none;
-        border-radius: 0;
+        height: 30px;
+        margin: 0;
+        padding: 3px 5px;
+        width: calc(100% - 80px);
     }
 
-    input[type='submit'] {
-        width: 80px;
-        height: 30px;
-        border: 2px solid $pure-white;
-        margin: 0;
+    [type='submit'] {
+        -webkit-appearance: none;
         background-color: $tcc-blue;
+        border: 2px solid $pure-white;
+        border-radius: 0;
         color: $pure-white;
         display: block;
         float: right;
-        -webkit-appearance: none;
-        border-radius: 0;
+        height: 30px;
+        margin: 0;
         text-align: center;
+        width: 80px;
     }
 }
 
 .banner {
-    padding: 0;
     margin: 0;
-    width: 100%;
-    top: 84px;
+    padding: 0;
     position: absolute;
+    top: 84px;
+    width: 100%;
     z-index: z(HIGH);
 
     @include bp(medium) {
-        width: 50%;
+        left: 20px;
         max-width: 380px;
         top: 21px;
-        left: 20px;
+        width: 50%;
     }
 
     @include bp(large) {
@@ -261,32 +257,45 @@
 
     img {
         display: block;
-        width: 100%;
-        max-width: 450px;
         margin: 0 auto;
+        max-width: 450px;
         padding: 0 10px;
+        width: 100%;
 
         @include bp(medium) {
-            padding: 0;
             margin: 0;
             max-width: 100%;
+            padding: 0;
         }
     }
 }
 
 // Styling for Placeholder text
+
+// Special hacks for inout element placeholder text
+// scss-lint:disable PseudoElement
+// scss-lint:disable VendorPrefix
 ::-webkit-input-placeholder {
-   @include font($style: italic);
+    @include font($style: italic);
 }
 
-:-moz-placeholder { /* Firefox 18- */
-   @include font($style: italic);
+// Special hacks for inout element placeholder text
+// scss-lint:disable PseudoElement
+// scss-lint:disable VendorPrefix
+:-moz-placeholder { //Firefox 18-
+    @include font($style: italic);
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
-   @include font($style: italic);
+// Special hacks for inout element placeholder text
+// scss-lint:disable PseudoElement
+// scss-lint:disable VendorPrefix
+::-moz-placeholder {  //Firefox 19+
+    @include font($style: italic);
 }
 
+// Special hacks for inout element placeholder text
+// scss-lint:disable PseudoElement
+// scss-lint:disable VendorPrefix
 :-ms-input-placeholder {
-   @include font($style: italic);
+    @include font($style: italic);
 }

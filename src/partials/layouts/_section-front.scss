@@ -1,56 +1,62 @@
 .sectionFront--blue {
     background-color: $tcc-blue;
-    background-image: url(/_resources/images/textures/diagonal-texture-2.png),
+    background-image: url('/_resources/images/textures/diagonal-texture-2.png'),
                 linear-gradient(to bottom, $tcc-blue, darken($tcc-blue, 10%));
 }
+
 .sectionFront--teal {
     background-color: $tcc-teal;
-    background-image: url(/_resources/images/textures/diagonal-texture-2.png),
+    background-image: url('/_resources/images/textures/diagonal-texture-2.png'),
                 linear-gradient(to bottom, $tcc-teal, darken($tcc-teal, 10%));
 }
+
 .sectionFront--burgundy {
     background-color: $tcc-burgundy;
-    background-image: url(/_resources/images/textures/diagonal-texture-2.png),
+    background-image: url('/_resources/images/textures/diagonal-texture-2.png'),
                 linear-gradient(to bottom, $tcc-burgundy, darken($tcc-burgundy, 10%));
 }
+
 .sectionFront--beige {
     background-color: $tcc-beige;
-    background-image: url(/_resources/images/textures/diagonal-texture-2.png),
+    background-image: url('/_resources/images/textures/diagonal-texture-2.png'),
                 linear-gradient(to bottom, $tcc-beige, darken($tcc-beige, 10%));
 }
+
 .sectionFront--green {
     background-color: $tcc-green;
-    background-image: url(/_resources/images/textures/diagonal-texture-2.png),
+    background-image: url('/_resources/images/textures/diagonal-texture-2.png'),
                 linear-gradient(to bottom, $tcc-green, darken($tcc-green, 10%));
 }
+
 .sectionFront--orange {
     background-color: $tcc-orange;
-    background-image: url(/_resources/images/textures/diagonal-texture-2.png),
+    background-image: url('/_resources/images/textures/diagonal-texture-2.png'),
                 linear-gradient(to bottom, $tcc-orange, darken($tcc-orange, 10%));
 }
+
 .sectionFront--purple {
     background-color: $tcc-purple;
-    background-image: url(/_resources/images/textures/diagonal-texture-2.png),
+    background-image: url('/_resources/images/textures/diagonal-texture-2.png'),
                 linear-gradient(to bottom, $tcc-purple, darken($tcc-purple, 10%));
 }
+
 .sectionFront--gray {
     background-color: $medium-gray;
-    background-image: url(/_resources/images/textures/diagonal-texture-2.png),
+    background-image: url('/_resources/images/textures/diagonal-texture-2.png'),
                 linear-gradient(to bottom, $medium-gray, darken($medium-gray, 10%));
 }
 
 .main-content .main-sectionFront,
-.main-tiles .main-sectionFront  {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 0 40px 0;
-    padding: 15px 20px;
-    position: relative;
-
+.main-tiles .main-sectionFront {
     color: $pure-white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
     line-height: 1.1;
+    margin: 0 0 40px;
+    max-width: 100%;
+    padding: 15px 20px;
     padding-left: 10px;
+    position: relative;
+    text-shadow: 1px 1px 2px $shadow-light;
+    width: 100%;
 
     @include bp(medium) {
         @include font(3rem);
@@ -65,14 +71,14 @@
         font-size: 5rem;
     }
 
-    &:after {
-        position: absolute;
-        bottom: -15px;
-        left: 0;
-        display: block;
-        width: 100%;
-        content: '';
-        height: 15px;
+    &::after {
         @extend %diagonal-bg;
+        bottom: -15px;
+        content: '';
+        display: block;
+        height: 15px;
+        left: 0;
+        position: absolute;
+        width: 100%;
     }
 }
