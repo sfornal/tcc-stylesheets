@@ -1821,4 +1821,63 @@ a:focus {
   padding: 0;
   width: 100%;
 }
+
+.table--3x3 {
+  border-spacing: 3px;
+  padding: 3px;
+  width: 90%;
+}
+
+.table--3x3 td {
+  border: 1px solid #fff;
+}
+
+.table--3x3 th {
+  border: 1px solid #fff;
+}
+
+.table--3x3 tbody tr:nth-child(odd) {
+  background-color: #e6e7e9;
+}
+
+.table--3x3 tbody tr:first-child {
+  background-color: #58585a;
+  text-align: left;
+}
+
+.table--3x4 {
+  border-spacing: 3px;
+  padding: 3px;
+  width: 90%;
+}
+
+.table--3x4 td {
+  border: 1px solid #fff;
+}
+
+.table--3x4 th {
+  border: 1px solid #fff;
+}
+
+.table--3x4 tbody tr:nth-child(odd) {
+  background-color: #e6e7e9;
+}
+
+.table--3x4 tbody tr:first-child {
+  background-color: #58585a;
+  text-align: left;
+}
+
+.table--3x4 tbody tr th {
+  background-color: #58585a;
+  text-align: left;
+}
+
+.td__width--small {
+  width: 60px;
+}
+
+.td__width--medium {
+  width: 120px;
+}
 /*# sourceMappingURL=tcc-universal.css.map */
