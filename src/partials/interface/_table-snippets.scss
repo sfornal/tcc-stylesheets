@@ -1,0 +1,60 @@
+// Styles for the table snippets used in the WYSIWYG editor
+
+.table--3x3 {
+    border-spacing: 3px;
+    padding: 3px;
+    width: 90%;
+
+    td {
+        border: 1px solid $pure-white;
+    }
+
+    th {
+        border: 1px solid $pure-white;
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: $light-gray;
+    }
+
+    tbody tr:first-child {
+        background-color: $medium-gray;
+        text-align: left;
+    }
+}
+
+.table--3x4 {
+    border-spacing: 3px;
+    padding: 3px;
+    width: 90%;
+
+    td {
+        border: 1px solid $pure-white;
+    }
+
+    th {
+        border: 1px solid $pure-white;
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: $light-gray;
+    }
+
+    tbody tr:first-child {
+        background-color: $medium-gray;
+        text-align: left;
+    }
+
+    tbody tr th {
+        background-color: $medium-gray;
+        text-align: left;
+    }
+}
+
+.td__width--small {
+    width: 60px;
+}
+
+.td__width--medium {
+    width: 120px;
+}
