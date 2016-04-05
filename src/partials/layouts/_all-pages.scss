@@ -43,21 +43,36 @@
 
 
 .hero {
+    background-color: $tcc-blue;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 6px solid $pure-white;
     height: 150px;
     margin: 0;
-    overflow: hidden;
     padding: 0;
     position: relative;
     width: 100%;
 
     @include bp(medium) {
-        height: 550px;
+        .homePage & {
+            height: 500px;
+        }
+
+        .hubPage & {
+            height: 350px;
+        }
+
+        .detailsPage & {
+            height: 200px;
+        }
     }
 
+    // This is a bottom border sandwhich, with the diagonal striping
     &::after {
         @extend %diagonal-bg;
         border-top: 6px solid $tcc-burgundy;
-        bottom: 0;
+        bottom: -27px;
         box-shadow: 0 6px 8px -6px $shadow-dark;
         content: '';
         display: block;
@@ -66,6 +81,7 @@
         width: 100%;
     }
 
+    // This is a semi-transparent black overlay for the hero image on mobile only
     &::before {
         background-color: $shadow-light;
         border-bottom: 6px solid $pure-white;
@@ -79,18 +95,21 @@
 
         @include bp(medium) {
             background-color: transparent;
+            display: none;
             top: auto;
         }
     }
 
+    The hero-image as an image element
     .hero-image {
-        border-bottom: 6px solid $pure-white;
-        display: block;
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        z-index: z(LOW);
+        // border-bottom: 6px solid $pure-white;
+        // display: block;
+        // left: 50%;
+        // position: absolute;
+        // top: 50%;
+        // transform: translate(-50%, -50%);
+        // width: 100%;
+        // z-index: z(LOW);
+        display: none;
     }
 }

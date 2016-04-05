@@ -42,42 +42,28 @@
 // Anchors with the learn more class are used at the end of tiles that have
 // links in the heading, to give a visual cue that more info is available
 .learn-more {
-    @include font(1rem, 300, italic);
-
-    border: 1px solid;
-    border-radius: 5px;
-    color: $tcc-teal;
-    display: block;
+    @include button-base();
     float: right;
-    padding: 5px 8px;
-    text-decoration: none;
 }
 
 // The Print Button appears at the top of all content pages
 // Until template is refactored, ignore name and id selector rules
 // scss-lint:disable SelectorFormat IdSelector
+.printButton,
 #printButton {
     display: none;
+    float: right;
     margin: 0;
     padding: 0;
-    position: absolute;
-    right: 20px;
-    top: 0;
 
     @include bp(large) {
         display: block;
     }
 
-    .main-sectionFront + & {
-        float: right;
-        padding-right: 20px;
-        position: static;
-    }
-
     // Using @extend for simplicity, override rule
     // scss-lint:disable PlaceholderInExtend
     a {
-        @extend .learn-more;
+        @include button-base();
         @include font(0.8rem);
     }
 }

@@ -1113,23 +1113,34 @@ a:focus {
 }
 
 .hero {
+  background-color: #003b76;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  border-bottom: 6px solid #fff;
   height: 150px;
   margin: 0;
-  overflow: hidden;
   padding: 0;
   position: relative;
   width: 100%;
 }
 
 @media only screen and (min-width: 700px) {
-  .hero {
-    height: 550px;
+  .homePage .hero {
+    height: 500px;
+  }
+  .hubPage .hero {
+    height: 350px;
+  }
+  .detailsPage .hero {
+    height: 200px;
   }
 }
 
 .hero::after {
   border-top: 6px solid #99002b;
-  bottom: 0;
+  bottom: -27px;
   -webkit-box-shadow: 0 6px 8px -6px rgba(0, 0, 0, 0.8);
           box-shadow: 0 6px 8px -6px rgba(0, 0, 0, 0.8);
   content: '';
@@ -1154,21 +1165,14 @@ a:focus {
 @media only screen and (min-width: 700px) {
   .hero::before {
     background-color: transparent;
+    display: none;
     top: auto;
   }
 }
 
-.hero .hero-image {
-  border-bottom: 6px solid #fff;
-  display: block;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 100%;
-  z-index: -5000;
+.hero The hero-image as an image element
+.hero-image {
+  display: none;
 }
 
 .sectionNav {
@@ -1651,6 +1655,23 @@ a:focus {
   display: table;
 }
 
+.breadcrumbWrap {
+  margin-bottom: 1rem;
+}
+
+.breadcrumbWrap::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.breadcrumbs {
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin: 0;
+  width: 100%;
+}
+
 .button--blue {
   background-color: #003b76;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#003b76), to(#002243));
@@ -1697,7 +1718,7 @@ a:focus {
   padding: 5px 12px;
 }
 
-.learn-more, #printButton a, .tabPanel-tabs .tab {
+.learn-more, .tabPanel-tabs .tab {
   font-size: 1rem;
   font-weight: 300;
   font-style: italic;
@@ -1705,33 +1726,37 @@ a:focus {
   border-radius: 5px;
   color: #007b97;
   display: block;
-  float: right;
   padding: 5px 8px;
   text-decoration: none;
+  float: right;
 }
 
+.printButton,
 #printButton {
   display: none;
+  float: right;
   margin: 0;
   padding: 0;
-  position: absolute;
-  right: 20px;
-  top: 0;
 }
 
 @media only screen and (min-width: 1024px) {
+  .printButton,
   #printButton {
     display: block;
   }
 }
 
-.main-sectionFront + #printButton {
-  float: right;
-  padding-right: 20px;
-  position: static;
-}
-
+.printButton a,
 #printButton a {
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+  border: 1px solid;
+  border-radius: 5px;
+  color: #007b97;
+  display: block;
+  padding: 5px 8px;
+  text-decoration: none;
   font-size: 0.8rem;
 }
 

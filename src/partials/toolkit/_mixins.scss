@@ -66,10 +66,26 @@
     width: 1px;
 }
 
+// Mix-in for creating buttons
+@mixin button-base() {
+    @include font(1rem, 300, italic);
+    border: 1px solid;
+    border-radius: 5px;
+    color: $tcc-teal;
+    display: block;
+    padding: 5px 8px;
+    text-decoration: none;
+}
+
 // This is an extend-only selector for the diagonal hashed background image
 // used throughout the site
 %diagonal-bg {
     background-color: $pure-white;
     background-image: url($diagonal-stripe-small);
     background-size: 15px 15px;
+}
+
+// This extend-only selector is the base style for buttons
+%button-base {
+    @include button-base();
 }
