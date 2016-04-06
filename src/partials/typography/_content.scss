@@ -12,7 +12,7 @@
     }
 
     @include bp(x-large) {
-        font-size: 1.3rem;
+        font-size: 1.15rem;
     }
 
     // // In super-wide desktop mode, all of the .main-content is floated left, and
@@ -113,14 +113,6 @@
     // }
 }
 
-// Link colors for content areas
-// .main-content, .main-sideBar {
-//     a {
-//         color: $tcc-blue-lighter;
-//     }
-// }
-
-
 //Special styling for lists of step-by-step instructions
 .steps {
     // Custom counter for labelling steps in a process
@@ -157,6 +149,7 @@
     }
 }
 
+// These styles are for elements that appear only in the OU Campus editing area
 .tile-transform {
     border: 2px solid $tcc-blue;
     border-collapse: collapse;
@@ -229,4 +222,9 @@
             padding: 8px 12px;
         }
     }
+}
+
+// Link colors for content areas
+a {
+    color: $tcc-link-color;
 }

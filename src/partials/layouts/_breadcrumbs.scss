@@ -1,0 +1,18 @@
+.breadcrumbWrap {
+    @include clearfix();
+    margin-bottom: 1rem;
+    padding: 0 20px;
+}
+
+.rsButtonWrap {
+    float: right;
+
+    &:not(:first-child) {
+        margin-right: 1rem;
+    }
+}
+
+.breadcrumbs {
+    @include font(0.8rem, 'thin');
+    margin: 0 2rem 0 0;
+}

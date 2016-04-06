@@ -1,8 +1,7 @@
 .requestInfo::before, .requestInfo::after, .homePage .main-callToAction::after, .homePage [class|='feeds']:not(:last-of-type)::after {
   background-color: #fff;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAFMN540AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAtNJREFUeNpi4C/dYw3E7AxQwAgiQIJQ/k9kDojNj67iNkAAMQI5LECGOVTgOkhWE0mLCUiFHJAtCxL42O1ylAHZSpBZAAEENxCJFkMXQ5Y0B5mLSxLkI350MXRFUuiSAAEEcqU1yHVQgZNAzAzEJmAX43IUkFZlgvpEFaob7nkgEGMCuRYckhAghGTFK5BOFqDAGajAY5g2oNhtkOQVJIFHMIdBAxzFEezIDgPZKYXkCBNkhwEEECNU5Ueg4BW0yMQm9hhkNUyMBV0AmyKo2BWg2EeUEEaJcgg4CVT0B5sYNImYwNIMyNncQLYBPBFBNGETA/ldEVmMBYsiVVDsECFmAtL8ByhwEpb2oAZiE/sKFLtAyM+vQLFLhNhtgACMlLEOwkAMQ6ssDAz3BQwMbAz8/zccEgNbh+7dGSp1gKC4coMj0fGp58vZSRDVv7fv4rN4B35q8VPFcNAndfDDM3XQFWUKNhI75Tfv575mLubVrJbVPt+jYjEJLdjdkFkAN+lVMdpZbtxqoXZIJinWaC6fMGxTo3IVg3HbtFtW800j2Jm3QbCbiRgugmEhdGJHNMlMMQwFc+MW6rhv2V3E8MNUxxnUyKRFMNlxJmLogo3c03iWJbVJ3DBVHfcWoPMyRmEYhqFoBIIMHQodOnToXuhQ6P1v0EJu0K136NYILPFjZEtOxvAwivX/l0I4D6UUvSjQvKXIDu4FVzCBcmeGd5asAN2hASOchO9bQxga99RGcYEWrKyG4LAMZzGJmwVc/7SJEYBsJMDz0+YHnEUscGcwi7WKosoah2W5K4hqow8MTpth8HxW6FsdluVk9p8qbtEoJAiYS0JEWU5m7qEnNmoo17NByDXE5unjyAkbzGVr4B2cjWLg5PpvEeSJKMvZFuaJjQdtkLZLlGwcVZb9gtFk8wKka4MRrojtocuB/TCtHHkB3hNRlmskm+mDBm2QtkuUbH9jODTwAHpsAwAAAABJRU5ErkJggg==");
-  -webkit-background-size: 15px 15px;
-          background-size: 15px 15px;
+  background-size: 15px 15px;
 }
 
 .feeds-calendar .main-identifier, .feeds-news .main-identifier,
@@ -120,23 +119,18 @@
 }
 
 .flexbox .homePage .callToAction-buttons {
-  -webkit-box-align: stretch;
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -162,7 +156,6 @@
     width: 25%;
   }
   .flexbox .homePage .button-wrap {
-    -webkit-box-flex: 1;
     -webkit-flex: 1 1 25%;
         -ms-flex: 1 1 25%;
             flex: 1 1 25%;
@@ -174,7 +167,6 @@
     width: 25%;
   }
   .flexbox .homePage .button-wrap {
-    -webkit-box-flex: 1;
     -webkit-flex: 1 1 25%;
         -ms-flex: 1 1 25%;
             flex: 1 1 25%;
@@ -182,7 +174,6 @@
 }
 
 .flexbox .homePage .button-wrap {
-  -webkit-box-flex: 1;
   -webkit-flex: 1 1 100%;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
@@ -224,8 +215,6 @@
 
 @media only screen and (min-width: 700px) {
   .flexbox .homePage .prospectiveStudents-buttons {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
@@ -233,12 +222,9 @@
 }
 
 .flexbox .homePage .prospectiveStudents-buttons {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -265,11 +251,9 @@
     width: 50%;
   }
   .flexbox .homePage .bigButton-wrap {
-    -webkit-box-flex: 1;
     -webkit-flex: 1 1 50%;
         -ms-flex: 1 1 50%;
             flex: 1 1 50%;
-    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -281,17 +265,14 @@
     width: 33.3333%;
   }
   .flexbox .homePage .bigButton-wrap {
-    -webkit-box-flex: 0;
     -webkit-flex: 0 1 33.3333%;
         -ms-flex: 0 1 33.3333%;
             flex: 0 1 33.3333%;
-    -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
   .flexbox .homePage .bigButton-wrap:nth-of-type(1), .flexbox .homePage .bigButton-wrap:nth-of-type(2) {
-    -webkit-box-flex: 1;
     -webkit-flex: 1 1 50%;
         -ms-flex: 1 1 50%;
             flex: 1 1 50%;
@@ -354,19 +335,15 @@
   -webkit-align-content: flex-start;
       -ms-flex-line-pack: start;
           align-content: flex-start;
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -378,7 +355,6 @@
     padding-right: 10px;
   }
   .flexbox .requestInfo-form .fieldWrap {
-    -webkit-box-flex: 1;
     -webkit-flex: 1 1 50%;
         -ms-flex: 1 1 50%;
             flex: 1 1 50%;
@@ -388,7 +364,6 @@
 
 @media only screen and (min-width: 1024px) {
   .flexbox .requestInfo-form .fieldWrap {
-    -webkit-box-flex: 1;
     -webkit-flex: 1 0 auto;
         -ms-flex: 1 0 auto;
             flex: 1 0 auto;
@@ -396,7 +371,6 @@
     max-width: 33%;
   }
   .flexbox .requestInfo-form .fieldWrap:last-of-type {
-    -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
@@ -498,10 +472,9 @@
 
 .feeds-calendar .event.today::before {
   font-size: 1.7rem;
-  font-weight: "black";
+  font-weight: 800;
   background-color: #8dc63f;
-  -webkit-box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.8);
-          box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.8);
   color: #fff;
   content: 'Today';
   padding: 0.1em 0.5em;
@@ -612,7 +585,7 @@
 
 .feeds-calendar .eventTime-day {
   font-size: 3.4rem;
-  font-weight: "black";
+  font-weight: 800;
   top: 36px;
 }
 
@@ -770,7 +743,6 @@
   font-weight: 400;
   font-style: normal;
   border-radius: 4px;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   padding: 10px 20px;
   width: 50%;
@@ -856,7 +828,7 @@ div.requestButtonInvisible {
 
 .main-identifier {
   font-size: 2rem;
-  font-weight: "black";
+  font-weight: 800;
   font-style: normal;
   line-height: 1.1;
   margin: 0 auto;
@@ -882,8 +854,7 @@ div.requestButtonInvisible {
   background-color: transparent;
   background-position: center center;
   background-repeat: no-repeat;
-  -webkit-background-size: contain;
-          background-size: contain;
+  background-size: contain;
   padding: 20px 0;
 }
 

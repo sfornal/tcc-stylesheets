@@ -2,9 +2,7 @@ module.exports =
     options:
         browsers: [
             'last 4 versions'
-            'ie 8'
-            'ie 9'
-            'android 2.3'
+            'ie 10'
         ]
         map: true
         cascade: true
