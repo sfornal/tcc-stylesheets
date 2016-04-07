@@ -15,7 +15,6 @@
     width: 100%;
 
     @include bp(medium) {
-        // border-bottom: 1px solid $light-gray;
         padding: 60px 40px;
         width: 50%;
 
@@ -29,25 +28,8 @@
         }
     }
 
-    // @include bp($custom:$bp-medium-only) {
-    //     &:nth-of-type(2n+1):last-child,
-    //     &:nth-of-type(2n+1):nth-last-of-type(2),
-    //     &:nth-of-type(2n+1):nth-last-of-type(2) + & {
-    //         border-bottom: none;
-    //     }
-    // }
-
     @include bp(large) {
         width: 33.33333%;
-
-        // &:nth-of-type(3n+1):last-of-type,
-        // &:nth-of-type(3n+1):nth-last-of-type(2),
-        // &:nth-of-type(3n+1):nth-last-of-type(2) + &,
-        // &:nth-of-type(3n+1):nth-last-of-type(3),
-        // &:nth-of-type(3n+1):nth-last-of-type(3) + &,
-        // &:nth-of-type(3n+1):nth-last-of-type(3) + & + & {
-        //     border-bottom: none;
-        // }
 
         .no-flexbox &:nth-of-type(2n+1) {
             clear: none;
@@ -84,5 +66,4 @@
     .no-flexbox & {
         @include clearfix();
     }
-
 }

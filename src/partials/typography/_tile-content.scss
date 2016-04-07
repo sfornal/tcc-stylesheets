@@ -27,9 +27,8 @@
             width: 100%;
         }
 
-        // Titles that are links look the same as regular titles, until hovered/focused
+        // Titles that are links are not underlined, until hovered/focused
         a {
-            color: inherit;
             text-decoration: none;
 
             &:hover,

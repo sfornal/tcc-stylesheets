@@ -501,7 +501,6 @@ a {
 }
 
 .tile h2 a {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -1750,22 +1749,25 @@ a {
 }
 
 .printButton,
-#printButton {
+#printButton,
+.rsButtonWrap {
   display: none;
   float: right;
   margin: 0;
   padding: 0;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 700px) {
   .printButton,
-  #printButton {
+  #printButton,
+  .rsButtonWrap {
     display: block;
   }
 }
 
 .printButton a,
-#printButton a {
+#printButton a,
+.rsButtonWrap a {
   font-size: 1rem;
   font-weight: 300;
   font-style: italic;

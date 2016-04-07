@@ -50,13 +50,14 @@
 // Until template is refactored, ignore name and id selector rules
 // scss-lint:disable SelectorFormat IdSelector
 .printButton,
-#printButton {
+#printButton,
+.rsButtonWrap {
     display: none;
     float: right;
     margin: 0;
     padding: 0;
 
-    @include bp(large) {
+    @include bp(medium) {
         display: block;
     }
 
