@@ -10,7 +10,7 @@
         text-align: center;
 
         .tab {
-            @extend .learn-more;
+            @include button-base();
             display: inline-block;
             float: none;
             margin-right: 1em;

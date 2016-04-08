@@ -11,21 +11,11 @@
 
     // Tiles always begin with an h2 element
     h2 {
-        border-left: 4px solid $tcc-green;
+        border-bottom: 12px solid $light-gray;
         line-height: 1.1;
         margin: 0;
-        padding-left: 5px;
+        padding-bottom: 0.5em;
         position: relative;
-
-        // The generated content creates the diagonal striped divider
-        &::after {
-            @extend %diagonal-bg;
-            content: '';
-            display: block;
-            height: 7.5px;
-            margin-top: 5px;
-            width: 100%;
-        }
 
         // Titles that are links are not underlined, until hovered/focused
         a {

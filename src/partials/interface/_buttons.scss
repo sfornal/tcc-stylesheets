@@ -28,6 +28,12 @@
     color: $pure-white;
 }
 
+.button--solid {
+    background-color: $tcc-link-color;
+    background-image: linear-gradient(to bottom, $tcc-link-color, darken($tcc-link-color, 10%));
+    color: $tcc-link-color-contrast;
+}
+
 .button--submit,
 [type='submit'].button--submit { //Bah, the reset has too much specificity, so this got convoluted
     @include font(1rem, bold);
@@ -44,14 +50,19 @@
 .learn-more {
     @include button-base();
     float: right;
+
+    .flexbox .tile-wrap & {
+        float: none;
+        margin-left: auto;
+        margin-top: auto;
+    }
 }
 
 // The Print Button appears at the top of all content pages
 // Until template is refactored, ignore name and id selector rules
 // scss-lint:disable SelectorFormat IdSelector
 .printButton,
-#printButton,
-.rsButtonWrap {
+#printButton {
     display: none;
     float: right;
     margin: 0;
@@ -66,5 +77,15 @@
     a {
         @include button-base();
         @include font(0.8rem);
+    }
+}
+
+// Only show the ReadSpeaker button at large size screens
+// TODO: Discuss this with the team before launch
+.rsButtonWrap {
+    display: none;
+
+    @include bp(large) {
+        display: block;
     }
 }

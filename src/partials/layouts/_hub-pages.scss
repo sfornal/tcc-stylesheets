@@ -11,11 +11,10 @@
 }
 
 .tile {
-    padding: 30px 20px 0;
+    padding: 20px;
     width: 100%;
 
     @include bp(medium) {
-        padding: 60px 40px;
         width: 50%;
 
         .no-flexbox & {
@@ -43,27 +42,23 @@
     .flexbox & {
         display: flex;
     }
-
-    .no-flexbox & {
-        float: none;
-    }
 }
 
 .tile-wrap {
-    border-bottom: 1px solid $light-gray; //Create vertical separation in mobile
-    padding-bottom: 30px;
+    border: 1px solid $light-gray;
+    border-left: 12px solid $tcc-green;
+    border-radius: 5px;
+    box-shadow: 3px 4px 4px -4px $shadow-dark;
+    padding: 20px 15px;
     width: 100%;
-
-    @include bp(medium) {
-        border-bottom: none; //Remove vertical separation from mobile layout
-        padding-bottom: 0;
-    }
-
-    .tile:last-of-type & {
-        border-bottom: none;
-    }
 
     .no-flexbox & {
         @include clearfix();
+    }
+
+    .flexbox & {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 }

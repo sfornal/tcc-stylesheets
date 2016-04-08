@@ -66,12 +66,12 @@
     width: 1px;
 }
 
-// Mix-in for creating buttons
+// Mix-in for creating buttons from anchors
+// Does not include color
 @mixin button-base() {
-    @include font(1rem, 300, italic);
+    @include font(1rem, 'thin', italic);
     border: 1px solid;
     border-radius: 5px;
-    color: $tcc-teal;
     display: block;
     padding: 5px 8px;
     text-decoration: none;

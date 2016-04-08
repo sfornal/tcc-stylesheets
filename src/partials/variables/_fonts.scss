@@ -3,10 +3,14 @@
 $primary-font: 'Gotham Narrow SSm A', 'Gotham Narrow SSm B', 'Franklin Gothic', sans-serif !default;
 
 $font-weights: (
+    'light': 100,
     'thin': 300,
     'regular': 400,
+    'book': 400,
+    'semibold': 600,
     'bold': 700,
-    'black': 800
+    'black': 800,
+    'ultra': 900
 );
 
 // Base value for font-size and line-height
