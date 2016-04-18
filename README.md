@@ -30,6 +30,8 @@ The SCSS code linting relies on the [scss-lint Ruby gem](https://github.com/brig
 
 ## Distribution Builds
 
-The distribution build *is* part of the repository, and can be used by dependency managers like [Bower](http://bower.io/) to pull this CSS into other projects. After updating the SCSS, you can use the commands `grunt publish:patch`, `grunt publish:minor`, or `grunt publish:major` to update the version number of this repository and generate a git commit, tag, and upstream push automagically. You would, of course, need git configured on your machine, but I'm assuming that's the case if you're working with this.
+The distribution build output *is not* part of the repository.
+
+After updating the SCSS, you can use the commands `grunt publish:patch`, `grunt publish:minor`, or `grunt publish:major` to update the version number of this repository and generate a git commit, tag, and upstream push automagically. You would, of course, need git configured on your machine, but I'm assuming that's the case if you're working with this.
 
 The SCSS code will be linted (see above) before publish, and lint errors will block the publish task from completing. If you *cannot* run the Ruby linter for some reason, and you're *sure* you should be publishing, you can probably use the `--force` flag on the command line when you run the publish task.
