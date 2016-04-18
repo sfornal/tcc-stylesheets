@@ -27,7 +27,6 @@
     "grunt-bump": "*",
     "grunt-coffeelint": "*",
     "grunt-contrib-clean": "*",
-    "grunt-contrib-copy": "*",
     "grunt-contrib-cssmin": "*",
     "grunt-sass": "*",
     "grunt-scss-lint": "*",
