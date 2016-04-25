@@ -185,7 +185,7 @@
     right: 0;
     top: 0;
     width: 100%;
-    z-index: z(HIGHEST);
+    z-index: z(OVER);
 
     @include bp(medium) {
         max-width: 326px;
@@ -232,7 +232,7 @@
     position: absolute;
     top: 84px;
     width: 100%;
-    z-index: z(HIGH);
+    z-index: z(OVER);
 
     @include bp(medium) {
         left: 20px;

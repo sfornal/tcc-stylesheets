@@ -1,11 +1,16 @@
 .sectionNav {
-    display: none; //Hidden by default on mobile...
+
+    // display: none; //Hidden by default on mobile... // Not anymore!
+    border-top: 6px solid $light-gray;
+    padding-top: 1rem;
 
     @include bp(medium) {
         border-right: 2px solid $light-gray;
+        border-top: none;
         display: block;  //Or we have a big enough screen.
         float: left;
         padding-bottom: 60px;
+        padding-top: 0;
         width: 240px;
     }
 
