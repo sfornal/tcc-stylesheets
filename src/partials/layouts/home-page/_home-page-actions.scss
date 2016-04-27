@@ -23,27 +23,35 @@
         margin: 0;
         padding: 10px;
 
-        @include bp(medium) {
-            max-width: none;
-            .no-flexbox & { float: left;  width: 25%; }
-            .flexbox & {
-                flex: 1 1 25%;
-            }
-        }
-
-        @include bp(large) {
-            .no-flexbox & { width: 25%; }
-            .flexbox & {
-                flex: 1 1 25%;
-            }
-        }
-
         .flexbox & {
             flex: 1 1 100%;
         }
 
         .no-flexbox & {
             width: 100%;
+        }
+
+        // Media queries should be last, for specificity purposes,
+        // but scss-linter wants them before nested elements,
+        // so we have to disable linter check for DeclarationOrder
+        // scss-lint:disable DeclarationOrder
+        @include bp(medium) {
+            max-width: none;
+            .no-flexbox & { float: left;  width: 20%; }
+            .flexbox & {
+                flex: 1 1 20%;
+            }
+        }
+
+        // Media queries should be last, for specificity purposes,
+        // but scss-linter wants them before nested elements,
+        // so we have to disable linter check for DeclarationOrder
+        // scss-lint:disable DeclarationOrder
+        @include bp(large) {
+            .no-flexbox & { width: 20%; }
+            .flexbox & {
+                flex: 1 1 20%;
+            }
         }
     }
 

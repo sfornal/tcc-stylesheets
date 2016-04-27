@@ -1,4 +1,7 @@
 module.exports =
+    options:
+        sourceMap: true
+        mediaMerging: false
     default:
         files: [{
             expand: true
