@@ -7,7 +7,23 @@
         width: 100%;
 
         .flexbox & {
-            align-items: stretch;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .no-flexbox & {
+            @include clearfix();
+        }
+    }
+
+    .callToAction-buttons-left {
+        width: 100%;
+
+        .flexbox & {
+            align-items: center;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -16,6 +32,30 @@
 
         .no-flexbox & {
             @include clearfix();
+        }
+
+        // Media queries should be last, for specificity purposes,
+        // but scss-linter wants them before nested elements,
+        // so we have to disable linter check for DeclarationOrder
+        // scss-lint:disable DeclarationOrder
+        @include bp(medium) {
+            width: 33%;
+
+            .no-flexbox & { float: left; }
+        }
+    }
+
+    .callToAction-buttons-right {
+        width: 100%;
+
+        // Media queries should be last, for specificity purposes,
+        // but scss-linter wants them before nested elements,
+        // so we have to disable linter check for DeclarationOrder
+        // scss-lint:disable DeclarationOrder
+        @include bp(medium) {
+            width: 66%;
+
+            .no-flexbox & { float: right; }
         }
     }
 
@@ -36,11 +76,7 @@
         // so we have to disable linter check for DeclarationOrder
         // scss-lint:disable DeclarationOrder
         @include bp(medium) {
-            max-width: none;
-            .no-flexbox & { float: left;  width: 20%; }
-            .flexbox & {
-                flex: 1 1 20%;
-            }
+            //
         }
 
         // Media queries should be last, for specificity purposes,
@@ -48,10 +84,7 @@
         // so we have to disable linter check for DeclarationOrder
         // scss-lint:disable DeclarationOrder
         @include bp(large) {
-            .no-flexbox & { width: 20%; }
-            .flexbox & {
-                flex: 1 1 20%;
-            }
+            //
         }
     }
 
