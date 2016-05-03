@@ -5,6 +5,15 @@
 
     .contentWrap { padding: 20px 0; }
 
+    .isHidden {
+        display: none;
+
+        .no-js &,
+        .no-overlay & {
+            display: block;
+        }
+    }
+
     &::before,
     &::after {
         @extend %diagonal-bg;
@@ -32,88 +41,89 @@
     }
 }
 
-.requestInfo-form {
-    margin: 2rem 0;
+.showFormWrap {
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 0 20px;
 
     .flexbox & {
-        align-content: flex-start;
+        align-items: center;
         display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
 
-        @include bp(medium) {
-            padding-left: 10px;
-            padding-right: 10px;
+        .showFormWrap-descriptionWrap {
+            flex: 0 0 100%;
+            width: 100%;
 
-            .fieldWrap {
-                flex: 1 1 50%;
+            @include bp(medium) {
+                flex: 1 1 auto;
+                max-width: 66%;
                 width: auto;
             }
-
         }
 
-        @include bp(large) {
-            .fieldWrap {
-                flex: 1 0 auto;
-                margin-bottom: 0;
-                max-width: 33%; //Keeps it on the grid with the buttons
-                &:last-of-type { flex: 0 0 auto; margin-left: auto; }
+        .showFormWrap-buttonWrap {
+            flex: 0 0 100%;
+            width: 100%;
+
+            @include bp(medium) {
+                flex: 1 1 auto;
+                max-width: 33%;
+                width: auto;
             }
         }
-
-        .button--submit { float: right; }
     }
 
     .no-flexbox & {
         @include clearfix();
 
-        .fieldWrap {
-            float: left;
+        .showFormWrap-descriptionWrap {
+            width: 100%;
 
-            @include bp(medium) { width: 50%; }
-            @include bp(large) { width: 33%; }
-
-            &:last-of-type {
-                float: right;
-                margin-left: auto;
-                width: auto;
+            @include bp(medium) {
+                float: left;
+                width: 50%;
             }
         }
 
+        .showFormWrap-buttonWrap {
+            width: 100%;
 
-
+            @include bp(medium) {
+                float: right;
+                width: 50%;
+            }
+        }
     }
+}
 
-    .fieldWrap {
-        margin-bottom: 10px;
-        padding: 10px;
-        position: relative;
-        width: 100%;
+.requestInfoFormWrap {
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 0 20px;
+
+    h2 {
+        @include font(1.2rem, 'bold');
     }
+}
+
+.formElementWrap {
+    @include clearfix();
+    margin: 0 auto 1rem;
+    width: 100%;
 
     label {
-        @include visuallyhidden();
-    }
-
-    input:not([type='submit']),
-    select {
-        @include font(1rem, thin);
-        // -webkit-appearance: none;
-        background-color: $pure-white;
-        border: 1px solid $medium-gray;
-        border-radius: 4px;
-        color: $text-black;
         display: block;
-        width: 100%;
-
     }
 
-    input:not([type='submit']) {
-        padding: 4px 16px;
+    input {
+        display: block;
     }
+}
 
-    select {
-        padding: 3px 12px;
-    }
+.formHelpText {
+    @include font(0.9rem, 'thin');
+    margin: 0 auto 1rem;
+    width: 100%;
 }
