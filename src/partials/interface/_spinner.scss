@@ -1,0 +1,35 @@
+// Styling for a CSS generated waiting spinner, for use in AJAX calls
+
+.ajaxSpinner {
+    margin: 2rem auto;
+    max-width: 15rem;
+    text-align: center;
+
+    > .circle {
+        animation: spinner 1.4s infinite ease-in-out both;
+        background-color: $tcc-green;
+        border-radius: 100%;
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+
+        &:nth-of-type(1) {
+            animation-delay: -0.32s;
+        }
+
+        &:nth-of-type(2) {
+            animation-delay: -0.16s;
+        }
+    }
+
+    // If there is no JS available, this should never be visible!
+    // scss-lint:disable ImportantRule
+    .no-script & {
+        display: none !important;
+    }
+}
+
+@keyframes spinner {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
+}

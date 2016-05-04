@@ -1,0 +1,230 @@
+//------------ General Styling ------------
+.table-snippet {
+    border-spacing: 3px;
+    padding: 3px;
+    width: 90%;
+
+    tbody tr:nth-child(odd) {
+        background-color: $tcc-table-color1;
+    }
+
+    tbody th {
+        background-color: $tcc-table-color2;
+        text-align: left;
+    }
+
+    td,
+    th {
+        border: 1px solid $pure-white;
+        text-align: left;
+        vertical-align: top;
+    }
+}
+
+//------------ Two Columns ------------
+// 20% | 80%
+.table-snippet-cols--20-80 tbody tr th:first-child {
+    width: 20%;
+}
+// 40% | 60%
+.table-snippet-cols--40-60 tbody tr th:first-child {
+    width: 40%;
+}
+// 50% | 50%
+.table-snippet-cols--50-50 tbody tr th:first-child {
+    width: 50%;
+}
+// 60% | 40%
+.table-snippet-cols--60-40 tbody tr th:first-child {
+    width: 60%;
+}
+// 70% | 30%
+.table-snippet-cols--70-30 tbody tr th:first-child {
+    width: 70%;
+}
+// 80% | 20%
+.table-snippet-cols--80-20 tbody tr th:first-child {
+    width: 80%;
+}
+// 85% | 15%
+.table-snippet-cols--85-15 tbody tr th:first-child {
+    width: 85%;
+}
+//------------ Three Columns ------------*/
+// 10% | 75% | 15%
+.table-snippet-cols--10-75-15 tbody tr th:nth-child(1) {
+    width: 10%;
+}
+
+.table-snippet-cols--10-75-15 tbody tr th:nth-child(2) {
+    width: 75%;
+}
+
+// 20% | 40% | 40%
+.table-snippet-cols--20-40-40 tbody tr th:nth-child(1) {
+    width: 20%;
+}
+
+.table-snippet-cols--20-40-40 tbody tr th:nth-child(2) {
+    width: 40%;
+}
+
+// 40% | 30% | 30%
+.table-snippet-cols--40-30-30 tbody tr th:nth-child(1) {
+    width: 40%;
+}
+
+.table-snippet-cols--40-30-30 tbody tr th:nth-child(2) {
+    width: 30%;
+}
+
+// 60% | 20% | 20%
+.table-snippet-cols--60-20-20 tbody tr th:nth-child(1) {
+    width: 60%;
+}
+
+.table-snippet-cols--60-20-20 tbody tr th:nth-child(2) {
+    width: 20%;
+}
+//------------ Four Columns ------------*/
+// 25% | 25% | 25% | 25%
+.table-snippet-cols--25-25-25-25 tbody tr th:nth-child(1) {
+    width: 25%;
+}
+
+.table-snippet-cols--25-25-25-25 tbody tr th:nth-child(2) {
+    width: 25%;
+}
+
+.table-snippet-cols--25-25-25-25 tbody tr th:nth-child(3) {
+    width: 25%;
+}
+
+// 30% | 20% | 20% | 30%
+.table-snippet-cols--30-20-20-30 tbody tr th:nth-child(1) {
+    width: 30%;
+}
+
+.table-snippet-cols--30-20-20-30 tbody tr th:nth-child(2) {
+    width: 20%;
+}
+
+.table-snippet-cols--30-20-20-30 tbody tr th:nth-child(3) {
+    width: 20%;
+}
+
+// 5% | 5% | 85% | 5%
+.table-snippet-cols--05-05-85-05 tbody tr th:nth-child(1) {
+    width: 5%;
+}
+
+.table-snippet-cols--05-05-85-05 tbody tr th:nth-child(2) {
+    width: 5%;
+}
+
+.table-snippet-cols--05-05-85-05 tbody tr th:nth-child(4) {
+    width: 5%;
+}
+// 55% | 15% | 15% | 15%
+.table-snippet-cols--55-15-15-15 tbody tr th:nth-child(1) {
+    width: 55%;
+}
+
+.table-snippet-cols--55-15-15-15 tbody tr th:nth-child(2) {
+    width: 15%;
+}
+
+.table-snippet-cols--55-15-15-15 tbody tr th:nth-child(3) {
+    width: 15%;
+}
+
+//------------ Five Columns ------------*/
+// 10% | 25% | 25% | 10% | 30%
+.table-snippet-cols--10-25-25-10-30 tbody tr th:nth-child(1) {
+    width: 10%;
+}
+
+.table-snippet-cols--10-25-25-10-30 tbody tr th:nth-child(2) {
+    width: 25%;
+}
+
+.table-snippet-cols--10-25-25-10-30 tbody tr th:nth-child(3) {
+    width: 25%;
+}
+
+.table-snippet-cols--10-25-25-10-30 tbody tr th:nth-child(4) {
+    width: 10%;
+}
+
+// 20% | 20% | 20% | 20% | 20%
+.table-snippet-cols--20-20-20-20-20 tbody tr th:nth-child(1) {
+    width: 20%;
+}
+
+.table-snippet-cols--20-20-20-20-20 tbody tr th:nth-child(2) {
+    width: 20%;
+}
+
+.table-snippet-cols--20-20-20-20-20 tbody tr th:nth-child(3) {
+    width: 20%;
+}
+
+.table-snippet-cols--20-20-20-20-20 tbody tr th:nth-child(4) {
+    width: 20%;
+}
+
+// 30% | 10% | 30% | 25% | 5%
+.table-snippet-cols--30-10-30-25-05 tbody tr th:nth-child(1) {
+    width: 30%;
+}
+
+.table-snippet-cols--30-10-30-25-05 tbody tr th:nth-child(2) {
+    width: 10%;
+}
+
+.table-snippet-cols--30-10-30-25-05 tbody tr th:nth-child(3) {
+    width: 30%;
+}
+
+.table-snippet-cols--30-10-30-25-05 tbody tr th:nth-child(4) {
+    width: 25%;
+}
+
+// 30% | 15% | 15% | 20% | 20%
+.table-snippet-cols--30-15-15-20-20 tbody tr th:nth-child(1) {
+    width: 30%;
+}
+
+.table-snippet-cols--30-15-15-20-20 tbody tr th:nth-child(2) {
+    width: 15%;
+}
+
+.table-snippet-cols--30-15-15-20-20 tbody tr th:nth-child(3) {
+    width: 15%;
+}
+
+.table-snippet-cols--30-15-15-20-20 tbody tr th:nth-child(4) {
+    width: 20%;
+}
+
+//------------ Six Columns ------------*/
+// 20% | 16% | 16% | 16% | 16% | 16%
+.table-snippet-cols--20-16-16-16-16-16 tbody tr th:nth-child(1) {
+    width: 20%;
+}
+
+.table-snippet-cols--20-16-16-16-16-16 tbody tr th:nth-child(2) {
+    width: 16%;
+}
+
+.table-snippet-cols--20-16-16-16-16-16 tbody tr th:nth-child(3) {
+    width: 16%;
+}
+
+.table-snippet-cols--20-16-16-16-16-16 tbody tr th:nth-child(4) {
+    width: 16%;
+}
+
+.table-snippet-cols--20-16-16-16-16-16 tbody tr th:nth-child(5) {
+    width: 16%;
+}
