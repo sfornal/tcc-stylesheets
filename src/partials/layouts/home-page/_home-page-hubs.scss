@@ -1,8 +1,12 @@
+// This is a value calculated based on the current
+// big button design as of 5-7-2016
+$big-button-ratio: 29.837%;
+
 .homePage {
 
     .prospectiveStudents-buttons {
-        // max-width: 400px;
         margin: 0 auto;
+        max-width: 400px;
         padding: 20px 10px 40px;
         position: relative;
         width: 100%;
@@ -22,7 +26,8 @@
         // so we have to disable linter check for DeclarationOrder
         // scss-lint:disable DeclarationOrder
         @include bp(medium) {
-            // max-width: 800px;
+            max-width: 100%;
+
             .flexbox & {
                 flex-direction: row;
             }
@@ -37,12 +42,32 @@
         .bigButton {
             border-radius: 8px;
             display: block;
+            height: 0;
+            overflow: hidden;
+            padding-top: $big-button-ratio;
+            position: relative;
+            width: 100%;
         }
 
-        img {
+        .bigButton-image,
+        .bigButton-button {
             display: block;
-            max-width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: auto;
         }
+
+        .bigButton-button {
+            right: 0;
+            z-index: z(high);
+        }
+
+        .bigButton-image {
+            left: 0;
+            z-index: z(over);
+        }
+
 
         // Media queries should be last, for specificity purposes,
         // but scss-linter wants them before nested elements,

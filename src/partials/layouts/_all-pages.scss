@@ -54,6 +54,14 @@
     position: relative;
     width: 100%;
 
+    // Don't display the background image, even if
+    // inline style attributes say to display it
+    // TODO: Abstract this to a variable
+    // scss-lint:disable ImportantRule
+    @include bp($custom: '(max-width:699px)') {
+        background-image: none !important;
+    }
+
     @include bp(medium) {
         .homePage & {
             height: 500px;
@@ -88,23 +96,23 @@
     }
 
     // This is a semi-transparent black overlay for the hero image on mobile only
-    &::before {
-        background-color: $shadow-light;
-        // border-bottom: 6px solid $pure-white;
-        bottom: 0;
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: z(CONTENT);
-
-        @include bp(medium) {
-            background-color: transparent;
-            display: none;
-            top: auto;
-        }
-    }
+    // &::before {
+    //     background-color: $shadow-light;
+    //     // border-bottom: 6px solid $pure-white;
+    //     bottom: 0;
+    //     content: '';
+    //     display: block;
+    //     position: absolute;
+    //     top: 0;
+    //     width: 100%;
+    //     z-index: z(CONTENT);
+    //
+    //     @include bp(medium) {
+    //         background-color: transparent;
+    //         display: none;
+    //         top: auto;
+    //     }
+    // }
 
     // The hero-image as an image element
     .hero-image {

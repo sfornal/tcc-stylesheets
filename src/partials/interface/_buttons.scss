@@ -28,6 +28,24 @@
     color: $pure-white;
 }
 
+.button--beige {
+    background-color: $tcc-beige;
+    background-image: linear-gradient(to bottom, $tcc-beige, darken($tcc-beige, 10%));
+    color: $pure-white;
+}
+
+.button--purple {
+    background-color: $tcc-purple;
+    background-image: linear-gradient(to bottom, $tcc-purple, darken($tcc-purple, 10%));
+    color: $pure-white;
+}
+
+.button--gray {
+    background-color: $dark-gray;
+    background-image: linear-gradient(to bottom, $dark-gray, darken($dark-gray, 10%));
+    color: $pure-white;
+}
+
 .button--solid {
     background-color: $tcc-link-color;
     background-image: linear-gradient(to bottom, $tcc-link-color, darken($tcc-link-color, 10%));
