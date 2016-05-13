@@ -1,14 +1,18 @@
-.feeds-news,
-.feeds-magazine,
-.feeds-district {
-    .main-identifier { @extend %main-identifier-styles; }
-
-    .feedList {
-        @extend %feed-list-styles;
-    }
+.feedList {
+    @extend %feed-list-styles;
 
     .feedItem {
         @extend %feed-list-item-styles;
+
+        // For the general announcements feed, go three across
+        // on large displays, instead of a column
+        .feeds-announcements & {
+            @include bp(medium) {
+                border-bottom: none;
+                float: left;
+                width: 33%;
+            }
+        }
     }
 
     .feedItemLink {
@@ -17,72 +21,55 @@
 
     .feedItemImage {
         display: block;
-        width: 100%;
+        margin: 0 auto;
+        max-width: 100%;
+        width: auto;
     }
 
     .feedItemTitle {
         @extend %feed-item-title-styles;
     }
 
-    .feedItemExcerpt {
+    .feedItemExcerpt,
+    .feedItemDescription {
         @extend %feed-item-excerpt-styles;
     }
 }
 
-.feeds-district {
-    @include clearfix();
 
-    .main-identifier {
-        @extend %main-identifier-styles;
+.announcements,
+.featuredVideo {
+    padding: 10px;
+    width: 100%;
 
-        @include bp(medium) {
-            @include font(2.4rem);
-        }
-
-        @include bp(large) {
-            @include font(2.8rem);
-        }
-
-        @include bp(x-large) {
-            @include font(3rem);
-        }
+    @include bp(medium) {
+        float: left;
+        padding: 20px;
+        width: 50%;
+        &:nth-of-type(2n+1) { clear: both; }
     }
 
-    .announcements,
-    .featuredVideo {
-        padding: 10px;
-        width: 100%;
-
-        @include bp(medium) {
-            float: left;
-            padding: 20px;
-            width: 50%;
-            &:nth-of-type(2n+1) { clear: both; }
-        }
-
-        .learnMoreWrap {
-            padding: 20px 0;
-        }
+    .learnMoreWrap {
+        padding: 20px 0;
     }
+}
 
-    .generalFeed {
+.generalFeed {
 
-        @include bp(medium) {
-            .feedItem {
-                @include clearfix();
-                border-bottom: 1px solid $light-gray;
-                margin-bottom: 1rem;
-                padding-bottom: 1rem;
-                padding-left: 175px;
+    @include bp(medium) {
+        .feedItem {
+            @include clearfix();
+            border-bottom: 1px solid $light-gray;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
 
-                &:last-of-type { border-bottom: none; }
-            }
-
-            .feedItemImage {
-                float: left;
-                margin-left: -175px;
-                max-width: 166px;
-            }
+            &:last-of-type { border-bottom: none; }
         }
+
+        // .feedItemImage {
+        //     float: left;
+        //     margin: 0 1rem 1rem 0;
+        //     max-width: 166px;
+        // }
     }
 }

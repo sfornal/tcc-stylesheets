@@ -3,6 +3,7 @@ module.exports =
         browsers: [
             'last 4 versions'
             'ie 10'
+            'ie 11'
         ]
         map: true
         cascade: true

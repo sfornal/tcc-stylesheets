@@ -30,6 +30,7 @@
         padding: 20px 10px 40px;
 
         @include bp(medium) {
+            @include clearfix();
             padding-left: 0;
             padding-right: 0;
         }
@@ -46,6 +47,8 @@
                 width: 100%;
             }
         }
+
+        .main-identifier { @extend %main-identifier-styles; }
     }
 
 }
