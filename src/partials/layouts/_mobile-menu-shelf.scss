@@ -200,3 +200,10 @@
         }
     }
 }
+
+// This style is added to the body element when the mobileShelf is open
+// to prevent scrolling of the body when the mobile shelf reaches
+// the top or bottom of the scrollable area inside of it
+.mobileShelfOpen {
+    overflow: hidden;
+}
