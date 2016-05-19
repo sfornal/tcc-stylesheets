@@ -8,8 +8,8 @@
     overflow-y: auto;
     padding: 5px 0 0;
     position: fixed;
-    transform: translateX(-150%);
-    width: 93vw;
+    transform: translateX(-100%);
+    width: 90vw;
     z-index: z(HIGH);
 
     @include bp(medium) {
@@ -206,4 +206,5 @@
 // the top or bottom of the scrollable area inside of it
 .mobileShelfOpen {
     overflow: hidden;
+    height: 100%;
 }
