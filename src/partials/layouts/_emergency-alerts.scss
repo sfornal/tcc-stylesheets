@@ -1,0 +1,51 @@
+.emergency-top,
+.emergency-full {
+    align-items: stretch;
+    background-color: $tcc-burgundy;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    width: 100%;
+}
+
+.emergency-top {
+    min-height: 25vh;
+}
+
+.emergency-full {
+    min-height: 90vh;
+}
+
+.emergency-wrapper {
+    align-items: center;
+    background-color: $pure-white;
+    display: flex;
+    flex: 1 1 auto;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.emergency-content {
+    background-color: $pure-white;
+    color: $pure-black;
+    max-width: 30rem;
+    padding: 20px;
+    text-align: center;
+}
+
+.emergencyHeading {
+    @include font(3rem, 'black');
+    color: $tcc-blue-darker;
+    line-height: 1.1;
+    margin: 0 auto 1rem;
+    text-transform: uppercase;
+}
+
+.emergencySubheading {
+    @include font(2rem, 'bold');
+    color: $tcc-burgundy;
+    line-height: 1.1;
+    margin: 0 auto 1rem;
+}
