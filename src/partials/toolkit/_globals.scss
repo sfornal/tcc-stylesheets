@@ -46,3 +46,38 @@ a:focus {
     box-shadow: 0 0 4px 3px transparentize($tcc-blue-lighter, 0.3);
     outline: 0;
 }
+
+// Slight tweaks to inputs for consistency
+input:not([type="submit"]) {
+    padding: 3px;
+}
+
+// Styling for Placeholder text
+
+// Special hacks for input element placeholder text
+// scss-lint:disable PseudoElement
+// scss-lint:disable VendorPrefix
+::-webkit-input-placeholder {
+    @include font($weight: 'thin', $style: italic);
+}
+
+// Special hacks for input element placeholder text
+// scss-lint:disable PseudoElement
+// scss-lint:disable VendorPrefix
+:-moz-placeholder { //Firefox 18-
+    @include font($weight: 'thin', $style: italic);
+}
+
+// Special hacks for input element placeholder text
+// scss-lint:disable PseudoElement
+// scss-lint:disable VendorPrefix
+::-moz-placeholder {  //Firefox 19+
+    @include font($weight: 'thin', $style: italic);
+}
+
+// Special hacks for input element placeholder text
+// scss-lint:disable PseudoElement
+// scss-lint:disable VendorPrefix
+:-ms-input-placeholder {
+    @include font($weight: 'thin', $style: italic);
+}

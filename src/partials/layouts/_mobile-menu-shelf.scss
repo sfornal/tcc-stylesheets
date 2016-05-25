@@ -1,6 +1,5 @@
 .mobileShelf {
     background: $dark-gray url('/_resources/images/textures/dark-texture-1.png');
-    box-shadow: 6px 0 12px -3px transparentize($pure-black, 0.8);
     display: block;
     height: 100vh;
     margin: 0;
@@ -9,8 +8,8 @@
     padding: 5px 0 0;
     position: fixed;
     transform: translateX(-100%);
-    width: 90vw;
-    z-index: z(HIGH);
+    width: 100%;
+    z-index: z(HIGHEST);
 
     @include bp(medium) {
         display: none; //!important; //Do we need this important?
@@ -146,25 +145,25 @@
 //Ignore repeated values
 // scss-lint:disable DuplicateProperty PropertySortOrder
 .mobileMenuButton {
-    @include font($size: 14px, $weight: 'black');
+    @include font($size: 20px, $weight: 'bold');
     -webkit-appearance: none;
     background: $tcc-burgundy;
     background: radial-gradient($tcc-burgundy, darken($tcc-burgundy, 10%));
     border: 3px solid $pure-white;
-    border-radius: 30px; // Fall back value for old Android :(
+    border-radius: 35px; // Fall back value for old Android :(
     border-radius: 50%;
     bottom: 24px;
     box-shadow: 0 2px 6px -2px $shadow-dark;
     color: $pure-white;
     display: none; //Default to hidden
-    height: 60px;
+    height: 70px;
     margin: 0;
     padding: 0;
     position: fixed;
-    right: calc(50% - 30px);
+    right: calc(50% - 35px);
     text-align: center;
     vertical-align: middle;
-    width: 60px;
+    width: 70px;
     z-index: z(MODAL);
 
     @include bp(medium) {
@@ -199,12 +198,4 @@
             background: radial-gradient(lighten($tcc-blue, 20%), $tcc-blue);
         }
     }
-}
-
-// This style is added to the body element when the mobileShelf is open
-// to prevent scrolling of the body when the mobile shelf reaches
-// the top or bottom of the scrollable area inside of it
-.mobileShelfOpen {
-    overflow: hidden;
-    height: 100%;
 }

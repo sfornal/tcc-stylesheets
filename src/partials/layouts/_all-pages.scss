@@ -7,7 +7,7 @@
     // Maximum column size for very large displays
     margin: 0 auto;
     max-width: $max-container-width;
-    padding: 60px 0 0;
+    padding: 40px 0 0;
     position: relative;
     width: 100%;
 }
@@ -47,8 +47,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-bottom: 6px solid $pure-white;
-    height: 100px;
+    height: 76px;
     margin: 0;
     padding: 0;
     position: relative;
@@ -68,11 +67,11 @@
         }
 
         .hubPage & {
-            height: 350px;
+            height: 400px;
         }
 
         .detailsPage & {
-            height: 200px;
+            height: 300px;
         }
 
         // Remove the second selector after testing
@@ -86,75 +85,20 @@
     &::after {
         @extend %diagonal-bg;
         border-top: 6px solid $tcc-burgundy;
-        bottom: -27px;
+        bottom: -18px;
         box-shadow: 0 6px 8px -6px $shadow-dark;
         content: '';
         display: block;
-        height: 21px;
+        height: 15px;
         position: absolute;
         width: 100%;
     }
 
-    // This is a semi-transparent black overlay for the hero image on mobile only
-    // &::before {
-    //     background-color: $shadow-light;
-    //     // border-bottom: 6px solid $pure-white;
-    //     bottom: 0;
-    //     content: '';
-    //     display: block;
-    //     position: absolute;
-    //     top: 0;
-    //     width: 100%;
-    //     z-index: z(CONTENT);
-    //
-    //     @include bp(medium) {
-    //         background-color: transparent;
-    //         display: none;
-    //         top: auto;
-    //     }
-    // }
-
-    // The hero-image as an image element
     .hero-image {
-        // border-bottom: 6px solid $pure-white;
-        // display: block;
-        // left: 50%;
-        // position: absolute;
-        // top: 50%;
-        // transform: translate(-50%, -50%);
-        // width: 100%;
-        // z-index: z(LOW);
-
-        // This entire rule will be removed in the final edit
         display: none;
     }
 }
 
 .hero-sectionLabel {
-    @include font(1.5rem, 'bold');
-    background: linear-gradient(to bottom, $tcc-teal-lighter, $tcc-teal, $tcc-teal-darker);
-    border: 6px solid $pure-white;
-    border-radius: 4px;
-    bottom: 0;
-    box-shadow: 0 6px 8px -6px $shadow-dark;
-    color: $pure-white;
-    display: none; // Doesn't appear on mobile pages
-    left: 20px;
-    line-height: 1;
-    padding: 10px 20px;
-    position: absolute;
-    text-shadow: 0 2px 2px $shadow-light;
-    transform: translate(0, 66%);
-    z-index: z(HIGH);
-
-    @include bp(medium) {
-        @include font(2rem);
-        display: block;
-        left: 240px;
-    }
-
-    @include bp(x-large) {
-        @include font(2.5rem);
-        left: calc((100% - 1280px) / 2);
-    }
+    display: none;
 }

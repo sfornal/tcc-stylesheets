@@ -5,7 +5,11 @@
     // background-image: url(/_resources/images/textures/dark-texture-1.png);
 
     @include bp(medium) {
-        padding-top: 100px; //Little more room when the quick links move up
+        padding-top: 94px; //Little more room when the quick links move up
+    }
+
+    @include bp(large) {
+        padding-top: 108px; //Little more room when the quick links move up
     }
 }
 
@@ -70,22 +74,22 @@
         background-color: $nav-background;
         box-shadow: 0 4px 4px -2px transparentize($pure-black, 0.6);
         float: none;
-        height: 42px;
+        height: 45px;
         left: 0;
         margin: 0;
         padding: 0;
         position: absolute;
-        top: 103px;
+        top: 97px;
         width: 100%;
-        z-index: z(HIGHEST);
+        z-index: z(HIGH);
 
-        // @include bp(large) {
-        //     height: 65px;
-        // }
+        @include bp(large) {
+            top: 111px;
+        }
 
         ul {
             display: table;
-            height: 42px;
+            height: 45px;
             margin: 0 auto;
             max-width: 1280px;
             padding: 6px 0;
@@ -100,7 +104,7 @@
             @include font(1rem, bold);
             // text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
             //text-transform: uppercase;
-            border-right: 1px solid lighten($medium-gray, 20%);
+            border-right: 1px solid $pure-white;
             display: table-cell;
             margin: 0;
             padding: 0;
@@ -129,6 +133,12 @@
                 @include bp(large) {
                     padding: 0;
                 }
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $tcc-green-lighter;
+                }
             }
         }
     }
@@ -142,14 +152,14 @@
         // left: 0;
         float: none;
         height: 65px;
-        max-width: 370px;
+        max-width: 385px;
         padding-right: 20px;
         padding-top: 10px;
         position: absolute;
         right: 0;
         text-align: right;
         top: 0;
-        width: 50%;
+        width: 60%;
 
         ul {
             height: 60px;
@@ -188,10 +198,10 @@
     z-index: z(OVER);
 
     @include bp(medium) {
-        max-width: 326px;
+        max-width: 375px;
         padding-top: 16px;
         top: 30px;
-        width: 50%;
+        width: 60%;
     }
 
     @include bp(x-large) {
@@ -223,27 +233,34 @@
         margin: 0;
         text-align: center;
         width: 80px;
+
+        &:hover {
+            background-color: $tcc-blue-lighter;
+        }
     }
 }
 
 .banner {
+    bottom: -38px;
+    left: 50%;
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 84px;
-    width: 100%;
+    transform: translate(-50%, 50%);
+    width: 94%;
     z-index: z(OVER);
 
     @include bp(medium) {
         left: 20px;
-        max-width: 380px;
-        top: 21px;
-        width: 50%;
+        max-width: 385px;
+        top: 23px;
+        transform: none;
+        width: 40%;
     }
 
     @include bp(large) {
-        max-width: 512px;
-        top: 12px;
+        max-width: 486px;
+        top: 19px;
     }
 
     @include bp(x-large) {
@@ -258,7 +275,7 @@
     img {
         display: block;
         margin: 0 auto;
-        max-width: 450px;
+        max-width: 400px;
         padding: 0 10px;
         width: 100%;
 
@@ -268,34 +285,4 @@
             padding: 0;
         }
     }
-}
-
-// Styling for Placeholder text
-
-// Special hacks for inout element placeholder text
-// scss-lint:disable PseudoElement
-// scss-lint:disable VendorPrefix
-::-webkit-input-placeholder {
-    @include font($style: italic);
-}
-
-// Special hacks for inout element placeholder text
-// scss-lint:disable PseudoElement
-// scss-lint:disable VendorPrefix
-:-moz-placeholder { //Firefox 18-
-    @include font($style: italic);
-}
-
-// Special hacks for inout element placeholder text
-// scss-lint:disable PseudoElement
-// scss-lint:disable VendorPrefix
-::-moz-placeholder {  //Firefox 19+
-    @include font($style: italic);
-}
-
-// Special hacks for inout element placeholder text
-// scss-lint:disable PseudoElement
-// scss-lint:disable VendorPrefix
-:-ms-input-placeholder {
-    @include font($style: italic);
 }

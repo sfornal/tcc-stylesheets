@@ -9,6 +9,15 @@
 // @import 'home-page/request-info';
 
 .homePage {
+
+    .homePage-main {
+        // Only for desktop sizes, push the beginning of the content
+        // down a little from the hero header
+        @include bp(medium) {
+            padding-top: 20px;
+        }
+    }
+
     .main-callToAction {
         margin-bottom: 60px;
         position: relative;
@@ -27,8 +36,6 @@
     }
 
     [class|='feeds'] {
-        padding: 20px 10px 40px;
-
         @include bp(medium) {
             @include clearfix();
             padding-left: 0;

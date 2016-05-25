@@ -3,7 +3,20 @@
     margin: 31px 0 61px;
     position: relative;
 
-    .contentWrap { padding: 20px 0; }
+    .requestInfo-innerWrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contentWrap {
+        min-height: 340px;
+        padding: 20px 0;
+
+        @include bp(medium) {
+            min-height: 230px;
+        }
+    }
 
     .isHidden {
         display: none;
@@ -36,6 +49,7 @@
 
     .main-identifier {
         @include font(1.5rem);
+        margin-bottom: 1rem;
 
         @include bp(medium) { @include font(1.8rem); }
     }
@@ -43,69 +57,38 @@
     // Nesting here to get a higher specificity due to
     // a conflicting 1 class rule
     .requestInfoSubmit {
-        margin-bottom: 1rem;
+        display: block;
+        margin: 1rem auto;
 
         @include bp(medium) {
-            clear: both;
-            display: block;
+            display: inline-block;
+            margin: 0 0.5rem;
         }
     }
 }
 
 .showFormWrap {
+    @include clearfix();
+
     margin: 0 auto;
     max-width: 700px;
     padding: 0 20px;
 
-    .flexbox & {
-        align-items: center;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        .showFormWrap-descriptionWrap {
-            flex: 0 0 100%;
-            width: 100%;
-
-            @include bp(medium) {
-                flex: 1 1 auto;
-                max-width: 66%;
-                width: auto;
-            }
-        }
-
-        .showFormWrap-buttonWrap {
-            flex: 0 0 100%;
-            width: 100%;
-
-            @include bp(medium) {
-                flex: 1 1 auto;
-                max-width: 33%;
-                width: auto;
-            }
-        }
+    .showFormWrap-descriptionWrap {
+        text-align: center;
+        width: 100%;
     }
 
-    .no-flexbox & {
-        @include clearfix();
+    .showFormWrap-buttonWrap {
+        width: 100%;
+    }
 
-        .showFormWrap-descriptionWrap {
-            width: 100%;
-
-            @include bp(medium) {
-                float: left;
-                width: 50%;
-            }
-        }
-
-        .showFormWrap-buttonWrap {
-            width: 100%;
-
-            @include bp(medium) {
-                float: right;
-                width: 50%;
-            }
-        }
+    .showForm {
+        @include font(1.3rem);
+        display: block;
+        height: 50px;
+        margin: 0 auto;
+        width: 160px;
     }
 }
 
@@ -113,6 +96,7 @@
     margin: 0 auto;
     max-width: 700px;
     padding: 0 20px;
+    text-align: center;
 
     h2 {
         @include font(1.2rem, 'bold');
@@ -121,17 +105,14 @@
 
 .formElementWrap {
     @include clearfix();
-    margin: 0 auto 1rem;
-    width: 100%;
-
-    @include bp(medium) {
-        float: left;
-        margin-right: 1rem;
-        width: auto;
-    }
+    display: inline-block;
+    margin: 0.5rem;
+    width: auto;
 
     label {
         display: block;
+        margin-bottom: 0.25rem;
+        text-align: left;
     }
 
     input {
@@ -139,13 +120,14 @@
     }
 
     &.formElementWrap--invalid input {
-        outline: 3px solid $tcc-orange;
+        outline: 3px solid $tcc-burgundy;
     }
 }
 
 .formHelpText {
     @include font(0.9rem, 'thin');
     margin: 0 auto 1rem;
+    text-align: center;
     width: 100%;
 }
 
@@ -153,5 +135,6 @@
     margin: 0 auto;
     max-width: 700px;
     padding: 0 20px;
+    text-align: center;
     width: 100%;
 }
