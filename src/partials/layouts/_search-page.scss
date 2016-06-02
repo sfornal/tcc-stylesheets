@@ -1,0 +1,91 @@
+.searchPageFormWrap {
+
+    border-bottom: 2px solid $light-gray;
+    padding-bottom: 1.5rem;
+
+    .text {
+        margin-right: 10px;
+    }
+
+    label {
+        margin-right: 10px;
+    }
+}
+
+.searchResultsList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        border-bottom: 1px solid $light-gray;
+        margin: 0.75rem 0;
+        padding: 0.75rem 20px;
+        width: 100%;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    .searchResult-keywordResult {
+        padding: 0.75rem 0 1.5rem;
+
+        > div {
+            border: 1px solid $tcc-green;
+            border-radius: 5px;
+            padding: 0.75rem 20px;
+        }
+    }
+}
+
+.searchResult-link {
+    line-height: 1.1;
+    margin: 0 0 0.5rem;
+    padding: 0;
+}
+
+.searchResult-type {
+    @include font(0.8em, 'book');
+    text-transform: uppercase;
+
+    em { @include font($style: normal); }
+}
+
+.searchResult-url {
+    @include font(0.8rem, 'thin');
+    margin: 0 0 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.searchResult-summary {
+    margin: 0;
+}
+
+.searchResults-pagination {
+    margin: 2rem 0;
+    padding: 0;
+
+    ul {
+        display: table;
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    li {
+        display: table-cell;
+        height: 3rem;
+        text-align: center;
+        vertical-align: middle;
+        width: 3rem;
+
+        &.currentPage {
+            background-color: $light-gray;
+            border: 5px solid $pure-white;
+            border-radius: 100%;
+        }
+    }
+}

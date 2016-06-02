@@ -1,0 +1,74 @@
+// These styles are for elements that appear only in the OU Campus editing area
+.tile-transform {
+    border: 2px solid $tcc-blue;
+    border-collapse: collapse;
+    margin: 3rem auto;
+    width: 90%;
+
+    tr {
+        width: 100%;
+    }
+
+    td {
+        border: 1px solid $light-gray;
+        padding: 8px 12px;
+
+        &:nth-of-type(1) {
+            @include font($weight: 700);
+            background-color: $tcc-blue;
+            color: $pure-white;
+            width: 33%;
+        }
+
+        &:nth-of-type(2) {
+            @include font($weight: 400);
+            background-color: $pure-white;
+            color: $text-black;
+            width: 67%;
+        }
+    }
+}
+
+.tile-transform-alternate {
+    border: 2px solid $tcc-blue;
+    border-collapse: collapse;
+    margin: 3rem auto;
+    width: 90%;
+
+    thead {
+        background-color: $tcc-blue;
+        color: $pure-white;
+
+        th,
+        tr {
+            border: none;
+        }
+    }
+
+    tr {
+        width: 100%;
+    }
+
+    tbody {
+        tr {
+            &:nth-of-type(even) {
+                @include font($weight: 400);
+                background-color: $light-gray;
+                color: $pure-black;
+                width: 33%;
+            }
+
+            &:nth-of-type(odd) {
+                @include font($weight: 400);
+                background-color: $pure-white;
+                color: $text-black;
+                width: 67%;
+            }
+        }
+
+        td {
+            border: 1px solid $light-gray;
+            padding: 8px 12px;
+        }
+    }
+}

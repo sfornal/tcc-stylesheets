@@ -70,14 +70,15 @@
             height: 400px;
         }
 
-        .detailsPage & {
+        .detailsPage &,
+        .searchPage & {
             height: 300px;
         }
 
         // Remove the second selector after testing
         &.hero--collapse,
         &.collapse {
-            height: 48px; // Based on nav menu height + border height (42 + 6)
+            height: 48px; // Based on nav menu height + border height (45 + 3)
         }
     }
 
@@ -101,4 +102,18 @@
 
 .hero-sectionLabel {
     display: none;
+}
+
+.pageWrap {
+
+    .mobileShelfOpen & {
+        height: 100vh;
+        overflow: hidden;
+
+        .no-js &,
+        .no-overlay & {
+            height: auto;
+            overflow: auto;
+        }
+    }
 }

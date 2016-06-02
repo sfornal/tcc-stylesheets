@@ -1,7 +1,7 @@
 .sectionNav {
-
     // display: none; //Hidden by default on mobile... // Not anymore!
     border-top: 6px solid $light-gray;
+    padding-left: 20px;
     padding-top: 1rem;
 
     @include bp(medium) {
@@ -19,9 +19,10 @@
     }
 
     a {
-        color: inherit;
         display: block;
+        overflow: hidden;
         text-decoration: none;
+        text-overflow: ellipsis;
         width: 100%;
 
         &:hover,
@@ -37,22 +38,20 @@
         padding: 0;
 
         ul {
-            margin-left: 1rem;
+            margin: 0 0 0 2rem;
         }
 
         li {
 
             //Separators
             border-bottom: 1px solid $light-gray;
-            color: $medium-gray;
             line-height: 1.2;
-            margin-bottom: 0.25rem;
             padding: 0;
 
             &:last-child { border-bottom: none; }
 
             a {
-                padding: 8px 20px 8px 30px;
+                padding: 10px 6px;
             }
 
             &.currentPage {
@@ -60,14 +59,12 @@
                 > a {
                     @include font($weight: 700);
                     background-color: $light-gray;
-                    border-left: 6px solid $tcc-green;
+                    border-right: 6px solid $tcc-green;
                     color: $pure-black;
-                    padding-left: 24px; //Because of border offset
                 }
 
                 li {
                     @include font($weight: 300, $style:italic);
-                    color: $dark-gray;
                 }
             }
         }
@@ -76,8 +73,6 @@
 
 .sectionNav-sectionTop {
     @include font(1.3rem, 'black');
-    color: $dark-gray;
-    padding: 0 20px;
     text-transform: uppercase;
 
     &:nth-of-type(n + 2) {

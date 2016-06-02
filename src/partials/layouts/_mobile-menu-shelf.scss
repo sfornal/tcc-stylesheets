@@ -5,7 +5,7 @@
     margin: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    padding: 5px 0 0;
+    padding: 15px 0 0;
     position: fixed;
     transform: translateX(-100%);
     width: 100%;
@@ -15,14 +15,9 @@
         display: none; //!important; //Do we need this important?
     }
 
-    .siteSearch {
-        // Note, this element is inheriting from the .siteSearch rules in the
-        // layouts/_common-header.scss file as well as the declarations here
-        background: $dark-gray url('/_resources/images/textures/dark-texture-1.png');
-        border-bottom: 3px solid $pure-white;
-        box-shadow: 0 6px 3px -3px transparentize($pure-black, 0.8);
-        position: fixed;
-        z-index: z(HIGHEST);
+    .no-js &,
+    .no-overlay & {
+        display: none;
     }
 
     .mobileShelf-mainNavWrap {
@@ -42,103 +37,16 @@
         }
     }
 
+    .sectionNav {
+        border-top-color: $tcc-burgundy;
+    }
+
     .mobileShelf-sectionNavWrap {
         @include clearfix();
-        @include font(1rem);
-        background-color: $tcc-blue-darker;
-        color: $pure-white;
+        background-color: $pure-white;
+        border-top: 6px solid $pure-white;
         padding-bottom: 120px;
         width: 100%;
-
-        a {
-            color: inherit;
-            text-decoration: none;
-
-            &:hover,
-            &:focus,
-            &:active {
-                outline: none;
-                text-decoration: underline;
-            }
-        }
-
-        .sectionNav-sectionTop {
-            @include font(1.2rem, 'black');
-            background-color: $tcc-blue-darker;
-            border-bottom: 1px solid $pure-white;
-            border-top: 3px solid $pure-white;
-            color: $pure-white;
-            padding: 10px 20px;
-            text-transform: uppercase;
-
-            &:nth-of-type(n+2) { //To override undesired cacscade effect from common layout
-                margin-top: 0;
-            }
-        }
-    }
-}
-
-.mobileNav {
-    display: block;
-
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-
-        li {
-            background-color: $nav-top-level;
-            color: $nav-top-level-text;
-            margin: 0;
-            padding: 0;
-
-            a {
-                display: block;
-                padding: 10px 10px 10px 20px;
-            }
-        }
-
-        // For readability
-        // scss-lint:disable MergeableSelector SelectorDepth
-        li li {
-            margin: 0 15px;
-            padding-bottom: 0;
-
-            a {
-                padding-left: 40px;
-            }
-        }
-
-        li li li {
-            margin: 0;
-
-            a {
-                padding-left: 60px;
-            }
-        }
-
-        li li li li {
-            margin: 0;
-
-            a {
-                padding-left: 80px;
-            }
-        }
-
-        .currentPage {
-            @include font($weight: 'bold');
-
-            > a {
-                background-color: $light-gray;
-                border-left: 6px solid $tcc-green;
-                padding-left: 14px;
-                position: relative;
-            }
-
-            li {
-                @include font($style: italic, $weight: 'book');
-            }
-        }
     }
 }
 
@@ -147,15 +55,15 @@
 .mobileMenuButton {
     @include font($size: 20px, $weight: 'bold');
     -webkit-appearance: none;
-    background: $tcc-burgundy;
-    background: radial-gradient($tcc-burgundy, darken($tcc-burgundy, 10%));
+    background: $tcc-green;
+    // background: radial-gradient($tcc-green, darken($tcc-green, 10%));
     border: 3px solid $pure-white;
     border-radius: 35px; // Fall back value for old Android :(
     border-radius: 50%;
     bottom: 24px;
     box-shadow: 0 2px 6px -2px $shadow-dark;
     color: $pure-white;
-    display: none; //Default to hidden
+    display: block;
     height: 70px;
     margin: 0;
     padding: 0;
@@ -171,31 +79,36 @@
     }
 
     &.closed {
-        background: $tcc-blue;
-        background: radial-gradient($tcc-blue, darken($tcc-blue, 10%));
+        background: $tcc-green;
+        // background: radial-gradient($tcc-green, darken($tcc-green, 10%));
     }
 
     &:hover,
     &:focus {
-        background: lighten($tcc-burgundy, 10%);
-        background: radial-gradient(lighten($tcc-burgundy, 10%), $tcc-burgundy);
+        background: $tcc-burgundy;
+        // background: radial-gradient(lighten($tcc-burgundy, 10%), $tcc-burgundy);
         outline: 0;
 
         &.closed {
-            background: lighten($tcc-blue, 10%);
-            background: radial-gradient(lighten($tcc-blue, 10%), $tcc-blue);
+            background: $tcc-green;
+            // background: radial-gradient(lighten($tcc-blue, 10%), $tcc-blue);
         }
     }
 
     &:active {
-        background: lighten($tcc-burgundy, 20%);
-        background: radial-gradient(lighten($tcc-burgundy, 20%), $tcc-burgundy);
+        background: $tcc-burgundy;
+        // background: radial-gradient(lighten($tcc-burgundy, 20%), $tcc-burgundy);
         bottom: 22px;
         box-shadow: none;
 
         &.closed {
-            background: lighten($tcc-blue, 20%);
-            background: radial-gradient(lighten($tcc-blue, 20%), $tcc-blue);
+            background: $tcc-green;
+            // background: radial-gradient(lighten($tcc-blue, 20%), $tcc-blue);
         }
+    }
+
+    .no-js &,
+    .no-overlay & {
+        display: none;
     }
 }

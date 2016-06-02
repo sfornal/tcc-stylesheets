@@ -13,4 +13,10 @@
 @import 'layouts/section-front';
 @import 'layouts/hub-pages';
 @import 'layouts/breadcrumbs';
+
+// One-off pages styles
 @import 'layouts/emergency-alerts';
+@import 'layouts/search-page';
+
+// Styles for the editor in OU
+@import 'layouts/ou-styles';

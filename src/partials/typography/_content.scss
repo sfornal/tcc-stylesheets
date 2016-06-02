@@ -57,14 +57,42 @@
         text-transform: uppercase;
     }
 
-    .image--pullLeft {
-        float: right;
-        margin: 0 1rem 1rem 0;
+    .image--pullLeft,
+    .image--pullRight {
+        display: block;
+        margin: 1rem auto;
+        max-width: 100%;
+
+        @include bp(medium) {
+            max-width: 33%;
+        }
+
+        @include bp(large) {
+            max-width: 40%;
+        }
+
+        @include bp(x-large) {
+            max-width: 50%;
+        }
+
     }
 
     .image--pullRight {
-        float: right;
-        margin: 0 0 1rem 1rem;
+        @include bp(medium) {
+            float: right;
+            margin: 0 0 1rem 1rem;
+        }
+    }
+
+    .image--pullLeft {
+        @include bp(medium) {
+            float: left;
+            margin: 0 1rem 1rem 0;
+        }
+    }
+
+    img {
+        max-width: 100%;
     }
 }
 
@@ -103,6 +131,10 @@
         //     margin-left: 0;
         //     margin-right: 0;
         // }
+
+        img {
+            max-width: 100%;
+        }
     }
 
     // // Float the sidebar to the right at the largest breakpoint
@@ -146,81 +178,6 @@
     > ol {
         list-style-type: none;
         padding: 0;
-    }
-}
-
-// These styles are for elements that appear only in the OU Campus editing area
-.tile-transform {
-    border: 2px solid $tcc-blue;
-    border-collapse: collapse;
-    margin: 3rem auto;
-    width: 90%;
-
-    tr {
-        width: 100%;
-    }
-
-    td {
-        border: 1px solid $light-gray;
-        padding: 8px 12px;
-
-        &:nth-of-type(1) {
-            @include font($weight: 700);
-            background-color: $tcc-blue;
-            color: $pure-white;
-            width: 33%;
-        }
-
-        &:nth-of-type(2) {
-            @include font($weight: 400);
-            background-color: $pure-white;
-            color: $text-black;
-            width: 67%;
-        }
-    }
-}
-
-.tile-transform-alternate {
-    border: 2px solid $tcc-blue;
-    border-collapse: collapse;
-    margin: 3rem auto;
-    width: 90%;
-
-    thead {
-        background-color: $tcc-blue;
-        color: $pure-white;
-
-        th,
-        tr {
-            border: none;
-        }
-    }
-
-    tr {
-        width: 100%;
-    }
-
-    tbody {
-        tr {
-            &:nth-of-type(even) {
-                @include font($weight: 400);
-                background-color: $light-gray;
-                color: $pure-black;
-                width: 33%;
-            }
-
-            &:nth-of-type(odd) {
-                @include font($weight: 400);
-                background-color: $pure-white;
-                color: $text-black;
-                width: 67%;
-            }
-        }
-
-        td {
-            border: 1px solid $light-gray;
-            padding: 8px 12px;
-        }
     }
 }
 

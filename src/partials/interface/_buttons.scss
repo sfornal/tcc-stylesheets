@@ -70,17 +70,19 @@
     float: right;
 
     .flexbox .tile-wrap & {
+        align-self: flex-end;
+        flex: 0 0 auto;
         float: none;
         margin-left: auto;
         margin-top: auto;
+        width: auto;
     }
 }
 
 // The Print Button appears at the top of all content pages
 // Until template is refactored, ignore name and id selector rules
 // scss-lint:disable SelectorFormat IdSelector
-.printButton,
-#printButton {
+.printButton {
     display: none;
     float: right;
     margin: 0;
@@ -95,6 +97,13 @@
     a {
         @include button-base();
         @include font(0.8rem);
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $tcc-link-color;
+            color: $tcc-link-color-contrast;
+        }
     }
 }
 
@@ -103,7 +112,7 @@
 .rsButtonWrap {
     display: none;
 
-    @include bp(large) {
+    @include bp(medium) {
         display: block;
     }
 }
