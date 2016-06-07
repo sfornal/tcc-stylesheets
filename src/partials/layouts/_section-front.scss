@@ -50,35 +50,28 @@
 .main-tiles .main-sectionFront {
     color: $pure-white;
     line-height: 1.1;
-    margin: 0 0 40px;
+    margin: 0 0 10px;
     max-width: 100%;
     padding: 15px 20px;
-    padding-left: 10px;
     position: relative;
     text-shadow: 1px 1px 2px $shadow-light;
     width: 100%;
 
     @include bp(medium) {
-        @include font(3rem);
-        padding: 15px 40px;
+        @include font(2.7rem);
+        padding: 10px 20px;
     }
 
     @include bp(large) {
-        @include font(4.5rem);
+        @include font(3.1rem);
+        margin-bottom: 20px;
     }
 
     @include bp(x-large) {
-        font-size: 5rem;
+        font-size: 3.5rem;
     }
+}
 
-    &::after {
-        @extend %diagonal-bg;
-        bottom: -15px;
-        content: '';
-        display: block;
-        height: 15px;
-        left: 0;
-        position: absolute;
-        width: 100%;
-    }
+.main-content .main-sectionFront {
+    padding-left: 40px;
 }

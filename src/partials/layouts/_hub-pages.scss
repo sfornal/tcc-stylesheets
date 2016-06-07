@@ -1,3 +1,5 @@
+$tile-gray: #b9b9b9;
+
 .main-tiles {
 
     .flexbox & {
@@ -11,10 +13,11 @@
 }
 
 .tile {
-    padding: 20px;
+    padding: 10px 20px;
     width: 100%;
 
     @include bp(medium) {
+        padding: 20px;
         width: 50%;
 
         .no-flexbox & {
@@ -45,10 +48,10 @@
 }
 
 .tile-wrap {
-    border: 1px solid $light-gray;
+    border: 1px solid $tile-gray;
     border-left: 12px solid $tcc-green;
     border-radius: 5px;
-    box-shadow: 3px 4px 4px -4px $shadow-dark;
+    box-shadow: 3px 4px 10px -3px $shadow-light;
     padding: 20px 15px;
     width: 100%;
 

@@ -4,26 +4,12 @@
 // It helps ensure a little higher specificity, so that content is consistently
 // styled, but also limits that styling to the main content area (less accidental
 // breakage of layout styles)
-.main-content {
+.main-content,
+.main-sideBar {
 
     // All main content gets a tiny bit bigger at the desktop sizes
     @include bp(large) {
         font-size: 1.1rem;
-    }
-
-    @include bp(x-large) {
-        font-size: 1.15rem;
-    }
-
-    // // In super-wide desktop mode, all of the .main-content is floated left, and
-    // // the sidebar is floated right
-    // @include bp(x-large) {
-    //     float: left;
-    // }
-    // General selector for consistent vertical spacing. Any element preceded by
-    // another element
-    * + * {
-        margin-top: 1.5rem;
     }
 
     // All elements inside .main-content share these styles
@@ -52,9 +38,52 @@
 
         color: $tcc-blue-darker;
         line-height: 1;
-        margin-bottom: 0;
+        margin-bottom: 0.25em;
         margin-top: 0;
         text-transform: uppercase;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 0;
+        margin-top: 1.25em;
+
+        + ol,
+        + ul,
+        + p {
+            margin-top: 0.25em;
+        }
+    }
+
+    p,
+    ol,
+    ul,
+    dl {
+        margin-bottom: 0;
+        margin-top: 1em;
+
+        + ol,
+        + ul,
+        + dl {
+            margin-top: 0.25;
+        }
+    }
+
+    li {
+        margin-bottom: 0.25em;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        > ol,
+        > ul,
+        > dl {
+            margin-top: 0.25em;
+        }
     }
 
     .image--pullLeft,
@@ -94,55 +123,13 @@
     img {
         max-width: 100%;
     }
-}
 
-// Scoping class for sidebar content, used for the same reasons as the
-// main-content class above
-.main-sideBar {
-
-    border-top: 1px solid $light-gray;
-    color: $text-black;
-    margin-top: 60px;
-
-    //Consistent vertical spacing
-    * + * {
-        margin-top: 1.5rem;
+    .contentUpdated {
+        @include font(0.8em, 'thin');
+        color: $medium-gray;
+        margin-bottom: 2rem;
+        text-align: right;
     }
-
-    // Gutters match main content
-    > * {
-        margin-left: 20px;
-        margin-right: 20px;
-
-        // Again for consistency with main content
-        @include bp(medium) {
-            margin-left: 40px;
-            margin-right: 30px;
-            max-width: 35rem; // Max width for controlling measure
-        }
-
-        @include bp(large) {
-            max-width: 45rem; // The font-size increased, so the measure is different
-        }
-
-        // @include bp(x-large) {
-        //     // Remove margins on elements edges, because the side-bar
-        //     // acquires padding
-        //     margin-left: 0;
-        //     margin-right: 0;
-        // }
-
-        img {
-            max-width: 100%;
-        }
-    }
-
-    // // Float the sidebar to the right at the largest breakpoint
-    // @include bp(x-large) {
-    //    float: right;
-    //    padding: 20px;
-    //    background-color: lighten($tcc-teal, 60%);
-    // }
 }
 
 //Special styling for lists of step-by-step instructions
@@ -156,6 +143,7 @@
         // Increment the counter on each top-level list item, but
         // not nested lists (child selector)
         counter-increment: step;
+        margin-top: 1em;
 
         // Uses generated content to label the steps
         &::before {
@@ -164,6 +152,10 @@
             color: $tcc-burgundy;
             content: 'Step ' counter(step) ': ';
             text-transform: uppercase;
+        }
+
+        &:first-of-type {
+            margin-top: 0;
         }
     }
 
@@ -184,4 +176,12 @@
 // Link colors for content areas
 a {
     color: $tcc-link-color;
+}
+
+hr {
+    border: none;
+    border-bottom: 2px solid $light-gray;
+    height: 0;
+    margin: 3rem 0;
+    width: 100%;
 }

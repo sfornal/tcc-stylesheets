@@ -55,8 +55,8 @@
 .mobileMenuButton {
     @include font($size: 20px, $weight: 'bold');
     -webkit-appearance: none;
-    background: $tcc-green;
-    background: radial-gradient($tcc-green, darken($tcc-green, 10%));
+    background: $tcc-blue;
+    background: radial-gradient($tcc-blue, darken($tcc-blue, 10%));
     border: 3px solid $pure-white;
     border-radius: 35px; // Fall back value for old Android :(
     border-radius: 50%;

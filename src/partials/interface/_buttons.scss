@@ -99,6 +99,7 @@
     a {
         @include button-base();
         @include font(0.8rem);
+        padding: 4px 9px;
 
         &:hover,
         &:focus,

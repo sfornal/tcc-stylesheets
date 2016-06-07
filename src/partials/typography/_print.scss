@@ -1,0 +1,29 @@
+// Important will be used liberally here to nuke page elements
+// scss-lint:disable ImportantRule PropertyUnits
+@media only print {
+    .pageHeader,
+    .hero,
+    .pageFooter,
+    .sectionNav,
+    .mobileShelf,
+    .mobileMenuButton,
+    .videoOuterWrapper,
+    video,
+    audio,
+    object,
+    embed {
+        display: none !important;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    html {
+        font-size: 12px !important;
+    }
+
+    @page {
+        margin: 1in 0.75in;
+    }
+}

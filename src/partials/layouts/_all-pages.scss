@@ -104,16 +104,16 @@
     display: none;
 }
 
-.pageWrap {
-
-    .mobileShelfOpen & {
-        height: 100vh;
-        overflow: hidden;
-
-        .no-js &,
-        .no-overlay & {
-            height: auto;
-            overflow: auto;
-        }
-    }
-}
+// .pageWrap {
+//
+//     .mobileShelfOpen & {
+//         height: 100vh;
+//         overflow: hidden;
+//
+//         .no-js &,
+//         .no-overlay & {
+//             height: auto;
+//             overflow: auto;
+//         }
+//     }
+// }
