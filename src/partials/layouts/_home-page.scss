@@ -36,6 +36,8 @@
     }
 
     [class|='feeds'] {
+        margin-bottom: 35px;
+
         @include bp(medium) {
             @include clearfix();
             padding-left: 0;
@@ -43,13 +45,13 @@
         }
 
         &:not(:last-of-type) {
-            margin-bottom: 20px;
 
             &::after {
                 @extend %diagonal-bg;
                 content: '';
                 display: block;
                 height: 15px;
+                margin: 0 auto;
                 opacity: 0.5;
                 width: calc(100% - 20px);
 
@@ -59,16 +61,24 @@
             }
         }
 
-        > .announcements:first-child::after {
-            @extend %diagonal-bg;
-            content: '';
-            display: block;
-            height: 15px;
-            opacity: 0.5;
-            width: 100%;
+        > .announcements:first-child {
+            margin-bottom: 35px;
 
             @include bp(medium) {
-                display: none;
+                margin-bottom: 0;
+            }
+
+            &::after {
+                @extend %diagonal-bg;
+                content: '';
+                display: block;
+                height: 15px;
+                opacity: 0.5;
+                width: 100%;
+
+                @include bp(medium) {
+                    display: none;
+                }
             }
         }
 
@@ -95,11 +105,24 @@
 
 .learnMoreWrap {
     @include clearfix();
-    padding: 20px 10px;
+    padding: 10px 10px 25px;
+    text-align: center;
     width: 100%;
 
     @include bp(medium) {
         padding: 20px;
+    }
+
+    .learn-more {
+        display: inline-block;
+        float: none;
+        text-align: center;
+
+        @include bp(medium) {
+            display: block;
+            float: right;
+            margin: 0;
+        }
     }
 }
 

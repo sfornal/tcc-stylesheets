@@ -13,6 +13,7 @@
     @include clearfix();
     margin: 0 auto;
     max-width: $max-container-width;
+    padding-bottom: 15px;
     width: 100%;
 
     @include bp(large) {
@@ -37,6 +38,10 @@
 
     @include bp(large) {
         width: 40%;
+
+        &:first-child {
+            padding-right: 0;
+        }
 
         &:last-child {
             float: right;
@@ -118,7 +123,7 @@
         display: block;
         left: 50%;
         max-width: 0.2 * $max-container-width;
-        padding-right: 20px;
+        // padding-right: 20px;
         position: absolute;
         top: 19px;
         transform: translateX(-50%);
@@ -130,7 +135,7 @@
 .pageFooter-logo {
     display: block;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 150px;
     padding: 0;
 }
 
@@ -148,6 +153,7 @@
 
         img {
             display: block;
+            height: 32px;
             width: 32px;
         }
     }

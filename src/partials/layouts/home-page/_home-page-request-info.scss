@@ -4,9 +4,15 @@
     position: relative;
 
     .requestInfo-innerWrap {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        .flexbox & {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .no-flexbox & {
+            display: block;
+        }
     }
 
     .contentWrap {

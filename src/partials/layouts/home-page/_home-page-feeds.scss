@@ -7,8 +7,9 @@
         // For the general announcements feed, go three across
         // on large displays, instead of a column
         .feeds-announcements & {
+            border-bottom: none;
+
             @include bp(medium) {
-                border-bottom: none;
                 float: left;
                 width: 33%;
             }
@@ -24,6 +25,20 @@
         margin: 0 auto;
         max-width: 100%;
         width: auto;
+
+        &.lazyLoad {
+            height: 0;
+            padding-top: 47.48%;
+
+            &.loaded {
+                height: auto;
+                padding-top: 0;
+            }
+
+            .no-js & {
+                display: none;
+            }
+        }
     }
 
     .feedItemTitle {
@@ -39,7 +54,7 @@
 
 .announcements,
 .featuredVideo {
-    padding: 10px;
+    padding: 0 10px;
     width: 100%;
 
     @include bp(medium) {
@@ -55,21 +70,21 @@
 }
 
 .generalFeed {
+    .feedItem {
+        @include clearfix();
+        border-bottom: 1px solid $light-gray;
 
-    @include bp(medium) {
-        .feedItem {
-            @include clearfix();
-            border-bottom: 1px solid $light-gray;
-            margin-bottom: 1rem;
-            padding-bottom: 1rem;
-
-            &:last-of-type { border-bottom: none; }
-        }
-
-        // .feedItemImage {
-        //     float: left;
-        //     margin: 0 1rem 1rem 0;
-        //     max-width: 166px;
-        // }
+        &:last-of-type { border-bottom: none; }
     }
+}
+
+.featuredVideo {
+    .videoOuterWrapper {
+        margin-bottom: 0;
+        margin-top: 54px;
+    }
+}
+
+.feeds-featured .generalFeed .feedItem {
+    border-bottom: none;
 }
