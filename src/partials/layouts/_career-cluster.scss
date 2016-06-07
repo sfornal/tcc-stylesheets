@@ -1,0 +1,38 @@
+// For the Career Cluster Icon that will sit under the heading
+.careerClusterWrap {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+
+    .careerClusterIcon {
+        display: block;
+        height: 60px;
+        max-width: 100%;
+    }
+}
+
+// For the career coach icon and any other icons that will sit at the bottom
+.careerCoachWrap {
+    @include clearfix();
+
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+
+    img {
+        display: block;
+        float: left;
+        height: auto;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        max-width: 130px;
+        width: auto;
+    }
+}
+
+// Class for small icons on course listing pages
+.main-content h2 > .careerClusterIcon-small {
+    display: inline-block;
+    height: auto;
+    max-height: 60px;
+    max-width: 60px;
+    width: auto;
+}

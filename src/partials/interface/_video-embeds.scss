@@ -42,3 +42,16 @@
     @include font(2rem, regular);
     text-align: center;
 }
+
+.videoPosterWrap {
+    margin: 1rem auto;
+    width: 100%;
+
+    .videoPoster {
+        display: block;
+        height: auto;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+}

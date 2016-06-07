@@ -5,11 +5,11 @@
     // background-image: url(/_resources/images/textures/dark-texture-1.png);
 
     @include bp(medium) {
-        padding-top: 94px; //Little more room when the quick links move up
+        padding-top: 142px; //Little more room when the quick links move up
     }
 
     @include bp(large) {
-        padding-top: 108px; //Little more room when the quick links move up
+        padding-top: 156px; //Little more room when the quick links move up
     }
 }
 
@@ -19,6 +19,10 @@
     background-image: url('/_resources/images/textures/dark-texture-1.png');
     border-bottom: 3px solid $pure-white;
     width: 100%;
+
+    @include bp(medium) {
+        border-bottom: none;
+    }
 }
 
 .mainMenu,
@@ -72,19 +76,20 @@
         @include clearfix();
         // bottom: 27px;
         background-color: $nav-background;
+        border-top: 3px solid $pure-white;
         box-shadow: 0 4px 4px -2px transparentize($pure-black, 0.6);
         float: none;
-        height: 45px;
+        height: 48px;
         left: 0;
         margin: 0;
         padding: 0;
         position: absolute;
-        top: 97px;
+        top: 94px;
         width: 100%;
         z-index: z(HIGH);
 
         @include bp(large) {
-            top: 111px;
+            top: 108px;
         }
 
         ul {
@@ -193,7 +198,7 @@
     padding: 12px 20px;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 1px;
     width: 100%;
     z-index: z(OVER);
 
@@ -224,6 +229,7 @@
     [type='submit'] {
         -webkit-appearance: none;
         background-color: $tcc-blue;
+        background-image: linear-gradient(to bottom, $tcc-blue, darken($tcc-blue, 10%));
         border: 2px solid $pure-white;
         border-radius: 0;
         color: $pure-white;

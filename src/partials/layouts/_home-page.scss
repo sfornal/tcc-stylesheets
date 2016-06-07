@@ -19,7 +19,7 @@
     }
 
     .main-callToAction {
-        margin-bottom: 60px;
+        margin-bottom: 35px;
         position: relative;
 
         &::after {
@@ -55,7 +55,23 @@
             }
         }
 
-        .main-identifier { @extend %main-identifier-styles; }
+        .main-identifier {
+            @extend %main-identifier-styles;
+
+            a {
+                text-decoration: none;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .contentWrap {
+            padding-top: 0px;
+        }
     }
 
 }

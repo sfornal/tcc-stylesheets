@@ -65,7 +65,9 @@
 
 // Anchors with the learn more class are used at the end of tiles that have
 // links in the heading, to give a visual cue that more info is available
+// scss-lint:disable PlaceholderInExtend
 .learn-more {
+    @extend .button--solid;
     @include button-base();
     float: right;
 

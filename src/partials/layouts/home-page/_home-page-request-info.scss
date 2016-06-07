@@ -10,11 +10,11 @@
     }
 
     .contentWrap {
-        min-height: 340px;
+        // min-height: 340px;
         padding: 20px 0;
 
         @include bp(medium) {
-            min-height: 230px;
+            min-height: 235px;
         }
     }
 

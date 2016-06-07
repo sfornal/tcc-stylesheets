@@ -56,7 +56,7 @@
     @include font($size: 20px, $weight: 'bold');
     -webkit-appearance: none;
     background: $tcc-green;
-    // background: radial-gradient($tcc-green, darken($tcc-green, 10%));
+    background: radial-gradient($tcc-green, darken($tcc-green, 10%));
     border: 3px solid $pure-white;
     border-radius: 35px; // Fall back value for old Android :(
     border-radius: 50%;
@@ -70,6 +70,7 @@
     position: fixed;
     right: calc(50% - 35px);
     text-align: center;
+    text-shadow: 2px 2px 3px $shadow-dark;
     vertical-align: middle;
     width: 70px;
     z-index: z(MODAL);
@@ -79,31 +80,31 @@
     }
 
     &.closed {
-        background: $tcc-green;
-        // background: radial-gradient($tcc-green, darken($tcc-green, 10%));
+        background: $tcc-blue;
+        background: radial-gradient($tcc-blue, darken($tcc-blue, 10%));
     }
 
     &:hover,
     &:focus {
         background: $tcc-burgundy;
-        // background: radial-gradient(lighten($tcc-burgundy, 10%), $tcc-burgundy);
+        background: radial-gradient(lighten($tcc-burgundy, 10%), $tcc-burgundy);
         outline: 0;
 
         &.closed {
-            background: $tcc-green;
-            // background: radial-gradient(lighten($tcc-blue, 10%), $tcc-blue);
+            background: $tcc-blue;
+            background: radial-gradient(lighten($tcc-blue, 10%), $tcc-blue);
         }
     }
 
     &:active {
         background: $tcc-burgundy;
-        // background: radial-gradient(lighten($tcc-burgundy, 20%), $tcc-burgundy);
+        background: radial-gradient(lighten($tcc-burgundy, 20%), $tcc-burgundy);
         bottom: 22px;
         box-shadow: none;
 
         &.closed {
-            background: $tcc-green;
-            // background: radial-gradient(lighten($tcc-blue, 20%), $tcc-blue);
+            background: $tcc-blue;
+            background: radial-gradient(lighten($tcc-blue, 20%), $tcc-blue);
         }
     }
 

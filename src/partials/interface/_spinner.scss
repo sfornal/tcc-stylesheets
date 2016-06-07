@@ -24,7 +24,7 @@
 
     // If there is no JS available, this should never be visible!
     // scss-lint:disable ImportantRule
-    .no-script & {
+    .no-js & {
         display: none !important;
     }
 }
