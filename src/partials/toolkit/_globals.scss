@@ -44,7 +44,7 @@ img { -ms-interpolation-mode: bicubic; }
 
 a:focus {
     box-shadow: 0 0 4px 3px transparentize($tcc-blue-lighter, 0.3);
-    outline: 0;
+    // outline: 0; // For future consideration. I have accessibility concerns regarding supressing the default outline
 }
 
 // Slight tweaks to inputs for consistency

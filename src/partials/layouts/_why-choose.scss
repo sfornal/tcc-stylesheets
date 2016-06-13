@@ -1,0 +1,128 @@
+// Styles specifically for the layout of the Why Choose TCC page
+
+// Override styling for content areas of "normal" pages
+.main.main--fullWidth .main-content > * {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+}
+
+.main-content h1 {
+    @include font(3rem);
+    text-align: center;
+}
+
+.factBlock {
+    margin-bottom: 2rem;
+    padding: 0 20px;
+    width: 100%;
+
+    &::after {
+        @extend %diagonal-bg;
+        content: '';
+        display: block;
+        height: 15px;
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    //Specificty... have to nest to beat out a rule from the universal sheet
+    .factBlock-title {
+        @include font(2.4rem, 'black');
+        color: $tcc-blue;
+        line-height: 1.1;
+        margin-bottom: 2rem;
+        margin-top: 0;
+        text-align: center;
+    }
+}
+
+
+
+.factBlock-columnWrap {
+    width: 100%;
+
+    @include bp(medium) {
+        .no-flexbox & {
+            @include clearfix();
+        }
+
+        .flexbox & {
+            align-items: stretch;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+
+.factBlock-column {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    @include bp(medium) {
+        border-right: 2px dotted $tcc-teal;
+        width: 33.33%;
+
+        .no-flexbox & {
+            float: left;
+        }
+
+        .flexbox & {
+            flex: 1 1 33.33%;
+        }
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    &:last-child > .factBlock-fact:last-child {
+        border-bottom: none;
+    }
+}
+
+.factBlock-fact {
+    border-bottom: 2px dotted $tcc-teal;
+    margin-bottom: 20px;
+    padding: 0;
+
+    @include bp(medium) {
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+.factBlock-fact-innerWrap {
+    padding: 20px;
+    text-align: center;
+
+    h3 {
+        @include font(2rem, 'bold');
+        color: $tcc-blue;
+        line-height: 1.1;
+        margin-bottom: 2rem;
+        margin-top: 0;
+
+        + p {
+            @include font(1rem);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            margin-top: -1.5rem;
+        }
+    }
+
+    img {
+        display: block;
+        margin: 1rem auto;
+        max-width: 100%;
+
+        @include bp(medium) {
+            &.reducedSize {
+                max-width: 45%;
+            }
+        }
+    }
+}

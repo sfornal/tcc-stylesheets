@@ -1,15 +1,17 @@
 .pageHeader {
     background-color: $tcc-blue;
-    padding-top: 57px; //Using padding so that the box doesn't collapse when all content is absolute/floating
+    padding-top: 57px;
+    //Using padding so that the box doesn't collapse when all content is absolute/floating
     position: relative;
-    // background-image: url(/_resources/images/textures/dark-texture-1.png);
 
     @include bp(medium) {
-        padding-top: 142px; //Little more room when the quick links move up
+        padding-top: 142px;
+        //Little more room when the quick links move up
     }
 
     @include bp(large) {
-        padding-top: 156px; //Little more room when the quick links move up
+        padding-top: 156px;
+        //Little more room when the quick links move up
     }
 }
 
@@ -74,7 +76,6 @@
 
     @include bp(medium) {
         @include clearfix();
-        // bottom: 27px;
         background-color: $nav-background;
         border-top: 3px solid $pure-white;
         box-shadow: 0 4px 4px -2px transparentize($pure-black, 0.6);
@@ -99,16 +100,10 @@
             max-width: 1280px;
             padding: 8px 0;
             width: 100%;
-
-            // @include bp(large) {
-            //     height: 65px;
-            // }
         }
 
         li {
-            @include font(1rem, bold);
-            // text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-            //text-transform: uppercase;
+            @include font(1rem, 'bold');
             border-right: 1px solid $pure-white;
             display: table-cell;
             margin: 0;
@@ -154,10 +149,9 @@
 
     @include bp(medium) {
         @include clearfix();
-        // left: 0;
         float: none;
         height: 65px;
-        max-width: 390px;
+        // max-width: 395px; //Removed due to user text sizing issues
         padding-right: 20px;
         padding-top: 10px;
         position: absolute;
@@ -174,7 +168,7 @@
         }
 
         li {
-            @include font(0.8rem, light);
+            @include font(0.8rem, 'book');
             display: inline-block;
             float: right;
             margin: 0;
@@ -188,7 +182,8 @@
 
     @include bp(x-large) {
         right: 0;
-        right: calc((100% - #{$max-container-width}) / 2); //SASS string interpolation required in calc() expressions
+        right: calc((100% - #{$max-container-width}) / 2);
+        //SASS string interpolation required in calc() expressions
     }
 }
 
@@ -211,7 +206,8 @@
 
     @include bp(x-large) {
         right: 0;
-        right: calc((100% - #{$max-container-width}) / 2); //SASS string interpolation necessary in calc() functions
+        right: calc((100% - #{$max-container-width}) / 2);
+        //SASS string interpolation necessary in calc() functions
     }
 
     [type='text'] {

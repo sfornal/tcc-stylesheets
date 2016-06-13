@@ -1,0 +1,81 @@
+// The shame file is for hacky things, emergency big fixes, etc.
+// The shame file is imported last into the style sheet, so it's rules
+// should have precedence over other rules with equal specificity.
+// Things in the shame file should be removed ASAP. This is only for
+// emergency or temporary fixes.
+// Each rule should be documented and signed by its creator
+
+// ================ Mobile Tutorial Overlay ==================
+// The following rules are for use during the launch period.
+// They are styles for a mobile overlay showing new users
+// where the menu button is located
+// Created by Stephen Fornal
+
+.mobileTutorialOverlay {
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999; //HACK! Just make sure it's the highest possible
+
+    @include bp(medium) {
+        display: none;
+    }
+
+    .innerWrap {
+        background: $shadow-dark;
+        bottom: 100px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+        z-index: 9999;
+    }
+
+    .message {
+        color: $pure-white;
+        margin: 0;
+        padding: 20px 20px 0;
+        text-align: center;
+        width: 100%;
+
+        h1 {
+            line-height: 1.1;
+            margin: 0;
+        }
+
+        p {
+            margin: 0.5em auto 0;
+        }
+    }
+
+    .fakebutton {
+        border: 3px solid;
+        border-radius: 10px;
+        color: $pure-white;
+        display: inline-block;
+        margin: 1em auto;
+        padding: 10px;
+        text-decoration: none;
+
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: underline;
+        }
+    }
+
+    .arrow {
+        bottom: 5px;
+        display: block;
+        height: 100px;
+        left: 50%;
+        margin: 0 auto;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 50px;
+    }
+}
