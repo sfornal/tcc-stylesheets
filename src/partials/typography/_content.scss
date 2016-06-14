@@ -54,7 +54,7 @@
         + ol,
         + ul,
         + p {
-            margin-top: 0.25em;
+            margin-top: 0.55em;
         }
     }
 
@@ -68,12 +68,12 @@
         + ol,
         + ul,
         + dl {
-            margin-top: 0.25;
+            margin-top: 0.55;
         }
     }
 
     li {
-        margin-bottom: 0.25em;
+        margin-bottom: 0.55em;
 
         &:last-of-type {
             margin-bottom: 0;
@@ -82,7 +82,7 @@
         > ol,
         > ul,
         > dl {
-            margin-top: 0.25em;
+            margin-top: 0.55em;
         }
     }
 

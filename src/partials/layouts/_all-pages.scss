@@ -104,16 +104,20 @@
     display: none;
 }
 
-// .pageWrap {
-//
-//     .mobileShelfOpen & {
-//         height: 100vh;
-//         overflow: hidden;
-//
-//         .no-js &,
-//         .no-overlay & {
-//             height: auto;
-//             overflow: auto;
-//         }
-//     }
-// }
+// Side by Side Images in the content area
+// For the career coach icon and any other icons that will sit at the bottom
+.sideBySideImageWrap {
+    @include clearfix();
+
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+
+    img {
+        display: block;
+        float: left;
+        height: auto;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        width: auto;
+    }
+}

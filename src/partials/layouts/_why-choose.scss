@@ -9,6 +9,7 @@
 
 .main-content h1 {
     @include font(3rem);
+    margin-bottom: 1.25rem;
     text-align: center;
 }
 
@@ -37,8 +38,6 @@
     }
 }
 
-
-
 .factBlock-columnWrap {
     width: 100%;
 
@@ -62,7 +61,7 @@
     width: 100%;
 
     @include bp(medium) {
-        border-right: 2px dotted $tcc-teal;
+        border-right: 3px solid $tcc-teal;
         width: 33.33%;
 
         .no-flexbox & {
@@ -84,7 +83,7 @@
 }
 
 .factBlock-fact {
-    border-bottom: 2px dotted $tcc-teal;
+    border-bottom: 3px solid $tcc-teal;
     margin-bottom: 20px;
     padding: 0;
 
@@ -119,10 +118,41 @@
         margin: 1rem auto;
         max-width: 100%;
 
-        @include bp(medium) {
-            &.reducedSize {
-                max-width: 45%;
-            }
+        &.reducedSize--45 {
+            max-width: 45%;
+        }
+
+        &.reducedSize--80 {
+            max-width: 80%;
         }
     }
+
+    .lazyLoad {
+        height: 0;
+        opacity: 0;
+        padding-top: 75%;
+        transform: translateY(33%);
+        transition: transform 0.4s 0.4s ease-out, opacity 0.4s 0.4s ease-out;
+
+        &.loaded {
+            height: auto;
+            opacity: 1;
+            padding-top: 0;
+            transform: translateY(0);
+        }
+
+        .no-js & {
+            display: none;
+        }
+    }
+}
+
+.detailsPage .hero.hero.hero { // HACK! Make sure to have higher specificity
+    @include bp(medium) {
+        height: 500px;
+    }
+}
+
+.contentUpdated {
+    display: none; // Not needed on this page
 }
