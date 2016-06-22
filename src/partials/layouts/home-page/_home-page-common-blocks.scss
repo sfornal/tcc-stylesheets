@@ -49,16 +49,16 @@
     margin: 0;
     padding: 0 0 10px;
     width: 100%;
-
-    @include bp(medium) {
-        @include font(1.1rem);
-    }
-
-    @include bp(large) {
-        @include font(1.2rem);
-    }
-
-    @include bp(x-large) {
-        @include font(1.35rem);
-    }
+    //
+    // @include bp(medium) {
+    //     @include font(1.1rem);
+    // }
+    //
+    // @include bp(large) {
+    //     @include font(1.2rem);
+    // }
+    //
+    // @include bp(x-large) {
+    //     @include font(1.35rem);
+    // }
 }
