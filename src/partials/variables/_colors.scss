@@ -38,14 +38,14 @@ $tcc-forestgreen-lighter: #00994c !default;
 $tcc-forestgreen-darker: #004821 !default;
 
 //Grayscales
-$dark-gray: #292a29 !default;
-$medium-gray: #58585a !default;
-$light-gray: #e6e7e9 !default;
+$dark-gray: #292929 !default;
+$medium-gray: #585858 !default;
+$light-gray: #e9e9e9 !default;
 
 $pure-white: #fff !default;
 $pure-black: #000 !default;
 
-$text-black: #404041 !default; //aka 90% black
+$text-black: #404040 !default; //aka 90% black
 
 //Translucent shadows
 $shadow-light: rgba(0, 0, 0, 0.4);
@@ -56,5 +56,7 @@ $tcc-link-color: #2c74ae;
 $tcc-link-color-contrast: $pure-white;
 
 //Table Styles Colors
-$tcc-table-color1: #e6e7e9;
-$tcc-table-color2: #d9eeee;
+$tcc-table-color0: #fcfcfc;
+$tcc-table-color1: #f2f2f2;
+$tcc-table-color2: lighten($tcc-teal, 60%);
+$tcc-table-color2-contrast: $text-black;

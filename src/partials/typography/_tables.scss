@@ -1,23 +1,49 @@
 //------------ General Styling ------------
-.table-snippet {
-    border-spacing: 3px;
-    padding: 3px;
-    width: 90%;
+.tableWrapper {
+    margin-bottom: 0;
+    margin-top: 1em;
+    overflow-x: auto;
+    position: relative;
+    width: calc(100% - 40px);
 
-    tbody tr:nth-child(odd) {
-        background-color: $tcc-table-color1;
+    @include bp(medium) {
+        width: calc(100% - 70px);
     }
+}
 
-    tbody th {
-        background-color: $tcc-table-color2;
-        text-align: left;
+.table-snippet {
+    width: 100%;
+
+    tbody,
+    thead,
+    tfoot {
+        tr:nth-child(odd) {
+            background-color: $tcc-table-color1;
+        }
+
+        tr:nth-child(even) {
+            background-color: $tcc-table-color0;
+        }
+
+        th {
+            @include font($weight: 'bold');
+            background-color: $tcc-table-color2;
+            color: $tcc-table-color2-contrast;
+            text-align: left;
+        }
     }
 
     td,
     th {
-        border: 1px solid $pure-white;
+        border: 2px solid $pure-white;
+        min-width: 15ch;
+        padding: 5px 8px;
         text-align: left;
         vertical-align: top;
+
+        @include bp(medium) {
+            min-width: auto;
+        }
     }
 }
 

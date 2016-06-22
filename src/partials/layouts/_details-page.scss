@@ -1,5 +1,6 @@
 .cbMapFrame {
-    max-width: 100%;
+    @include clearfix();
+    margin-top: 1em;
 
     &.cbMapFrame--noEmbed {
         height: auto;
@@ -9,5 +10,15 @@
     iframe {
         height: 600px;
         width: 100%;
+    }
+
+    // Extend button styles because we don't want to edit all that content
+    // scss-lint:disable PlaceholderInExtend
+    > a:first-child {
+        @extend .button--solid;
+        @extend .learnMore;
+        @include button-base();
+        float: left;
+        margin: 0 0 1rem;
     }
 }

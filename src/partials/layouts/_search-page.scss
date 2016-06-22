@@ -1,14 +1,30 @@
 .searchPageFormWrap {
+    @include clearfix();
 
     border-bottom: 2px solid $light-gray;
+    margin-top: 1em;
     padding-bottom: 1.5rem;
 
     .text {
         margin-right: 10px;
     }
 
-    label {
-        margin-right: 10px;
+    .searchTypeWrap {
+        @include clearfix();
+        label {
+            display: block;
+            float: left;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+    }
+
+    .button.button--submit {
+        border-radius: 0;
+        margin-top: 5px;
+        padding: 6px 12px;
+        position: relative;
+        top: -1px;
     }
 }
 

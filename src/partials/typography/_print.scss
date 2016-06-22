@@ -26,4 +26,11 @@
     @page {
         margin: 1in 0.75in;
     }
+
+    .contentWrap::before {
+        @include font(2rem, 'black');
+        content: 'Tarrant County College | askTCC 817-515-8223';
+        display: block;
+        margin: 1rem 0;
+    }
 }
