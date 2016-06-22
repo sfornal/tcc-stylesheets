@@ -1,5 +1,6 @@
 .pageHeader {
     background-color: $tcc-blue;
+    background-image: linear-gradient(to bottom, $tcc-blue, $tcc-blue-darker);
     padding-top: 57px;
     //Using padding so that the box doesn't collapse when all content is absolute/floating
     position: relative;
