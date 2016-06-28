@@ -16,7 +16,7 @@
     // scss-lint:disable PlaceholderInExtend
     > a:first-child {
         @extend .button--solid;
-        @extend .learnMore;
+        @extend .learn-more;
         @include button-base();
         float: left;
         margin: 0 0 1rem;
