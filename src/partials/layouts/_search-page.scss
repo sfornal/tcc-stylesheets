@@ -53,13 +53,15 @@
             padding: 0.75rem 20px;
         }
     }
+
+    .searchResult-link {
+        line-height: 1.1;
+        margin: 0 0 0.5rem;
+        padding: 0;
+    }
 }
 
-.searchResult-link {
-    line-height: 1.1;
-    margin: 0 0 0.5rem;
-    padding: 0;
-}
+
 
 .searchResult-type {
     @include font(0.8em, 'book');
