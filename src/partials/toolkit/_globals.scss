@@ -40,6 +40,12 @@ img { -ms-interpolation-mode: bicubic; }
     visibility: hidden;
 }
 
+// Class for manually adding a clearfix to elements
+.clearfix,
+.cf {
+    @include clearfix();
+}
+
 //Default outline style for keyboard navigation
 
 a:focus {
