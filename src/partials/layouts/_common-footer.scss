@@ -159,22 +159,20 @@
     }
 }
 
-.pageFooter-feedback{
-    background: #2c74ae;
-    color: white;
-    text-align: center;
-    height: inherit;
+.pageFooter-feedback {
+    background: $tcc-link-color;
+    border-bottom: 3px solid $pure-white;
+    color: $pure-white;
     font-size: 16px;
-    margin-top: -70px;
+    height: inherit;
     margin-bottom: 22px;
+    margin-top: -70px;
     padding: 1px;
-    border-bottom: 3px solid #fff;
+    text-align: center;
+
+    a {
+        color: $pure-white;
+        font-weight: 600;
+        text-decoration: underline;
     }
-.pageFooter-feedback a{
-            text-decoration: underline;
-            font-weight: 600;
-            color: $pure-white;
-    }
-.pageFooter-feedback a:visited{
-            color: #fff;
-    }
+}
