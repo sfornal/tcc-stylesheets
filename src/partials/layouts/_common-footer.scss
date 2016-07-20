@@ -125,7 +125,7 @@
         max-width: 0.2 * $max-container-width;
         // padding-right: 20px;
         position: absolute;
-        top: 19px;
+        top: 51px;
         transform: translateX(-50%);
         visibility: visible;
         width: 20%;
@@ -158,3 +158,23 @@
         }
     }
 }
+
+.pageFooter-feedback{
+    background: #2c74ae;
+    color: white;
+    text-align: center;
+    height: inherit;
+    font-size: 16px;
+    margin-top: -70px;
+    margin-bottom: 22px;
+    padding: 1px;
+    border-bottom: 3px solid #fff;
+    }
+.pageFooter-feedback a{
+            text-decoration: underline;
+            font-weight: 600;
+            color: $pure-white;
+    }
+.pageFooter-feedback a:visited{
+            color: #fff;
+    }
