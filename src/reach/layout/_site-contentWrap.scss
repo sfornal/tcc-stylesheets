@@ -1,0 +1,333 @@
+.textContent,
+.headline,
+.subhead,
+.author {
+    @include clearfix();
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $max-container-width;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include bp(medium) {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    @include bp(large) {
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+
+    @include bp(x-large) {
+        padding-left: 17rem;
+        padding-right: 17rem;
+    }
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+// Ignore comment rule due to autopreficer compiler directives
+// scss-lint:disable Comment PropertySortOrder
+.heroImage {
+    background-attachment: scroll;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 0;
+    padding-top: 56.25%;
+    width: 100%;
+
+    /* autoprefixer: off */
+    -ms-behavior: url('/magazine/assets/js/backgroundsize.min.htc');
+
+    @include bp(x-large) {
+        /* autoprefixer: on */
+        background-attachment: fixed;
+        padding-top: 0;
+        height: 100%;
+        height: calc(90vh - 80px);
+        overflow: hidden;
+    }
+}
+
+picture {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+.textContent {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.interiorImage {
+    width: 100%;
+    margin: 2rem auto;
+
+    @include bp(medium) {
+        max-width: 50%;
+        &:first-child { margin-top: 0; }
+
+        &.fullWidth {
+            max-width: 100%;
+        }
+
+        &.smaller {
+            max-width: 33%;
+        }
+    }
+
+    @include bp(x-large) {
+        max-width: 60%;
+
+        &.fullWidth {
+            max-width: 100%;
+        }
+
+        &.smaller {
+            max-width: 25%;
+        }
+    }
+
+    img {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .caption {
+        margin-top: 1rem;
+    }
+}
+
+.pull--left {
+    @include bp(medium) {
+        float: left;
+        margin: 1rem 2rem 1rem (0.8 * -4rem);
+    }
+
+    @include bp(large) {
+        margin-left: (0.8 * -8rem);
+    }
+
+    @include bp(x-large) {
+        margin-left: (0.8 * -17rem);
+    }
+}
+
+.pull--right {
+    @include bp(medium) {
+        float: right;
+        margin: 1rem (0.8 * -4rem) 1rem 2rem;
+    }
+
+    @include bp(large) {
+        margin-right: (0.8 * -8rem);
+    }
+
+    @include bp(x-large) {
+        margin-right: (0.8 * -17rem);
+    }
+}
+
+.author {
+    @include clearfix();
+    display: block;
+    margin-top: 1rem;
+}
+
+.authorImage {
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: (45px / 2);
+    float: left;
+    margin-right: 10px;
+
+    @include bp(medium) {
+        float: right;
+        margin-right: 0;
+        margin-left: 10px;
+    }
+}
+
+// Line-height set by px for to-the-pixel layout
+// scss-lint:disable PropertyUnits
+.byline {
+    width: auto;
+    float: left;
+    height: 45px;
+    line-height: 45px;
+    vertical-align: middle;
+    margin: 0;
+
+    @include bp(medium) {
+        float: right;
+    }
+}
+
+.quoteWrapper {
+    width: 100%;
+    margin: 3rem auto;
+    background-color: $light-gray;
+    overflow: hidden;
+
+    blockquote {
+        width: 100%;
+        max-width: $max-container-width;
+        margin: 0 auto;
+        position: relative;
+
+        padding: 2rem 20px;
+        z-index: z(FOREGROUND);
+
+        @include bp(medium) {
+            padding: 2rem 4rem;
+        }
+
+        @include bp(large) {
+            padding: 2rem 8rem;
+        }
+
+        @include bp(x-large) {
+            padding: 2rem 17rem;
+        }
+
+        // Linter doesn't like darken() ??
+        // scss-lint:disable VariableForProperty
+        &::before,
+        &::after {
+            @include font(5em, 'black', italic, $secondary-font);
+            color: darken($light-gray, 10%);
+            position: absolute;
+            z-index: z(BACKGROUND);
+        }
+
+        &::before {
+            content: '“';
+            top: 0;
+            text-align: left;
+            left: 20px;
+
+            @include bp(x-large) {
+                left: 8rem;
+            }
+        }
+
+        &::after {
+            content: '”';
+            bottom: -0.45em;
+            text-align: right;
+            right: 40px;
+
+            @include bp(x-large) {
+                right: 10rem;
+            }
+        }
+    }
+}
+
+.videoFrame {
+    width: 100%;
+    position: relative;
+    height: 0;
+    margin: 1rem 0 0;
+
+    &.video--16-9 { padding-top: 56.25%; }
+    &.video--4-3 { padding-top: 75%; }
+    &.video--9-16 { padding-top: 177.78%; }
+
+    .videoWrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        iframe,
+        video {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.tableWrap {
+    @include font(0.8rem);
+    margin: 3rem auto;
+    max-width: $max-container-width;
+    overflow-x: auto;
+    width: 100%;
+
+    table {
+        width: auto;
+        margin: 0 auto;
+        border-collapse: collapse;
+    }
+
+    thead {
+        th {
+            text-align: center;
+        }
+
+        h3 {
+            @include font(1.8em);
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        h4 {
+            @include font(1.3em);
+            line-height: 1.2;
+            margin: 0;
+        }
+    }
+
+    td,
+    th {
+        padding: 0.4rem 0.8rem;
+    }
+
+    tbody {
+        th {
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        // Linter doesn't like lighten() ??
+        // scss-lint:disable VariableForProperty
+        tr:nth-of-type(odd) {
+            background-color: lighten($tcc-teal-lighter, 50%);
+        }
+
+        th,
+        td {
+            border-right: 1px solid $tcc-teal-darker;
+
+            &:last-child {
+                border-right: none;
+            }
+        }
+
+        td {
+            text-align: center;
+        }
+    }
+}

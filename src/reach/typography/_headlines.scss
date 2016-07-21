@@ -1,0 +1,56 @@
+.headline {
+    @include font(2.3rem, 'black', normal, $secondary-font);
+    // text-transform: uppercase;
+    color: $tcc-blue;
+    line-height: 1.1;
+    margin-top: 3rem;
+
+    @include bp(medium) {
+        @include font(3rem);
+    }
+
+    @include bp(large) {
+        @include font(3.2rem);
+    }
+
+    @include bp(x-large) {
+        @include font(3.4rem, 'black', normal);
+    }
+}
+
+.subhead {
+    @include font(1.3rem, 'book', normal, $secondary-font);
+    color: $dark-gray;
+    line-height: 1.1;
+    margin-top: 1rem;
+
+    @include bp(medium) {
+        @include font(1.8rem);
+    }
+
+    @include bp(large) {
+        @include font(2.3rem);
+    }
+
+    @include bp(x-large) {
+        @include font(2.3rem);
+    }
+}
+
+.byline {
+    @include font(0.8rem, regular, normal);
+    color: $medium-gray;
+    text-align: right;
+
+    @include bp(medium) {
+        @include font(0.9rem);
+    }
+
+    @include bp(large) {
+        @include font(1rem);
+    }
+
+    @include bp(x-large) {
+        @include font(1.1rem);
+    }
+}

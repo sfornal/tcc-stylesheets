@@ -1,0 +1,186 @@
+blockquote {
+    @include font(1.3rem, bold, italic, $secondary-font);
+    color: $tcc-blue-darker;
+    line-height: 1.5;
+
+    @include bp(medium) {
+        @include font(1.6rem, bold, italic, $secondary-font);
+    }
+
+    @include bp(x-large) {
+        @include font(1.8rem, bold, italic, $secondary-font);
+    }
+
+    .citation,
+    .attribution {
+        @include font(1.1rem, regular, normal, $secondary-font);
+        text-align: right;
+
+        @include bp(medium) {
+            @include font(1.25rem);
+        }
+
+        @include bp(x-large) {
+            @include font(1.6rem);
+        }
+
+        &::before {
+            content: '— ';
+        }
+    }
+}
+
+.caption {
+    @include font(0.9rem, regular, italic, $secondary-font);
+    text-align: center;
+
+    @include bp(medium) {
+        @include font(1rem);
+    }
+}
+
+.superCaption { //Inherits everything else from the tag that's used
+    text-align: center;
+}
+
+.dropcap {
+    @include font(4rem, 'black', normal, $secondary-font);
+    color: $tcc-blue-darker;
+    display: block;
+    float: left;
+    line-height: 0.9;
+    margin: 0 0.3rem 0 0;//0.4rem 1.5rem 0 -10%;
+
+    @include bp(medium) { @include font(4rem); }
+    @include bp(large) { @include font(5rem); }
+    @include bp(x-large) { @include font(6rem); }
+}
+
+.textContent {
+    @include font(1.1rem);
+    line-height: 1.7;
+
+    h2 {
+        @include font(1.5rem, 'black');
+        color: $tcc-blue;
+        line-height: 1.3;
+        margin-bottom: 0;
+        margin-top: 1em;
+
+        @include bp(medium) {
+            @include font(1.66rem);
+        }
+
+        @include bp(large) {
+            @include font(1.75rem);
+        }
+
+        @include bp(x-large) {
+            @include font(1.9rem);
+        }
+    }
+
+    h3 {
+        @include font(1.2rem, bold);
+        color: $tcc-blue-darker;
+        line-height: 1.3;
+        margin-bottom: 0;
+        margin-top: 1em;
+
+        @include bp(medium) {
+            @include font(1.33rem);
+        }
+
+        @include bp(large) {
+            @include font(1.5rem);
+        }
+
+        @include bp(x-large) {
+            @include font(1.66rem);
+        }
+    }
+}
+
+.footnotes {
+    @include font(0.8em);
+}
+
+hr {
+    border-color: $medium-gray;
+    border-style: solid none none;
+    border-width: 1px 0 0;
+    height: 0;
+    margin: 2em 0 0;
+    width: 100%;
+}
+
+sup {
+    @include font(65%);
+    top: -0.8em;
+}
+
+li {
+    margin-bottom: 0.5rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+ol,
+ul {
+    margin-bottom: 0;
+    margin-top: 1em;
+}
+
+.noBullets {
+    list-style-type: none;
+    margin: 1em 0 0;
+    padding: 0;
+
+    li {
+        margin: 0 0 1rem;
+        padding: 0;
+
+        h3,
+        h4 {
+            line-height: 1.2;
+        }
+
+        h3 {
+            margin: 1em 0 0;
+        }
+
+        h4 {
+            margin: 0.25em 0 0;
+        }
+
+        p {
+            margin: 1em 0 0;
+        }
+
+    }
+}
+
+.ruledList {
+    li {
+        border-bottom: 1px solid $medium-gray;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+ol ul,
+ul ol,
+ul ul,
+ol ol {
+    margin-top: 1rem;
+}
