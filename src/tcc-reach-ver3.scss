@@ -2,12 +2,11 @@
 //These don't need to be loaded on any other page, so we are
 //factoring them out into a separate request
 
+// Loading modules from the universal kit first
 @import 'partials/variables';
+@import 'partials/toolkit';
 
-// Since this style sheet gets loaded in conjunction with the universal stylesheet,
-// We don't need to import the global styles or the reset styles again
-@import 'partials/toolkit/functions';
-@import 'partials/toolkit/mixins';
-
-@import 'reach/layouts';
+//Reach specific styles
+@import 'reach/variables';
+@import 'reach/layout';
 @import 'reach/typography';

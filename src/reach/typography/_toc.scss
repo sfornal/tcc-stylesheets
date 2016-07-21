@@ -1,0 +1,28 @@
+.toc-title {
+    @include font(1.7rem, 'black', normal, $secondary-font);
+    color: $text-black;
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+}
+
+.toc-subtitle {
+    @include font(1rem, bold);
+    color: $medium-gray;
+    line-height: 1.1;
+    margin: 0 0 0.5rem;
+
+    @include bp(large) {
+        @include font(1.1rem);
+    }
+
+    @include bp(x-large) {
+        @include font(1.5rem);
+    }
+}
+
+.toc-description {
+    @include font(0.9rem);
+    color: $medium-gray;
+    line-height: 1.3;
+    margin: 0;
+}
