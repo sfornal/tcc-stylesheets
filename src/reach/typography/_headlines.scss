@@ -1,39 +1,42 @@
 .headline {
-    @include font(2.3rem, 'black', normal, $secondary-font);
+    @include font(2rem, 'black', normal, $secondary-font);
     // text-transform: uppercase;
     color: $tcc-blue;
     line-height: 1.1;
+    margin-bottom: 0;
     margin-top: 3rem;
+    text-transform: uppercase;
 
     @include bp(medium) {
-        @include font(3rem);
+        @include font(2.4rem);
     }
 
     @include bp(large) {
-        @include font(3.2rem);
+        @include font(2.8rem);
     }
 
     @include bp(x-large) {
-        @include font(3.4rem, 'black', normal);
+        @include font(3rem, 'black', normal);
     }
 }
 
 .subhead {
-    @include font(1.3rem, 'book', normal, $secondary-font);
+    @include font(1.3rem, 'book', normal, $primary-font);
     color: $dark-gray;
     line-height: 1.1;
-    margin-top: 1rem;
+    margin-top: 0.25rem;
+    text-transform: lowercase;
 
     @include bp(medium) {
-        @include font(1.8rem);
+        @include font(1.4rem);
     }
 
     @include bp(large) {
-        @include font(2.3rem);
+        @include font(1.6rem);
     }
 
     @include bp(x-large) {
-        @include font(2.3rem);
+        @include font(1.75rem);
     }
 }
 

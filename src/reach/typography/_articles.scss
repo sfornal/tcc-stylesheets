@@ -43,9 +43,10 @@ blockquote {
     text-align: center;
 }
 
-.dropcap {
+.dropcap,
+.articleWrap:first-of-type > p:first-of-type::first-letter {
     @include font(4rem, 'black', normal, $secondary-font);
-    color: $tcc-blue-darker;
+    color: $tcc-green;
     display: block;
     float: left;
     line-height: 0.9;

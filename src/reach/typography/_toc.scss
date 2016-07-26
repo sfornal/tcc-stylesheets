@@ -1,6 +1,6 @@
 .toc-title {
-    @include font(1.7rem, 'black', normal, $secondary-font);
-    color: $text-black;
+    @include font(1.3rem, 'black', normal, $secondary-font);
+    color: $tcc-link-color;
     line-height: 1.2;
     margin: 0 0 0.5rem;
 }

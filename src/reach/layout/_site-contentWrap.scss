@@ -1,44 +1,26 @@
-.textContent,
-.headline,
-.subhead,
-.author {
-    @include clearfix();
-    margin-left: auto;
-    margin-right: auto;
+.headerImage,
+.main-content {
+    margin: 0 auto;
     max-width: $max-container-width;
-    padding-left: 20px;
-    padding-right: 20px;
-
-    @include bp(medium) {
-        padding-left: 4rem;
-        padding-right: 4rem;
-    }
-
-    @include bp(large) {
-        padding-left: 8rem;
-        padding-right: 8rem;
-    }
-
-    @include bp(x-large) {
-        padding-left: 17rem;
-        padding-right: 17rem;
-    }
+    padding: 0 20px;
 }
 
-figure {
-    margin: 0;
-    padding: 0;
-}
-
-picture {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-
-    img {
-        display: block;
+.headerImage {
+    picture {
+        margin: 0;
+        padding: 0;
         width: 100%;
+
+        img {
+            display: block;
+            width: 100%;
+        }
     }
+}
+
+.article-relatedContent {
+    border-top: 1px solid;
+    margin-top: 3rem;
 }
 
 .textContent {
@@ -50,75 +32,49 @@ picture {
     }
 }
 
-.interiorImage {
-    margin: 2rem auto;
-    width: 100%;
+.articleHeader {
+    margin: 0 auto 2rem;
+    max-width: 1000px;
+}
 
-    @include bp(medium) {
-        max-width: 50%;
-        &:first-child { margin-top: 0; }
-
-        &.fullWidth {
-            max-width: 100%;
-        }
-
-        &.smaller {
-            max-width: 33%;
-        }
-    }
-
-    @include bp(x-large) {
-        max-width: 60%;
-
-        &.fullWidth {
-            max-width: 100%;
-        }
-
-        &.smaller {
-            max-width: 25%;
-        }
-    }
+.articleWrap {
+    margin: 0 auto;
+    max-width: 750px;
 
     img {
         display: block;
-        height: auto;
-        margin: 0 auto;
+        margin: 1rem auto;
         max-width: 100%;
-        width: auto;
-    }
 
-    .caption {
-        margin-top: 1rem;
-    }
-}
+        &.image--pullRight {
+            @include bp(medium) {
+                float: right;
+                margin: 0 0 1rem 1rem;
+            }
 
-.pull--left {
-    @include bp(medium) {
-        float: left;
-        margin: 1rem 2rem 1rem (0.8 * -4rem);
-    }
+            @include bp(large) {
+                margin-right: calc((100vw - 810px) / 2 * -1);
+            }
 
-    @include bp(large) {
-        margin-left: (0.8 * -8rem);
-    }
+            @include bp(x-large) {
+                margin-right: calc((#{$max-container-width} - 790px) / 2 * -1);
+            }
+        }
 
-    @include bp(x-large) {
-        margin-left: (0.8 * -17rem);
-    }
-}
+        &.image--pullLeft {
+            @include bp(medium) {
+                float: left;
+                margin: 0 1rem 1rem 0;
+            }
 
-.pull--right {
-    @include bp(medium) {
-        float: right;
-        margin: 1rem (0.8 * -4rem) 1rem 2rem;
-    }
+            @include bp(large) {
+                margin-left: calc((100vw - 810px) / 2 *-1);
+            }
 
-    @include bp(large) {
-        margin-right: (0.8 * -8rem);
-    }
-
-    @include bp(x-large) {
-        margin-right: (0.8 * -17rem);
+            @include bp(x-large) {
+                margin-left: calc((#{$max-container-width} - 790px) / 2 * -1);
+            }
+        }
     }
 }
 
@@ -158,64 +114,36 @@ picture {
     }
 }
 
-.quoteWrapper {
-    background-color: $light-gray;
-    margin: 3rem auto;
-    overflow: hidden;
-    width: 100%;
+blockquote {
+    clear: both;
+    margin: 0 auto;
+    padding: 2rem 20px;
+    position: relative;
+    width: 80%;
+    z-index: z(FOREGROUND);
 
-    blockquote {
+    // Linter doesn't like darken() ??
+    // scss-lint:disable VariableForProperty
+    &::before,
+    &::after {
+        @include font(5em, 'black', italic, $secondary-font);
+        color: darken($light-gray, 10%);
+        position: absolute;
+        z-index: z(BACKGROUND);
+    }
 
-        margin: 0 auto;
-        max-width: $max-container-width;
-        padding: 2rem 20px;
-        position: relative;
-        width: 100%;
-        z-index: z(FOREGROUND);
+    &::before {
+        content: '“';
+        left: -20px;
+        text-align: left;
+        top: -20px;
+    }
 
-        @include bp(medium) {
-            padding: 2rem 4rem;
-        }
-
-        @include bp(large) {
-            padding: 2rem 8rem;
-        }
-
-        @include bp(x-large) {
-            padding: 2rem 17rem;
-        }
-
-        // Linter doesn't like darken() ??
-        // scss-lint:disable VariableForProperty
-        &::before,
-        &::after {
-            @include font(5em, 'black', italic, $secondary-font);
-            color: darken($light-gray, 10%);
-            position: absolute;
-            z-index: z(BACKGROUND);
-        }
-
-        &::before {
-            content: '“';
-            left: 20px;
-            text-align: left;
-            top: 0;
-
-            @include bp(x-large) {
-                left: 8rem;
-            }
-        }
-
-        &::after {
-            bottom: -0.45em;
-            content: '”';
-            right: 40px;
-            text-align: right;
-
-            @include bp(x-large) {
-                right: 10rem;
-            }
-        }
+    &::after {
+        bottom: -0.45em;
+        content: '”';
+        right: 40px;
+        text-align: right;
     }
 }
 
