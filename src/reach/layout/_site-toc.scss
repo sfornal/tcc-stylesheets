@@ -143,3 +143,15 @@
 .toc-titleWrap {
     padding: 10px;
 }
+
+// Style to remove default link styling on archive page links
+.archiveLink {
+    color: $tcc-link-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: underline;
+    }
+}
