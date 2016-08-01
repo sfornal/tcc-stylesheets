@@ -45,21 +45,21 @@ blockquote {
 
 .dropcap,
 .articleWrap:first-of-type > p:first-of-type::first-letter {
-    @include font(4rem, 'black', normal, $secondary-font);
+    @include font(3rem, 'black', normal, $secondary-font);
     color: $tcc-green;
     display: block;
     float: left;
     line-height: 0.9;
     margin: 0 0.3rem 0 0;//0.4rem 1.5rem 0 -10%;
 
-    @include bp(medium) { @include font(4rem); }
-    @include bp(large) { @include font(5rem); }
-    @include bp(x-large) { @include font(6rem); }
+    @include bp(medium) { @include font(3rem); }
+    @include bp(large) { @include font(3.5rem); }
+    @include bp(x-large) { @include font(4rem); }
 }
 
 .textContent {
-    @include font(1.1rem);
-    line-height: 1.7;
+    @include font(1rem);
+    line-height: 1.4;
 
     h2 {
         @include font(1.5rem, 'black');
@@ -98,6 +98,10 @@ blockquote {
 
         @include bp(x-large) {
             @include font(1.66rem);
+        }
+
+        + h4 {
+            margin: 0;
         }
     }
 }

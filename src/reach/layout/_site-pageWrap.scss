@@ -5,6 +5,19 @@
     width: 100%;
 }
 
+.main {
+    &::after {
+        background: url($diagonal-stripe-small) $pure-white;
+        border-bottom: 6px solid $pure-white;
+        content: '';
+        display: block;
+        height: 18px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+}
+
 // Styles for the menu button, similar to the main site, but without separate states for open and closed, since there is no related shelf
 .mobileMenuButton--reach {
     @include font($size: 20px, $weight: 'bold');

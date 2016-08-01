@@ -25,7 +25,6 @@
     color: $tcc-teal;
     line-height: 1.1;
     margin-top: 0.25rem;
-    text-transform: lowercase;
 
     @include bp(medium) {
         @include font(1.4rem);

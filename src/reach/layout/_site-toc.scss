@@ -1,17 +1,6 @@
 .reach-toc .main,
 .reach-archive .main {
     background-color: $tcc-blue;
-
-    &::after {
-        background: url($diagonal-stripe-small) $pure-white;
-        border-bottom: 6px solid $pure-white;
-        content: '';
-        display: block;
-        height: 18px;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-    }
 }
 
 .tocHeadingWrap {
@@ -103,7 +92,17 @@
 .toc-article-innerWrap {
     display: block;
     padding: 12px;
+    position: relative;
     width: 100%;
+
+    &.featuredArticle::before {
+        content: url('/magazine/assets/images/icons/feature.svg');
+        display: block;
+        left: 5px;
+        position: absolute;
+        top: 5px;
+        width: 33.3%;
+    }
 }
 
 .toc-article-link {
