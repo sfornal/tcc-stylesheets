@@ -101,10 +101,14 @@
 
 .legal {
     @include font(0.75rem);
+    background-color: $medium-gray;
     margin: 0 auto;
-    max-width: $max-container-width;
-    padding: 10px 20px;
+    padding: 10px 20px 90px;
     text-align: center;
+
+    @include bp(medium) {
+        padding-bottom: 20px;
+    }
 
     p {
         margin: 0;

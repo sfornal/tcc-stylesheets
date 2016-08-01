@@ -102,15 +102,17 @@
 
 .toc-article-innerWrap {
     display: block;
-    padding: 20px;
+    padding: 12px;
     width: 100%;
 }
 
 .toc-article-link {
     background-color: $pure-white;
+    border-radius: 4px;
     border-top-color: $tcc-teal-lighter;
     border-top-style: solid;
     border-top-width: 6px;
+    box-shadow: 0 6px 6px -4px $shadow-dark;
     display: block;
     height: 100%;
     text-decoration: none;
@@ -141,7 +143,7 @@
 }
 
 .toc-titleWrap {
-    padding: 10px;
+    padding: 20px;
 }
 
 // Style to remove default link styling on archive page links

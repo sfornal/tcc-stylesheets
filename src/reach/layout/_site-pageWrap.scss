@@ -4,3 +4,35 @@
     position: relative;
     width: 100%;
 }
+
+// Styles for the menu button, similar to the main site, but without separate states for open and closed, since there is no related shelf
+.mobileMenuButton--reach {
+    @include font($size: 20px, $weight: 'bold');
+    background: radial-gradient($tcc-blue, darken($tcc-blue, 10%)) $tcc-blue;
+    border: 3px solid $pure-white;
+    border-radius: 50%;
+    bottom: 24px;
+    box-shadow: 0 2px 6px -2px $shadow-dark;
+    color: $pure-white;
+    display: block;
+    height: 70px;
+
+    // Line Height in PX for button is intentional
+    //scss-lint:disable PropertyUnits
+    line-height: 60px;
+
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    right: calc(50% - 35px);
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 2px 2px 3px $shadow-dark;
+    vertical-align: middle;
+    width: 70px;
+    z-index: z(MODAL);
+
+    @include bp(medium) {
+        display: none; // !important; //Was important needed here?
+    }
+}

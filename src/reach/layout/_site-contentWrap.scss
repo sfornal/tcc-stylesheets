@@ -123,12 +123,11 @@ blockquote {
     width: 80%;
     z-index: z(FOREGROUND);
 
-    // Linter doesn't like darken() ??
-    // scss-lint:disable VariableForProperty
     &::before,
     &::after {
+        $quote-color: transparentize($tcc-green, 0.5);
         @include font(5em, 'black', italic, $secondary-font);
-        color: darken($light-gray, 10%);
+        color: $quote-color;
         position: absolute;
         z-index: z(BACKGROUND);
     }
@@ -216,10 +215,9 @@ blockquote {
             text-transform: uppercase;
         }
 
-        // Linter doesn't like lighten() ??
-        // scss-lint:disable VariableForProperty
         tr:nth-of-type(odd) {
-            background-color: lighten($tcc-teal-lighter, 50%);
+            $table-color: lighten($tcc-teal-lighter, 50%);
+            background-color: $table-color;
         }
 
         th,
