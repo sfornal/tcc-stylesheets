@@ -101,7 +101,8 @@
         left: 5px;
         position: absolute;
         top: 5px;
-        width: 33.3%;
+        width: 45%;
+        z-index: z(HIGHEST);
     }
 }
 
@@ -115,6 +116,7 @@
     display: block;
     height: 100%;
     text-decoration: none;
+    transition: transform 0.15s ease-out;
     width: 100%;
 
     @include bp(large) {
@@ -125,6 +127,13 @@
         .toc-article:nth-of-type(3n+2) & {
             border-top-color: $tcc-green;
         }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        transform: scale(1.05);
+        transition: transform 0.15s ease-in;
     }
 }
 

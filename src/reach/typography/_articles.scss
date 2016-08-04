@@ -1,6 +1,6 @@
 blockquote {
     @include font(1.3rem, bold, italic, $secondary-font);
-    color: $tcc-blue-darker;
+    color: $tcc-teal;
     line-height: 1.5;
 
     @include bp(medium) {

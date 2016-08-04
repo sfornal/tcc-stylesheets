@@ -22,11 +22,12 @@
     }
 
     .column {
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         width: 100%;
 
         @include bp(medium) {
             float: left;
+            margin-bottom: 20px;
             width: 33%;
         }
     }
@@ -70,7 +71,7 @@
     }
 
     .socialIcon {
-        width: 32px;
+        width: 40px;
     }
 }
 
@@ -104,7 +105,7 @@
     @include font(0.75rem);
     background-color: $medium-gray;
     margin: 0 auto;
-    padding: 10px 20px 90px;
+    padding: 10px 20px 100px;
     text-align: center;
 
     @include bp(medium) {
