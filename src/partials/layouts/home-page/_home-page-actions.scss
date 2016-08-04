@@ -9,7 +9,7 @@
 
         @include bp(medium) {
             max-width: 100%;
-            padding-left: 0;
+            // padding-left: 0; //Removed to fix alignment of top button area
         }
 
         .flexbox & {
@@ -17,7 +17,7 @@
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: center;
         }
 
         .no-flexbox & {
@@ -119,6 +119,14 @@
     .button-wrap {
         margin: 0;
         padding: 5px;
+        transition: transform 0.2s ease-out;
+
+        &:hover,
+        &:focus,
+        &:active {
+            transform: scale(1.02);
+            transition: transform 0.15s ease-in;
+        }
 
         .flexbox & {
             flex: 1 1 100%;

@@ -37,7 +37,15 @@ $big-button-ratio: 29.837%;
     .bigButton-wrap {
         margin: 0;
         padding: 10px;
+        transition: transform 0.2s ease-in;
         width: 100%;
+
+        &:hover,
+        &:focus,
+        &:active {
+            transform: scale(1.02);
+            transition: transform 0.15s ease-out;
+        }
 
         .bigButton {
             border-radius: 8px;
