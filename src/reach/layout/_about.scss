@@ -1,0 +1,102 @@
+.reach-about .pageWrap {
+    p {
+        margin: 0 0 1em;
+    }
+
+    h2 {
+        @include font(1.75rem);
+
+        @include bp(medium) {
+            @include font(2rem);
+        }
+
+        @include bp(large) {
+            @include font(2.5rem);
+        }
+
+        @include bp(x-large) {
+            @include font(3rem);
+        }
+    }
+
+    h3 {
+        @include font(1.33rem);
+
+        @include bp(medium) {
+            @include font(1.66rem);
+        }
+
+        @include bp(large) {
+            @include font(2rem);
+        }
+
+        @include bp(x-large) {
+            @include font(2.5rem);
+        }
+    }
+
+    .about-text {
+        margin: 1rem 0;
+        width: 100%;
+
+        @include bp(medium) {
+            float: left;
+            margin: 0 20px 0 0;
+            max-width: 500px;
+        }
+    }
+
+    .download-link {
+        margin: 1rem auto;
+        width: 150px;
+
+        @include bp(medium) {
+            float: right;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        .caption {
+            text-align: center;
+        }
+    }
+
+    .person {
+        display: table;
+        margin: 1rem 0;
+        padding: 0;
+        vertical-align: middle;
+    }
+
+    .person-image {
+        display: table-cell;
+        width: 100px;
+
+        @include bp(medium) {
+            width: 200px;
+        }
+    }
+
+    .person-name {
+        @include font(1.2rem);
+        display: table-cell;
+        margin: 0;
+        padding: 0 0 0 20px;
+        vertical-align: middle;
+
+        @include bp(large) {
+            @include font(1.66rem);
+        }
+    }
+
+    .textContent {
+        @include clearfix();
+        margin-bottom: 2rem;
+    }
+}

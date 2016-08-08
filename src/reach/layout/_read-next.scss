@@ -1,0 +1,93 @@
+.readNextWrap {
+    margin: 5rem auto;
+    max-width: $max-container-width;
+    width: 100%;
+
+    .readNext-heading {
+        @include font(1rem, 'black');
+        border-bottom: 1px solid $dark-gray;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 0;
+
+        @include bp(medium) {
+            margin-left: 4rem;
+            margin-right: 4rem;
+        }
+
+        @include bp(large) {
+            margin-left: 8rem;
+            margin-right: 8rem;
+        }
+
+        @include bp(x-large) {
+            margin-left: 17rem;
+            margin-right: 17rem;
+        }
+    }
+
+    .readNext-list {
+        @include clearfix();
+        display: block;
+        list-style-type: none;
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .readNextEntry {
+        margin: 0 0 0.5rem;
+        width: 100%;
+
+        @include bp($custom: '(min-width: 450px)') {
+            float: left;
+            margin: 0;
+            width: 50%;
+        }
+
+        @include bp($custom: '(min-width: 550px)') {
+            width: 33%;
+        }
+
+        @include bp(medium) {
+            width: 16.66667%;
+        }
+    }
+
+    .readNextInnerWrap {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .readNextLink {
+        display: block;
+        height: 100%;
+        text-decoration: none;
+        width: 100%;
+    }
+
+    // Autoprefixer compiler directive messes this up
+    //scss-lint:disable PropertySortOrder Comment
+    .readNextImg {
+        background-color: $pure-white;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        // filter: $drop-shadow-filter;
+        margin-bottom: 0.5rem;
+        padding-top: 56.25%;
+        width: 100%;
+
+        /* autoprefixer: off */
+        -ms-behavior: url('/magazine/assets/js/backgroundsize.min.htc');
+    }
+
+    .readNextTitle {
+        @include font(0.8rem);
+        color: $text-black;
+        line-height: 1.1;
+        margin: 0;
+        text-align: left;
+    }
+}
