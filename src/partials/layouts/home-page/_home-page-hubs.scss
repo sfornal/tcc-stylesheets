@@ -35,6 +35,7 @@ $big-button-ratio: 29.837%;
     }
 
     .bigButton-wrap {
+        border-radius: 8px;
         margin: 0;
         padding: 10px;
         transition: transform 0.2s ease-in;
@@ -67,11 +68,13 @@ $big-button-ratio: 29.837%;
         }
 
         .bigButton-button {
+            border-radius: 0 8px 8px 0;
             right: 0;
             z-index: z(HIGH);
         }
 
         .bigButton-image {
+            border-radius: 8px 0 0 8px;
             left: 0;
             z-index: z(OVER);
         }
