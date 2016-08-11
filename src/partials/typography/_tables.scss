@@ -164,6 +164,20 @@
     width: 15%;
 }
 
+// 30% / 10% / 10% / 50%
+
+.table-snippet-cols--30-10-10-50 tbody tr th:nth-child(1) {
+    width: 30%;
+}
+
+.table-snippet-cols--30-10-10-50 tbody tr th:nth-child(2) {
+    width: 10%;
+}
+
+.table-snippet-cols--30-10-10-50 tbody tr th:nth-child(3) {
+    width: 10%;
+}
+
 //------------ Five Columns ------------*/
 // 10% | 25% | 25% | 10% | 30%
 .table-snippet-cols--10-25-25-10-30 tbody tr th:nth-child(1) {
