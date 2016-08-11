@@ -164,6 +164,20 @@
     width: 15%;
 }
 
+// 30% / 10% / 10% / 50%
+
+.table-snippet-cols--30-10-10-50 tbody tr th:nth-child(1) {
+    width: 30%;
+}
+
+.table-snippet-cols--30-10-10-50 tbody tr th:nth-child(2) {
+    width: 10%;
+}
+
+.table-snippet-cols--30-10-10-50 tbody tr th:nth-child(3) {
+    width: 10%;
+}
+
 //------------ Five Columns ------------*/
 // 10% | 25% | 25% | 10% | 30%
 .table-snippet-cols--10-25-25-10-30 tbody tr th:nth-child(1) {
@@ -253,4 +267,79 @@
 
 .table-snippet-cols--20-16-16-16-16-16 tbody tr th:nth-child(5) {
     width: 16%;
+}
+
+
+/* Styles applied to the whole Cost table */
+.table-cost {
+    width: 100%;
+}
+
+.table-cost tbody th {
+    text-align: center;
+}
+
+.table-cost td {
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+/* These classes are manually added into the database */
+.table-cost__td--grouping {      
+    text-decoration: underline;
+}
+
+.table-cost__td--indented:before {
+    content: "\00a0 \00a0 \00a0  ";
+}
+     
+
+/* For Degree Table, Specifically */
+.table-cost-degree tbody tr td:nth-child(3),
+.table-cost-degree tbody tr td:nth-child(7),
+.table-cost-degree tbody tr td:nth-child(11),
+.table-cost-degree tbody tr td:nth-child(12) {
+    font-weight: bold;
+}
+
+.table-cost-degree tbody tr td:nth-child(2),
+.table-cost-degree tbody tr td:nth-child(3),
+.table-cost-degree tbody tr td:nth-child(7),
+.table-cost-degree tbody tr td:nth-child(11) {
+    text-align: center;
+}
+     
+.table-cost-degree tbody tr td:nth-child(4),
+.table-cost-degree tbody tr td:nth-child(5),
+.table-cost-degree tbody tr td:nth-child(6),      
+.table-cost-degree tbody tr td:nth-child(8),
+.table-cost-degree tbody tr td:nth-child(9),
+.table-cost-degree tbody tr td:nth-child(10),     
+.table-cost-degree tbody tr td:nth-child(12) {
+    text-align: right;
+}
+
+/* For Certificate Table, Specifically */
+.table-cost-cert tbody tr td:nth-child(3),
+.table-cost-cert tbody tr td:nth-child(6) {
+    font-weight: bold;
+}
+
+.table-cost-cert tbody tr td:nth-child(2),
+.table-cost-cert tbody tr td:nth-child(3) {
+    text-align: center;
+}
+        
+.table-cost-cert tbody tr td:nth-child(4),
+.table-cost-cert tbody tr td:nth-child(5),
+.table-cost-cert tbody tr td:nth-child(6) {
+    text-align: right;
+}
+
+/* For description at the bottom of the table (tuition) */
+.table-cost-addendum .heading {
+    font-weight: bold;
+}
+.table-cost-addendum ul {
+    list-style-type: none;
 }
