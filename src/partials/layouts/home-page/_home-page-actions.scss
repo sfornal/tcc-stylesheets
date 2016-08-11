@@ -54,9 +54,10 @@
                 > .button-wrap { float: none; width: 100%; }
             }
 
-            .flexbox & > .button-wrap {
-                padding: 0;
-            }
+            // Remove to fix spacing issue
+            // .flexbox & > .button-wrap {
+            //     padding: 0;
+            // }
         }
 
         .lazyLoad {
