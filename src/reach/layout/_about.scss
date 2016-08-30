@@ -76,6 +76,7 @@
 
     .person-image {
         display: table-cell;
+        max-width: none;
         width: 100px;
 
         @include bp(medium) {
