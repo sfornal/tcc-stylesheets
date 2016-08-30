@@ -1,0 +1,69 @@
+// Styles for the special message banner that goes directly under the hero
+
+.specialNotice {
+    background-color: $tcc-teal;
+    color: $pure-white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+
+    .marketingContent + & {
+        margin-top: 0;
+    }
+
+    .specialNotice-innerWrap {
+        margin: 0 auto;
+        max-width: $max-container-width;
+        padding: 10px 20px;
+        text-align: center;
+        width: 100%;
+
+        p {
+            font-weight: 700;
+            margin: 0;
+            padding: 0;
+
+            img {
+                height: 16px;
+                margin-right: 8px;
+                position: relative;
+                top: -2px;
+                vertical-align: middle;
+                width: 16px;
+            }
+        }
+    }
+}
+
+//Styles for the marketing copy that is superimposed over the header of the page
+
+.marketingContent {
+    background-color: $tcc-blue;
+    color: $pure-white;
+    margin: 18px 0 0;
+    padding: 0;
+
+    @include bp(medium) {
+        // TODO: Make it look as good on desktop
+    }
+}
+
+.marketingContent-innerWrap {
+    margin: 0 auto;
+    max-width: $max-container-width;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.marketContent-header {
+    //TODO: Style the header somehow
+}
+
+.marketingContent-copy {
+
+    a {
+        @include font($weight: 'bold');
+        color: inherit;
+    }
+}
