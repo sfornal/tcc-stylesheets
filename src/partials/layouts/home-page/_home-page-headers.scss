@@ -61,6 +61,12 @@
 }
 
 .marketingContent-copy {
+    @include font($weight: 'bold');
+    text-transform: uppercase;
+
+    p {
+        margin: 0;
+    }
 
     a {
         @include font($weight: 'bold');
