@@ -66,15 +66,18 @@
     @include bp(medium) {
         .homePage & {
             height: 500px;
+            max-height: 42vh;
         }
 
         .hubPage & {
             height: 400px;
+            max-height: 42vh;
         }
 
         .detailsPage &,
         .searchPage & {
             height: 300px;
+            max-height: 42vh;
         }
 
         // Remove the second selector after testing
