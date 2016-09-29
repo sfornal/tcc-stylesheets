@@ -43,6 +43,20 @@
         text-transform: uppercase;
     }
 
+    h2 {
+        @include font(1.5em, 'bold');
+    }
+
+    h3 {
+        @include font(1.25em, 'bold');
+        color: $tcc-blue;
+    }
+
+    h4 {
+        @include font(1.17em, 'bold');
+        color: $tcc-teal;
+    }
+
     h2,
     h3,
     h4,

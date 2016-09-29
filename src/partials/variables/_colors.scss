@@ -48,15 +48,15 @@ $pure-black: #000 !default;
 $text-black: #404040 !default; //aka 90% black
 
 //Translucent shadows
-$shadow-light: rgba(0, 0, 0, 0.4);
-$shadow-dark: rgba(0, 0, 0, 0.8);
+$shadow-light: rgba(0, 0, 0, 0.4) !default;
+$shadow-dark: rgba(0, 0, 0, 0.8) !default;
 
 // Link color
-$tcc-link-color: #315cbf; //#2c74ae;
-$tcc-link-color-contrast: $pure-white;
+$tcc-link-color: #315cbf !default; //#2c74ae;
+$tcc-link-color-contrast: $pure-white !default;
 
 //Table Styles Colors
-$tcc-table-color0: #fcfcfc;
-$tcc-table-color1: #f2f2f2;
-$tcc-table-color2: lighten($tcc-teal, 60%);
-$tcc-table-color2-contrast: $text-black;
+$tcc-table-color0: #fcfcfc !default;
+$tcc-table-color1: #f2f2f2 !default;
+$tcc-table-color2: lighten($tcc-teal, 60%) !default;
+$tcc-table-color2-contrast: $text-black !default;

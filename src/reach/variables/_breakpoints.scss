@@ -1,0 +1,16 @@
+//Breakpoints for media queries
+
+// Max size for desktop, constrains content and centers
+$max-container-width: 1280px;
+
+// First bp up from mobile layout. Tablet in portrait orientation
+$bp-medium: 'only screen and (min-width: 768px)';
+
+// Tablet in landscape, or small laptop
+$bp-large: 'only screen and (min-width: 1024px)';
+
+// Last breakpoint, for large desktop screens
+$bp-x-large: 'only screen and (min-width: 1280px)';
+
+// Medium only breakpoint (special case use)
+$bp-medium-only: 'only screen and (min-width:768px) and (max-width: 1023px)';

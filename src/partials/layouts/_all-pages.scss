@@ -80,7 +80,9 @@
         // Remove the second selector after testing
         &.hero--collapse,
         &.collapse {
-            height: 0; // Based on nav menu height + border height (45 + 3)
+            height: 0;
+            // Based on nav menu height + border height (45 + 3)
+            margin-top: -3px;
         }
     }
 
