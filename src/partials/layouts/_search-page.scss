@@ -48,8 +48,9 @@
         padding: 0.75rem 0 1.5rem;
 
         > div {
-            border: 1px solid $tcc-green;
-            border-radius: 5px;
+            // Removing as a test to see if users will click promoted links if they look different
+            // border: 1px solid $tcc-green;
+            // border-radius: 5px;
             padding: 0.75rem 20px;
         }
     }
