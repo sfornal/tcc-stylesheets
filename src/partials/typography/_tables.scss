@@ -76,6 +76,11 @@
 .table-snippet-cols--85-15 tbody tr th:first-child {
     width: 85%;
 }
+// 30% | 70%
+.table-snippet-cols--30-70 tbody tr th:first-child {
+    width: 30%;
+}
+
 //------------ Three Columns ------------*/
 // 10% | 75% | 15%
 .table-snippet-cols--10-75-15 tbody tr th:nth-child(1) {
@@ -111,6 +116,15 @@
 
 .table-snippet-cols--60-20-20 tbody tr th:nth-child(2) {
     width: 20%;
+}
+
+// 20% | 60% | 20%
+.table-snippet-cols--20-60-20 tbody tr th:nth-child(1) {
+    width: 20%;
+}
+
+.table-snippet-cols--20-60-20 tbody tr th:nth-child(2) {
+    width: 60%;
 }
 //------------ Four Columns ------------*/
 // 25% | 25% | 25% | 25%
