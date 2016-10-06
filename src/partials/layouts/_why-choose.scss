@@ -98,6 +98,10 @@
     padding: 20px;
     text-align: center;
 
+    a {
+        text-decoration: none;
+    }
+
     h3 {
         @include font(2rem, 'bold');
         color: $tcc-blue;
