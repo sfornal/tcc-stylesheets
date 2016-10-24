@@ -1,0 +1,16 @@
+// Important note! This file resides at
+//      /_resources/social/ou-mashup/css/social-media-hub.css
+// Not in the usual CSS folder
+
+//Styles that are specific to the Social Media Mashup page
+//These don't need to be loaded on any other page, so we are
+//factoring them out into a separate request
+
+@import 'partials/variables';
+
+// Since this style sheet gets loaded in conjunction with the universal stylesheet,
+// We don't need to import the global styles or the reset styles again
+@import 'partials/toolkit/functions';
+@import 'partials/toolkit/mixins';
+
+@import 'partials/layouts/social-hub';
