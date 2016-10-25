@@ -1,0 +1,465 @@
+// Ignore mergeable selector rule until we get everything else tamed
+// scss-lint:disable MergeableSelector
+
+//  Reset
+.mashup ul,
+.mashup li {
+    background: none;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 85%;
+}
+
+//  Main styles
+//  Feeds
+.mashup {
+    color: $medium-gray;
+    list-style: none outside none;
+    margin: 0;
+}
+
+.mashup-content {
+    padding: 0;
+    position: relative;
+
+}
+
+.mashup-loading {
+    background: url('../images/loading_light.gif') no-repeat 0 0;
+    height: 24px;
+    left: 10px;
+    padding: 6px 0 0 30px;
+    position: absolute;
+    top: 10px;
+}
+
+.mashup-toolbar .mashup-loading {
+    left: auto;
+    right: 10px;
+}
+
+.stream p {
+    margin: 0;
+    padding: 0;
+}
+
+.stream li a {
+    color: $tcc-link-color;
+}
+
+
+.stream li {
+    background-color: $pure-white;
+    box-shadow: 4px 4px 3px 0 $shadow-light;
+    font-size: 1rem;
+    line-height: 1.35;
+    margin: 0 7px 7px 0;
+    padding: 15px 0 45px;
+    position: relative;
+    width: 200px;
+}
+
+.stream li img {
+    display: inline;
+    width: 100%;
+}
+
+
+.stream li .inner {
+    overflow: hidden;
+    padding: 0 15px;
+}
+
+.stream li .icon {
+    bottom: 0;
+    left: 3px;
+    position: absolute;
+    width: 26px;
+    z-index: 3;
+}
+
+.stream li .section-intro {
+    bottom: 0;
+    color: $pure-white;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: bold;
+    left: 0;
+    padding: 7px 0;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.stream li .clear {
+    clear: both;
+}
+
+//  Content blocks
+
+.stream li .section-intro a {
+    color: $pure-white;
+    margin-left: 32px;
+    text-decoration: underline;
+}
+
+.stream li .section-title {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.stream li .section-title a {
+    color: $medium-gray;
+}
+
+.stream li .section-title a:hover {
+    color: $tcc-link-color;
+}
+
+.stream li .section-thumb {
+    float: left;
+    margin: 0 7px 3px 0;
+
+}
+
+.stream li .section-thumb img {
+    background: $pure-white;
+    border: 1px solid $light-gray;
+    padding: 1px;
+}
+
+.stream li .section-text {
+    display: block;
+}
+
+.stream li .section-text br {
+    display: none;
+}
+
+.stream li .section-user {
+    background: url('../images/profile.png') no-repeat 0 5px;
+    clear: both;
+    display: block;
+    float: left;
+    font-style: italic;
+    line-height: 1.1;
+    margin: 0 8px 5px 0;
+    padding: 5px 0 0 15px;
+}
+
+.stream li .meta {
+    color: $light-gray;
+    display: block;
+    font-size: 90%;
+}
+
+.stream li .meta span {
+    display: block;
+    float: left;
+    line-height: 1.1;
+    margin: 0 8px 5px 0;
+    padding: 0 0 0 15px;
+}
+
+.meta .shares {
+    background: url('../images/shares.png') no-repeat 0 0;
+    padding-left: 20px;
+}
+
+.meta .views {
+    background: url('../images/views.png') no-repeat 0 0;
+    padding-left: 18px;
+}
+
+.meta .likes {
+    //Placeholder
+}
+
+.meta .comments {
+    background: url('../images/comments.png') no-repeat 0 0;
+}
+
+.meta .users {
+    background: url('../images/users.png') no-repeat 0 0;
+}
+
+.meta .videos {
+    background: url('../images/videos.png') no-repeat 0 0;
+    padding-left: 16px;
+}
+
+.stream .mashup-error {
+    color: $tcc-burgundy;
+}
+
+//  Toolbar
+.mashup-toolbar {
+    margin-bottom: 19px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+//  Filter
+
+// The following selectors appear to be unused (couldn't find #wall in html output)
+// #wall {
+//     padding-top: 0px;
+// }
+
+// #wall .mashup-toolbar {
+//     margin-bottom: 25px;
+// }
+
+.mashup-toolbar .filter {
+    margin: 0 0 15px;
+    padding: 0;
+}
+
+.mashup-toolbar .filter li {
+    background: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.mashup-toolbar .filter .link-all {
+    color: $dark-gray;
+    font-weight: bold;
+    padding: 7px 7px 4px;
+}
+
+.mashup-toolbar .filter li a {
+    display: block;
+    float: left;
+    margin: 0 1px 0 0;
+    outline: 0;
+    padding: 4px 3px 0;
+}
+
+.mashup-toolbar .filter li img {
+    height: 30px;
+    margin: 0;
+}
+
+//  Controls
+.mashup .controls {
+    height: 22px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 7px;
+    z-index: 12;
+}
+
+.mashup .controls li {
+    background: none;
+    display: inline;
+}
+
+.mashup .controls a {
+    background: url('../images/controls.png') no-repeat 0 0;
+    display: block;
+    float: left;
+    height: 22px;
+    margin: 0 0 0 2px;
+    outline: 0;
+    width: 22px;
+}
+
+.mashup .controls .prev {
+    background-position: -44px 0;
+}
+
+.mashup .controls .next {
+    background-position: -66px 0;
+}
+
+.mashup .controls .play {
+    background-position: 0 0;
+}
+
+.mashup .controls .pause {
+    background-position: -22px 0;
+}
+
+.mashup .controls .prev:hover {
+    background-position: -44px -22px;
+}
+
+.mashup .controls .next:hover {
+    background-position: -66px -22px;
+}
+
+.mashup .controls .play:hover {
+    background-position: 0 -22px;
+}
+
+.mashup .controls .pause:hover {
+    background-position: -22px -22px;
+}
+
+//  feeds network specific styles
+.stream .mashup-rss .section-intro {
+    background-color: $tcc-orange;
+}
+
+.stream .mashup-delicious .section-intro {
+    background-color: $tcc-blue-lighter;
+}
+
+.stream .mashup-twitter .section-intro {
+    background-color: $tcc-twitter-color;
+}
+
+.stream .mashup-facebook .section-intro {
+    background-color: $tcc-facebook-color;
+}
+
+.stream .mashup-google .section-intro {
+    background-color: $medium-gray;
+}
+
+.stream .mashup-youtube .section-intro {
+    background-color: $tcc-youtube-color;
+}
+
+.stream .mashup-pinterest .section-intro {
+    background-color: $tcc-burgundy-lighter;
+}
+
+.stream .mashup-instagram .section-intro {
+    background-color: $tcc-instagram-color;
+}
+
+.stream .mashup-tumblr .section-intro {
+    background-color: $tcc-purple;
+}
+
+//  feeds network specific styles
+.filter .f-rss a:hover {
+    background-color: $tcc-orange;
+}
+
+.filter .f-flickr a:hover {
+    background-color: $tcc-burgundy-lighter;
+}
+
+.filter .f-twitter a:hover {
+    background-color: $tcc-twitter-color;
+}
+
+.filter .f-facebook a:hover {
+    background-color: $tcc-facebook-color;
+}
+
+.filter .f-youtube a:hover {
+    background-color: $tcc-youtube-color;
+}
+
+.filter .f-pinterest a:hover {
+    background-color: $tcc-burgundy-lighter;
+}
+
+.filter .f-instagram a:hover {
+    background-color: $tcc-instagram-color;
+}
+
+
+//  Facebook
+.stream .mashup-facebook .section-text img {
+    background: $pure-white;
+    border: 1px solid $light-gray;
+    float: left;
+    margin: 5px 7px 5px 0;
+    padding: 1px;
+}
+
+.stream .mashup-facebook .section-text a {
+    margin-right: 4px;
+}
+
+.stream .mashup-facebook .section-intro a {
+    margin-left: 25px;
+}
+
+//  google
+.stream .mashup-google .section-title {
+    margin-bottom: 5px;
+}
+
+.stream .mashup-google .section-thumb img {
+    max-width: 190px;
+}
+
+.stream .mashup-google .meta .plusones {
+    padding-left: 0;
+}
+
+// * Flickr *
+.stream .mashup-flickr .section-thumb {
+    margin: 0;
+}
+
+.stream .mashup-flickr .section-thumb img {
+    height: 70px;
+}
+
+//  Pinterest
+.stream .mashup-pinterest .section-thumb {
+    display: block;
+}
+
+.stream .mashup-pinterest .section-text {
+    clear: both;
+}
+
+.stream .mashup-pinterest .section-thumb img {
+    width: 190px;
+}
+
+//  dribbble
+.stream .mashup-dribbble .inner img {
+    margin-bottom: 5px;
+    max-width: 190px;
+}
+
+// isotope
+.isotope,
+.isotope .isotope-item {
+    //  change duration value to whatever you like
+    transition-duration: 0.8s;
+}
+
+.isotope {
+    transition-property: height, width;
+}
+
+.isotope .isotope-item {
+    transition-property: transform, opacity;
+}
+
+// *** disabling Isotope CSS3 transitions ***
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+    transition-duration: 0s;
+}
+
+// Ignore ID rule here
+// scss-lint:disable IdSelector
+@media only screen and (min-width: 1024px) {
+    .main-content > #social-media-hub {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .main-content > #social-media-hub {
+        max-width: 100%;
+    }
+}
