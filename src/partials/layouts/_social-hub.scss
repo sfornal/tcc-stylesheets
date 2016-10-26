@@ -1,20 +1,20 @@
 // Ignore mergeable selector rule until we get everything else tamed
 // scss-lint:disable MergeableSelector
-
 //  Reset
-.mashup ul,
-.mashup li {
+.mashup li,
+.mashup ul {
     background: none;
     list-style: none;
     margin: 0 auto;
     padding: 0;
-    width: 85%;
+    width: 100%;
 }
 
 //  Main styles
 //  Feeds
+
 .mashup {
-    color: $medium-gray;
+    color: $text-black;
     list-style: none outside none;
     margin: 0;
 }
@@ -22,7 +22,6 @@
 .mashup-content {
     padding: 0;
     position: relative;
-
 }
 
 .mashup-loading {
@@ -48,7 +47,6 @@
     color: $tcc-link-color;
 }
 
-
 .stream li {
     background-color: $pure-white;
     box-shadow: 4px 4px 3px 0 $shadow-light;
@@ -64,7 +62,6 @@
     display: inline;
     width: 100%;
 }
-
 
 .stream li .inner {
     overflow: hidden;
@@ -95,9 +92,7 @@
 .stream li .clear {
     clear: both;
 }
-
 //  Content blocks
-
 .stream li .section-intro a {
     color: $pure-white;
     margin-left: 32px;
@@ -121,7 +116,6 @@
 .stream li .section-thumb {
     float: left;
     margin: 0 7px 3px 0;
-
 }
 
 .stream li .section-thumb img {
@@ -190,10 +184,9 @@
     padding-left: 16px;
 }
 
-.stream .mashup-error {
+.mashup-error {
     color: $tcc-burgundy;
 }
-
 //  Toolbar
 .mashup-toolbar {
     margin-bottom: 19px;
@@ -202,18 +195,7 @@
     position: relative;
     width: 100%;
 }
-
 //  Filter
-
-// The following selectors appear to be unused (couldn't find #wall in html output)
-// #wall {
-//     padding-top: 0px;
-// }
-
-// #wall .mashup-toolbar {
-//     margin-bottom: 25px;
-// }
-
 .mashup-toolbar .filter {
     margin: 0 0 15px;
     padding: 0;
@@ -227,7 +209,7 @@
 }
 
 .mashup-toolbar .filter .link-all {
-    color: $dark-gray;
+    color: $text-black;
     font-weight: bold;
     padding: 7px 7px 4px;
 }
@@ -245,7 +227,6 @@
     margin: 0;
 }
 
-//  Controls
 .mashup .controls {
     height: 22px;
     padding: 0;
@@ -301,44 +282,44 @@
 .mashup .controls .pause:hover {
     background-position: -22px -22px;
 }
-
+// Deleted all the `.mashup .controls` and `.mashup-toolbar` styles,
+// since the elements don't seem to appear anywhere on the page
 //  feeds network specific styles
-.stream .mashup-rss .section-intro {
+.mashup-rss .section-intro {
     background-color: $tcc-orange;
 }
 
-.stream .mashup-delicious .section-intro {
+.mashup-delicious .section-intro {
     background-color: $tcc-blue-lighter;
 }
 
-.stream .mashup-twitter .section-intro {
+.mashup-twitter .section-intro {
     background-color: $tcc-twitter-color;
 }
 
-.stream .mashup-facebook .section-intro {
+.mashup-facebook .section-intro {
     background-color: $tcc-facebook-color;
 }
 
-.stream .mashup-google .section-intro {
+.mashup-google .section-intro {
     background-color: $medium-gray;
 }
 
-.stream .mashup-youtube .section-intro {
+.mashup-youtube .section-intro {
     background-color: $tcc-youtube-color;
 }
 
-.stream .mashup-pinterest .section-intro {
+.mashup-pinterest .section-intro {
     background-color: $tcc-burgundy-lighter;
 }
 
-.stream .mashup-instagram .section-intro {
+.mashup-instagram .section-intro {
     background-color: $tcc-instagram-color;
 }
 
-.stream .mashup-tumblr .section-intro {
+.mashup-tumblr .section-intro {
     background-color: $tcc-purple;
 }
-
 //  feeds network specific styles
 .filter .f-rss a:hover {
     background-color: $tcc-orange;
@@ -367,10 +348,8 @@
 .filter .f-instagram a:hover {
     background-color: $tcc-instagram-color;
 }
-
-
 //  Facebook
-.stream .mashup-facebook .section-text img {
+.mashup-facebook .section-text img {
     background: $pure-white;
     border: 1px solid $light-gray;
     float: left;
@@ -378,55 +357,50 @@
     padding: 1px;
 }
 
-.stream .mashup-facebook .section-text a {
+.mashup-facebook .section-text a {
     margin-right: 4px;
 }
 
-.stream .mashup-facebook .section-intro a {
+.mashup-facebook .section-intro a {
     margin-left: 25px;
 }
-
 //  google
-.stream .mashup-google .section-title {
+.mashup-google .section-title {
     margin-bottom: 5px;
 }
 
-.stream .mashup-google .section-thumb img {
+.mashup-google .section-thumb img {
     max-width: 190px;
 }
 
-.stream .mashup-google .meta .plusones {
+.mashup-google .meta .plusones {
     padding-left: 0;
 }
-
 // * Flickr *
-.stream .mashup-flickr .section-thumb {
+.mashup-flickr .section-thumb {
     margin: 0;
 }
 
-.stream .mashup-flickr .section-thumb img {
+.mashup-flickr .section-thumb img {
     height: 70px;
 }
-
 //  Pinterest
-.stream .mashup-pinterest .section-thumb {
+.mashup-pinterest .section-thumb {
     display: block;
 }
 
-.stream .mashup-pinterest .section-text {
+.mashup-pinterest .section-text {
     clear: both;
 }
 
-.stream .mashup-pinterest .section-thumb img {
+.mashup-pinterest .section-thumb img {
     width: 190px;
 }
-
 //  dribbble
-.stream .mashup-dribbble .inner img {
+.mashup-dribbble .inner img {
     margin-bottom: 5px;
     max-width: 190px;
 }
-
 // isotope
 .isotope,
 .isotope .isotope-item {
@@ -441,25 +415,24 @@
 .isotope .isotope-item {
     transition-property: transform, opacity;
 }
-
 // *** disabling Isotope CSS3 transitions ***
-
+.isotope .isotope-item.no-transition,
 .isotope.no-transition,
-.isotope.no-transition .isotope-item,
-.isotope .isotope-item.no-transition {
+.isotope.no-transition .isotope-item {
     transition-duration: 0s;
 }
 
 // Ignore ID rule here
 // scss-lint:disable IdSelector
-@media only screen and (min-width: 1024px) {
-    .main-content > #social-media-hub {
-        max-width: 100%;
-    }
+#social-media-hub {
+    margin: 1rem auto;
+    max-width: 100%;
+    width: 100%;
 }
 
-@media only screen and (min-width: 700px) {
-    .main-content > #social-media-hub {
-        max-width: 100%;
-    }
+
+// Overrides to Universal Stylesheet
+.main-content .contentUpdated,
+.main-sideBar .contentUpdated {
+    display: none;
 }
