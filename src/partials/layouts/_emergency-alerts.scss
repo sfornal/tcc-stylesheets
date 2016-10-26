@@ -1,10 +1,7 @@
 .emergency-top,
 .emergency-full {
-    align-items: stretch;
     background-color: $tcc-burgundy;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: block;
     padding: 40px;
     width: 100%;
 }
