@@ -180,7 +180,6 @@ $tile-gray: #b9b9b9;
     overflow: hidden;
     padding: 0;
     position: relative;
-    width: 100%;
 
     .mashup-loading {
         left: auto;
@@ -207,6 +206,7 @@ $tile-gray: #b9b9b9;
             }
 
             img {
+                border-radius: 4px;
                 height: 44px;
                 margin: 0;
             }

@@ -197,5 +197,5 @@ hr {
     border-bottom: 2px solid $light-gray;
     height: 0;
     margin: 3rem 0;
-    width: 100%;
+    // width: 100%; // This was breaking the mobile layout!
 }
