@@ -1,0 +1,238 @@
+// This is my redo, from scratch, for the social river styling. It seems
+// easier to start with a clean slate, instead of bulling my way through the
+// OU provided code base
+
+// Local variables
+$tile-gray: #b9b9b9;
+
+// Styles for "The River"
+
+// Use the ID selector here, because this is a special element and specificity!
+// scss-lint:disable IdSelector
+#social-media-hub {
+    margin: 1rem 0;
+    max-width: 100%;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.mashup-content {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.stream {
+    @include clearfix();
+    color: $text-black;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    li {
+        $margin-value: 20px;
+
+        border: 1px solid $tile-gray;
+        border-radius: 6px;
+        box-shadow: 3px 4px 10px -3px $shadow-light;
+        display: block;
+        margin: 0 0 $margin-value;
+        padding: 20px 15px 60px;
+        width: 100%;
+
+        @include bp($custom:'(min-width: 550px)') {
+            margin: 0 $margin-value $margin-value 0;
+            width: calc((100% - #{2 * $margin-value}) / 2);
+        }
+
+        @include bp(large) {
+            width: calc((100% - #{3 * $margin-value}) / 3);
+        }
+
+        @include bp(x-large) {
+            width: calc((100% - #{4 * $margin-value}) / 4);
+        }
+
+        &.mashup-twitter {
+            border-color: $tcc-twitter-color;
+
+            .section-intro {
+                background-color: $tcc-twitter-color;
+            }
+        }
+
+        &.mashup-facebook {
+            border-color: $tcc-facebook-color;
+
+            .section-intro {
+                background-color: $tcc-facebook-color;
+            }
+        }
+
+        &.mashup-youtube {
+            border-color: $tcc-youtube-color;
+
+            .section-intro {
+                background-color: $tcc-youtube-color;
+            }
+        }
+
+        &.mashup-instagram {
+            border-color: $tcc-instagram-color;
+
+            .section-intro {
+                background-color: $tcc-instagram-color;
+            }
+        }
+    }
+
+    a {
+        color: $tcc-link-color;
+        text-decoration: underline;
+    }
+
+    .inner {
+        // TODO: Stuff here
+    }
+
+    // Need line-height in px for card placement
+    // scss-lint:disable PropertyUnits
+    .section-intro {
+        @include font(0.8em);
+        background-color: $tile-gray;
+        border-radius: 0 0 3px 3px;
+        bottom: 0;
+        color: $pure-white;
+        display: block;
+        height: 45px;
+        left: 0;
+        line-height: 45px;
+        padding-left: 60px;
+        position: absolute;
+        vertical-align: middle;
+        width: 100%;
+
+        a {
+            color: $pure-white;
+        }
+    }
+
+    .icon {
+        bottom: 7px;
+        display: block;
+        height: 32px;
+        left: 8px;
+        position: absolute;
+        width: 32px;
+    }
+}
+
+//Code ported from original stylsheet, converted to SASS format
+// Following code is for the toolbar/filters
+.mashup-loading {
+    background: url('../images/loading_light.gif') no-repeat 0 0;
+    height: 24px;
+    left: 10px;
+    padding: 6px 0 0 30px;
+    position: absolute;
+    top: 10px;
+}
+
+//  Toolbar
+.mashup-toolbar {
+    margin-bottom: 19px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+
+    .mashup-loading {
+        left: auto;
+        right: 10px;
+    }
+
+    .filter {
+        margin: 0 0 15px;
+        padding: 0;
+
+        li {
+            background: none;
+            display: inline;
+            margin: 0;
+            padding: 0;
+
+            a {
+                box-shadow: none;
+                display: block;
+                float: left;
+                margin: 0 1px 0 0;
+                outline: none;
+                padding: 4px 3px 0;
+            }
+
+            img {
+                height: 30px;
+                margin: 0;
+            }
+        }
+
+        .link-all {
+            color: $text-black;
+            font-weight: bold;
+            padding: 7px 7px 4px;
+        }
+    }
+}
+
+.socialMediaAccounts {
+    columns: 2;
+    list-style-type: none;
+    padding: 0;
+
+    @include bp(medium) {
+        columns: 3;
+    }
+}
+
+.socialMediaRiver-heading {
+    @include font(2em, 'black');
+    line-height: 1;
+    margin-bottom: 0.25em;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.socialMediaRiver-instructions {
+    margin-bottom: 1em;
+}
+
+// Overrides to Universal Stylesheet
+.main-content .contentUpdated,
+.main-sideBar .contentUpdated {
+    display: none;
+}
+
+// Isotope.js specific styles
+
+.isotope,
+.isotope .isotope-item {
+    //  change duration value to whatever you like
+    transition-duration: 0.8s;
+}
+
+.isotope {
+    transition-property: height, width;
+
+    .isotope-item {
+        transition-property: transform, opacity;
+    }
+}
+
+// *** disabling Isotope CSS3 transitions ***
+.isotope .isotope-item.no-transition,
+.isotope.no-transition,
+.isotope.no-transition .isotope-item {
+    transition-duration: 0s;
+}
