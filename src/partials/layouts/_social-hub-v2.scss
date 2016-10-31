@@ -95,6 +95,13 @@ $tile-gray: #b9b9b9;
 
     .inner > [class^="section-"] {
         display: block;
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            width: auto;
+        }
     }
 
     .section-text {
