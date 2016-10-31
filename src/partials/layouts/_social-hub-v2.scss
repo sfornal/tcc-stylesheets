@@ -93,8 +93,12 @@ $tile-gray: #b9b9b9;
         text-decoration: underline;
     }
 
-    .inner {
-        // TODO: Stuff here
+    .inner > [class^="section-"] {
+        display: block;
+    }
+
+    .section-text {
+        padding-top: 15px;
     }
 
     // Need line-height in px for card placement
