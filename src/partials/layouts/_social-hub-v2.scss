@@ -10,10 +10,8 @@ $tile-gray: #b9b9b9;
 // Use the ID selector here, because this is a special element and specificity!
 // scss-lint:disable IdSelector
 #social-media-hub {
-    margin: 1rem 0;
     max-width: 100%;
     padding: 0 20px;
-    width: 100%;
 }
 
 .mashup-content {
@@ -45,14 +43,38 @@ $tile-gray: #b9b9b9;
         @include bp($custom:'(min-width: 550px)') {
             margin: 0 $margin-value $margin-value 0;
             width: calc((100% - #{2 * $margin-value}) / 2);
+
+            &:nth-of-type(2n) {
+                margin-right: 0;
+            }
         }
 
         @include bp(large) {
             width: calc((100% - #{3 * $margin-value}) / 3);
+
+            &:nth-of-type(2n) {
+                margin-right: $margin-value;
+            }
+
+            &:nth-of-type(3n) {
+                margin-right: 0;
+            }
         }
 
         @include bp(x-large) {
             width: calc((100% - #{4 * $margin-value}) / 4);
+
+            &:nth-of-type(2n) {
+                margin-right: $margin-value;
+            }
+
+            &:nth-of-type(3n) {
+                margin-right: $margin-value;
+            }
+
+            &:nth-of-type(4n) {
+                margin-right: 0;
+            }
         }
 
         &.mashup-twitter {
@@ -153,7 +175,8 @@ $tile-gray: #b9b9b9;
 
 //  Toolbar
 .mashup-toolbar {
-    margin-bottom: 19px;
+    margin-bottom: 1em;
+    margin-top: 1em;
     overflow: hidden;
     padding: 0;
     position: relative;
@@ -180,11 +203,11 @@ $tile-gray: #b9b9b9;
                 float: left;
                 margin: 0 1px 0 0;
                 outline: none;
-                padding: 4px 3px 0;
+                padding: 8px 8px 0;
             }
 
             img {
-                height: 30px;
+                height: 44px;
                 margin: 0;
             }
         }
@@ -215,7 +238,8 @@ $tile-gray: #b9b9b9;
     text-transform: uppercase;
 }
 
-.socialMediaRiver-instructions {
+
+.main-content .socialMediaRiver-instructions {
     margin-bottom: 1em;
 }
 
