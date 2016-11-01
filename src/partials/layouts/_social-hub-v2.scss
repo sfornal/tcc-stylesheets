@@ -43,38 +43,14 @@ $tile-gray: #b9b9b9;
         @include bp($custom:'(min-width: 550px)') {
             margin: 0 $margin-value $margin-value 0;
             width: calc((100% - #{2 * $margin-value}) / 2);
-
-            &:nth-of-type(2n) {
-                margin-right: 0;
-            }
         }
 
         @include bp(large) {
             width: calc((100% - #{3 * $margin-value}) / 3);
-
-            &:nth-of-type(2n) {
-                margin-right: $margin-value;
-            }
-
-            &:nth-of-type(3n) {
-                margin-right: 0;
-            }
         }
 
         @include bp(x-large) {
             width: calc((100% - #{4 * $margin-value}) / 4);
-
-            &:nth-of-type(2n) {
-                margin-right: $margin-value;
-            }
-
-            &:nth-of-type(3n) {
-                margin-right: $margin-value;
-            }
-
-            &:nth-of-type(4n) {
-                margin-right: 0;
-            }
         }
 
         &.mashup-twitter {
