@@ -59,17 +59,25 @@
 
     @include bp(medium) {
         @include font(2.7rem);
+        border: 3px solid $pure-white;
+        border-radius: 6px;
+        bottom: calc(100% + 35px);
+        box-shadow: 0 6px 8px -6px $shadow-dark;
+        left: 20px;
+        margin: 0;
+        max-width: calc(100% - 40px);
         padding: 10px 20px;
+        position: absolute;
+        width: auto;
     }
 
     @include bp(large) {
         @include font(3.1rem);
-        margin-bottom: 20px;
     }
 
-    @include bp(x-large) {
-        font-size: 3.5rem;
-    }
+    // @include bp(x-large) {
+    //     font-size: 3.5rem;
+    // }
 }
 
 .main-content .main-sectionFront {
