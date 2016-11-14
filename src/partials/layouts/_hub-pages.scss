@@ -64,4 +64,9 @@ $tile-gray: #b9b9b9;
         flex-direction: column;
         justify-content: flex-start;
     }
+
+    // This rule pushed the learn more buttons down a little bit
+    > *:nth-last-child(2) {
+        margin-bottom: 1em;
+    }
 }

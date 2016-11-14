@@ -61,16 +61,17 @@
 //Ignore repeated values
 // scss-lint:disable DuplicateProperty PropertySortOrder
 .mobileMenuButton {
+    @include font($weight: 'bold');
     -webkit-appearance: none;
-    background-color: $tcc-blue;
-    background-image: linear-gradient(to bottom, $tcc-blue, darken($tcc-blue, 10%));
+    background-color: $tcc-burgundy;
+    background-image: linear-gradient(to bottom, $tcc-burgundy, $tcc-burgundy-darker);
     border: 2px solid $pure-white;
     border-radius: 4px;
     color: $pure-white;
     display: block;
     float: left;
-    height: 40px;
-    margin: 0 5px 0 0;
+    height: 35px;
+    margin: 0 10px 0 0;
     text-align: center;
     width: 80px;
 
@@ -78,32 +79,22 @@
         display: none; // !important; //Was important needed here?
     }
 
-    &.closed {
-        background-color: $tcc-blue;
-        background-image: linear-gradient(to bottom, $tcc-blue, darken($tcc-blue, 10%));
-    }
-
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
         background-color: $tcc-burgundy;
-        background-image: linear-gradient(to bottom, $tcc-burgundy, darken($tcc-burgundy, 10%));
-        outline: 0;
-
-        &.closed {
-            background: $tcc-blue;
-            background: linear-gradient(to bottom, $tcc-blue, darken($tcc-blue, 10%));
-        }
+        background-image: none;
     }
 
-    &:active {
-        background: $tcc-burgundy;
-        background: linear-gradient(to bottom, $tcc-burgundy, darken($tcc-burgundy, 10%));
-        bottom: 22px;
-        box-shadow: none;
+    &.closed {
+        background-color: $tcc-green;
+        background-image: linear-gradient(to bottom, $tcc-green, $tcc-green-darker);
 
-        &.closed {
-            background: $tcc-blue;
-            background: linear-gradient(to bottom, $tcc-blue, darken($tcc-blue, 10%));
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $tcc-green;
+            background-image: none;
         }
     }
 
