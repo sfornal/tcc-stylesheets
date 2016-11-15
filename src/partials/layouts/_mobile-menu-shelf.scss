@@ -58,8 +58,8 @@
     }
 }
 
-//Ignore repeated values
-// scss-lint:disable DuplicateProperty PropertySortOrder
+//Ignore repeated values, ignore units restriction on line-height
+// scss-lint:disable DuplicateProperty PropertySortOrder PropertyUnits
 .mobileMenuButton {
     @include font($weight: 'bold');
     -webkit-appearance: none;
@@ -71,8 +71,11 @@
     display: block;
     float: left;
     height: 35px;
+    line-height: 35px; //To center text in the pseudo-button
     margin: 0 10px 0 0;
     text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
     width: 80px;
 
     @include bp(medium) {
