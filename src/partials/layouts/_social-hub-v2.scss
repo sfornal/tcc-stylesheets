@@ -45,12 +45,8 @@ $tile-gray: #b9b9b9;
             width: calc((100% - #{2 * $margin-value}) / 2);
         }
 
-        @include bp(large) {
-            width: calc((100% - #{3 * $margin-value}) / 3);
-        }
-
         @include bp(x-large) {
-            width: calc((100% - #{4 * $margin-value}) / 4);
+            width: calc((100% - #{3 * $margin-value}) / 3);
         }
 
         &.mashup-twitter {
