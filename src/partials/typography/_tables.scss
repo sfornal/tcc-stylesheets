@@ -8,10 +8,6 @@
 
     @include bp(medium) {
         width: calc(100% - 70px);
-
-        &::before {
-            display: none;
-        }
     }
 
     &::before {
@@ -20,6 +16,10 @@
         content: '⇔ Scroll table for more information…';
         display: block;
         margin-bottom: 0.5rem;
+
+        @include bp(medium) {
+            display: none;
+        }
     }
 }
 
