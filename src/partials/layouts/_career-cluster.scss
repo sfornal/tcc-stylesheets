@@ -29,10 +29,14 @@
 }
 
 // Class for small icons on course listing pages
-.main-content h2 > .careerClusterIcon-small {
-    display: inline-block;
-    height: auto;
-    max-height: 60px;
-    max-width: 60px;
-    width: auto;
+.main-content h2,
+.main-content h3,
+.main-content h4 {
+    > .careerClusterIcon-small {
+        display: inline-block;
+        height: auto;
+        max-height: 60px;
+        max-width: 60px;
+        width: auto;
+    }
 }
