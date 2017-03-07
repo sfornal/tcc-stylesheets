@@ -395,3 +395,57 @@
 .table-cost-addendum ul {
     list-style-type: none;
 }
+
+// Styles specifically for College for Kids course listings
+.kids-session-date-wrapper {
+    clear: both;
+    content: '';
+    display: table;
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 75%;
+}
+
+.kids-session-title {
+    float: left;
+    width: 50%;
+}
+
+.kids-date-title {
+    float: left;
+    text-align: right;
+    width: 50%;
+}
+
+.kids-block-title {
+    font-size: medium;
+    font-weight: bold;
+    margin-left: 45px;
+}
+
+// Al says it's important...
+// scss-lint:disable ImportantRule
+.kids-table-tr-empty {
+    background-color: $pure-white;
+    height: 15px !important;
+}
+
+.kids-table {
+    font-size: medium;
+    width: 100%;
+
+    tbody tr {
+        th:nth-child(1) {
+            width: 10%;
+        }
+
+        th:nth-child(2) {
+            width: 35%;
+        }
+
+        th:nth-child(3) {
+            width: 40%;
+        }
+    }
+}
