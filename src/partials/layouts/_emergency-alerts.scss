@@ -2,8 +2,13 @@
 .emergency-full {
     background-color: $tcc-burgundy;
     display: block;
+    margin-top: 59px; //Magic number for the size of the fixed top menu bar in mobile
     padding: 40px;
     width: 100%;
+
+    @include bp(medium) {
+        margin-top: 0;
+    }
 }
 
 .emergency-top {
