@@ -9,7 +9,7 @@
 
     // Fix for the feedback area margin problem
     @include bp(medium) {
-        margin-top: 60px;
+        margin-top: 40px; // 60px; // When using the banner, 60px is needed
     }
 }
 
@@ -129,7 +129,8 @@
         max-width: 0.2 * $max-container-width;
         // padding-right: 20px;
         position: absolute;
-        top: 65px; //Adjustment for the feedback bar
+        top: 20px; // When using no banner
+        //top: 65px; //Adjustment for the feedback bar
         transform: translateX(-50%);
         visibility: visible;
         width: 20%;
