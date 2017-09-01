@@ -5,6 +5,7 @@
     line-height: 1.1;
     margin-bottom: 0;
     margin-top: 3rem;
+    text-align: center;
     text-transform: uppercase;
 
     @include bp(medium) {
@@ -25,6 +26,7 @@
     color: $tcc-teal;
     line-height: 1.1;
     margin-top: 0.25rem;
+    text-align: center;
 
     @include bp(medium) {
         @include font(1.4rem);
