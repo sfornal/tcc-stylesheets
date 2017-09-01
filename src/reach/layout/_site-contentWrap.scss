@@ -6,6 +6,11 @@
 }
 
 .headerImage {
+
+    @include bp(medium) {
+        min-height: 40px;
+    }
+
     picture {
         margin: 0;
         padding: 0;
