@@ -204,6 +204,20 @@
     width: 10%;
 }
 
+// 20% / 50% / 15% / 15%
+
+.table-snippet-cols--20-50-15-15 tbody tr th:nth-child(1) {
+    width: 20%;
+}
+
+.table-snippet-cols--30-10-10-50 tbody tr th:nth-child(2) {
+    width: 50%;
+}
+
+.table-snippet-cols--30-10-10-50 tbody tr th:nth-child(3) {
+    width: 15%;
+}
+
 //------------ Five Columns ------------*/
 // 10% | 25% | 25% | 10% | 30%
 .table-snippet-cols--10-25-25-10-30 tbody tr th:nth-child(1) {
@@ -449,3 +463,15 @@
         }
     }
 }
+
+// Styles for Senior Education Tables
+
+.senior-table td:first-child{
+    width: 90px;
+}
+
+.senior-location-title{
+    font-weight: bold;
+    font-size: larger;
+}
+
