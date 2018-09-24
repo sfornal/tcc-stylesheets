@@ -21,17 +21,17 @@
   "license": "CC-BY-SA-4.0",
   "private": true,
   "dependencies": {
-    "coffeelint": "*",
-    "grunt": "*",
+    "coffeelint": "^2.1.0",
+    "grunt": "^1.0.3",
     "grunt-autoprefixer": "*",
     "grunt-bump": "*",
     "grunt-coffeelint": "*",
     "grunt-contrib-clean": "*",
     "grunt-contrib-cssmin": "*",
     "grunt-sass": "*",
-    "grunt-scss-lint": "*",
-    "load-grunt-config": "*",
-    "node-sass": "*",
+    "grunt-scss-lint": "^0.5.0",
+    "load-grunt-config": "^0.19.2",
+    "node-sass": "^4.9.3",
     "time-grunt": "*"
   }
 }
