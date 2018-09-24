@@ -7,6 +7,10 @@
     @include bp(medium) {
         width: calc(100% - 70px);
     }
+
+    .tile & {
+        width: 100%;
+    }
 }
 
 .videoWrapper {
