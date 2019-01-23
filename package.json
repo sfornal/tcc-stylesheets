@@ -1,37 +1,33 @@
 {
-  "name": "tcc-stylesheets",
-  "version": "1.8.6",
-  "description": "The SCSS source for the TCC official CSS, used on the main website. Includes a framework system for quickly creating other stylesheets for subsites based on standard colors, etc.",
-  "scripts": {
-    "start": "grunt compile",
-    "test": "grunt lint"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://trtc1143.all.disttccd.net:8443/scm/tccwwwsit/tcc-stylesheets.git"
-  },
-  "keywords": [
-    "scss",
-    "css",
-    "node",
-    "grunt",
-    "autoprefixer"
-  ],
-  "author": "TCC Web Communications",
-  "license": "CC-BY-SA-4.0",
-  "private": true,
-  "dependencies": {
-    "coffeelint": "^2.1.0",
-    "grunt": "^1.0.3",
-    "grunt-autoprefixer": "*",
-    "grunt-bump": "*",
-    "grunt-coffeelint": "*",
-    "grunt-contrib-clean": "*",
-    "grunt-contrib-cssmin": "*",
-    "grunt-sass": "*",
-    "grunt-scss-lint": "^0.5.0",
-    "load-grunt-config": "^0.19.2",
-    "node-sass": "^4.9.3",
-    "time-grunt": "*"
-  }
+    "name": "tcc-stylesheets",
+    "version": "1.8.6",
+    "description": "The SCSS source for the TCC official CSS, used on the main website. Includes a framework system for quickly creating other stylesheets for subsites based on standard colors, etc.",
+    "scripts": {
+        "start": "gulp compile",
+        "test": "gulp lint"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://trtc1143.all.disttccd.net:8443/scm/tccwwwsit/tcc-stylesheets.git"
+    },
+    "keywords": [
+        "scss",
+        "css",
+        "node",
+        "gulp",
+        "autoprefixer"
+    ],
+    "author": "TCC Web Communications",
+    "license": "CC-BY-SA-4.0",
+    "private": true,
+    "dependencies": {
+        "del": "*",
+        "gulp": "*",
+        "gulp-autoprefixer": "*",
+        "gulp-bump": "*",
+        "gulp-clean-css": "*",
+        "gulp-sass": "*",
+        "gulp-scss-lint": "^0.5.0",
+        "node-sass": "*",
+    }
 }

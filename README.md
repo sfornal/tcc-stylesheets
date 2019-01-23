@@ -34,4 +34,4 @@ The distribution build output *is not* part of the repository.
 
 After updating the SCSS, you can use the commands `gulp publish:patch`, `gulp publish:minor`, or `gulp publish:major` to update the version number of this repository and generate a git commit, tag, and upstream push automagically. You would, of course, need git configured on your machine, but I'm assuming that's the case if you're working with this.
 
-The SCSS code will be linted (see above) before publish, and lint errors will block the publish task from completing. If you *cannot* run the Ruby linter for some reason, and you're *sure* you should be publishing, you can probably use the `--force` flag on the command line when you run the publish task.
+The SCSS code needs to be linted (see above) before publish, and lint errors must be addressed by the author before publishing. If you *cannot* run the Ruby linter for some reason, and you're *sure* you should be publishing, you can probably use the `--force` flag on the command line when you run the publish task.
