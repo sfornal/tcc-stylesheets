@@ -26,8 +26,12 @@
         "gulp-autoprefixer": "*",
         "gulp-bump": "*",
         "gulp-clean-css": "*",
+        "gulp-git": "*",
+        "gulp-rename": "*",
         "gulp-sass": "*",
-        "gulp-scss-lint": "^0.5.0",
-        "node-sass": "*",
+        "gulp-scss-lint": "*",
+        "gulp-sourcemaps": "*",
+        "minimist": "*",
+        "node-sass": "*"
     }
 }
