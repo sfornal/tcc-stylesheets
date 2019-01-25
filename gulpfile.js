@@ -16,11 +16,11 @@ const fs = require('fs');
 
 gulp.task('clean', (done) => {
     del(['dist/**/*', 'tmp/**/*'])
-        .then(paths =>{
+        .then((paths) => {
             console.log(`Deleted ${paths.length} file(s): ${paths.join(', ')}`);
             done();
         })
-        .catch(err => {
+        .catch((err) => {
             console.log('Error cleaning: ' + err.toString());
             done();
         });
@@ -38,7 +38,8 @@ gulp.task('lint', () => {
 gulp.task('compile', () => {
     return gulp.src('src/**/*.scss')
         .pipe(sourcemap.init())
-        .pipe(sass()).on('error', sass.logError)
+        .pipe(sass())
+            .on('error', sass.logError)
         .pipe(autoprefixer({
             browsers: ['last 4 versions', 'ie 11']
         }))
@@ -52,7 +53,8 @@ gulp.task('compile', () => {
 gulp.task('bump-version', () => {
 
     return gulp.src(['./package.json'])
-        .pipe(bump({type: pubtype}).on('error', console.log('Error bumping version')))
+        .pipe(bump({type: pubtype})
+            .on('error', (error) => { console.log(`Error bumping version: ${error.toString()}`)}))
         .pipe(gulp.dest('./'));
 });
 
