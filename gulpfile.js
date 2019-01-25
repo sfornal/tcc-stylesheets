@@ -11,7 +11,7 @@ const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 const lint = require('gulp-scss-lint');
 const sourcemap = require('gulp-sourcemaps');
-const pubtype = require('minimist')(process.argv, {default:{ pubtype: "patch" }})['pubtype'];
+const pubtype = require('minimist')(process.argv, {default:{ pubtype: "patch" }}).pubtype;
 const fs = require('fs');
 
 gulp.task('clean', (done) => {
@@ -54,7 +54,7 @@ gulp.task('bump-version', () => {
 
     return gulp.src(['./package.json'])
         .pipe(bump({type: pubtype})
-            .on('error', (error) => { console.log(`Error bumping version: ${error.toString()}`)}))
+            .on('error', (error) => { console.log(`Error bumping version: ${error.toString()}`);}))
         .pipe(gulp.dest('./'));
 });
 
