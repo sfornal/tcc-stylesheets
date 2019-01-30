@@ -93,3 +93,9 @@ gulp.task('publish', gulp.series(
     'push-changes',
     'create-new-tag'
 ));
+
+gulp.task('local-build', gulp.series(
+    'clean',
+    'compile',
+    'lint'
+));
