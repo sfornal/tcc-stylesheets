@@ -15,107 +15,15 @@
         .flexbox & {
             align-items: center;
             display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .no-flexbox & {
-            @include clearfix();
-        }
-    }
-
-    .callToAction-buttons-leftGroup {
-        width: 100%;
-
-        .flexbox & {
-            align-items: center;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .no-flexbox & {
-            @include clearfix();
-        }
-
-        // Media queries should be last, for specificity purposes,
-        // but scss-linter wants them before nested elements,
-        // so we have to disable linter check for DeclarationOrder
-        // scss-lint:disable DeclarationOrder
-        @include bp(medium) {
-            width: 33%;
-
-            .no-flexbox & {
-                float: left;
-                @include clearfix();
-
-                > .button-wrap { float: none; width: 100%; }
-            }
-
-            // Remove to fix spacing issue
-            // .flexbox & > .button-wrap {
-            //     padding: 0;
-            // }
-        }
-
-        .lazyLoad {
-            height: 0;
-            padding-top: 47.48%;
-
-            &.loaded {
-                height: auto;
-                padding-top: 0;
-            }
-
-            .no-js & {
-                display: none;
-            }
-        }
-    }
-
-    .callToAction-buttons-rightGroup {
-        width: 100%;
-
-        .flexbox & {
-            align-items: center;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            flex-flow: row wrap;
             justify-content: space-between;
         }
 
         .no-flexbox & {
             @include clearfix();
         }
-
-        // Media queries should be last, for specificity purposes,
-        // but scss-linter wants them before nested elements,
-        // so we have to disable linter check for DeclarationOrder
-        // scss-lint:disable DeclarationOrder
-        @include bp(medium) {
-            width: 66%;
-
-            .no-flexbox & { float: right; }
-
-            .flexbox & > .button-wrap { flex: 1 1 50%; }
-        }
-
-        .lazyLoad {
-            height: 0;
-            padding-top: 22.22%;
-
-            &.loaded {
-                height: auto;
-                padding-top: 0;
-            }
-
-            .no-js & {
-                display: none;
-            }
-        }
     }
+
 
     .button-wrap {
         margin: 0;
@@ -131,6 +39,10 @@
 
         .flexbox & {
             flex: 1 1 100%;
+
+            @include bp(medium) {
+                flex: 1 1 33%;
+            }
         }
 
         .no-flexbox & {
@@ -138,7 +50,7 @@
 
             @include bp(medium) {
                 float: left;
-                width: 50%;
+                width: 33%;
             }
         }
     }
