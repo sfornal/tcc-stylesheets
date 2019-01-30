@@ -22,7 +22,7 @@ gulp.task('clean', (done) => {
         })
         .catch((err) => {
             console.log('Error cleaning: ' + err.toString());
-            done();
+            done(err);
         });
 });
 
