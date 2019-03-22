@@ -1,0 +1,64 @@
+.pathwayTile {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid $light-gray;
+    border-right: 6px solid $tcc-green;
+    border-radius: 5px;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 200px 2fr 1fr;
+    grid-template-areas:
+        "header header header"
+        "image  descr  aside"
+        "image  link   aside";
+
+        h3.pathwayTitle {
+            grid-area: header;
+            margin: -10px -10px 0;
+            padding: 10px;
+            background-color: $tcc-blue-lighter;
+            color: $pure-white;
+        }
+
+        .pathwayImage {
+            grid-area: image;
+            margin: -10px 0 -10px -10px;
+
+            img {
+                display: block;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        .pathwayDescription {
+            grid-area: descr;
+
+            & > *:first-child {
+                margin-top: 0;
+            }
+        }
+
+        .pathwayCallToAction {
+            grid-area: link;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+
+            .learn-more {
+                float: none;
+                display: block;
+            }
+        }
+
+        .pathwayAside {
+            margin-top: 0;
+
+            .pathwayAside-title {
+                margin-top: 0;
+            }
+        }
+}
+
