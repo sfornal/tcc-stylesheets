@@ -17,7 +17,7 @@ const fs = require('fs');
 gulp.task('clean', (done) => {
     del(['dist/**/*', 'tmp/**/*'])
         .then((paths) => {
-            console.log(`Deleted ${paths.length} file(s): ${paths.join(', ')}`);
+            console.log(`Deleted ${paths.length} file(s)`);
             done();
         })
         .catch((err) => {
