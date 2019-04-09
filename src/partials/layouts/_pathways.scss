@@ -1,35 +1,55 @@
 .pathwayTile {
-    width: 100%;
-    max-width: 100%;
-    padding: 10px;
+    width: auto;
+    padding: 20px;
     border: 1px solid $light-gray;
     border-right: 6px solid $tcc-green;
     border-radius: 5px;
+    margin-top: 2em;
+    margin-bottom: 2em;
 
     display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 200px 2fr 1fr;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
     grid-template-areas:
+        "header"
+        "image"
+        "descr"
+        "aside"
+        "link";
+
+    @include bp(large) {
+        max-width: calc(100% - 60px);
+        width: calc(100% - 60px);
+        grid-template-columns: 200px 2fr 1fr;
+        grid-template-areas:
         "header header header"
         "image  descr  aside"
         "image  link   aside";
+    }
 
         h3.pathwayTitle {
             grid-area: header;
-            margin: -10px -10px 0;
+            margin: -20px -20px 0;
             padding: 10px;
-            background-color: $tcc-blue-lighter;
+            background-color: $tcc-blue-darker;
             color: $pure-white;
+            border-top-left-radius: 5px;
         }
 
         .pathwayImage {
             grid-area: image;
-            margin: -10px 0 -10px -10px;
+
+            @include bp(large) {
+                margin: -20px 0 -20px -20px;
+                border-bottom-left-radius: 5px;
+            }
 
             img {
                 display: block;
                 object-fit: cover;
                 object-position: center;
+                width: 100%;
+                height: 100%;
             }
         }
 
