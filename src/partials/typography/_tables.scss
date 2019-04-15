@@ -112,6 +112,14 @@
     width: 40%;
 }
 
+// 34% | 30% | 30%
+.table-snippet-cols--34-30-30 tbody tr th:nth-child(1) {
+    width: 34%;
+}
+
+.table-snippet-cols--34-30-30 tbody tr th:nth-child(2) {
+    width: 30%;
+}
 // 40% | 30% | 30%
 .table-snippet-cols--40-30-30 tbody tr th:nth-child(1) {
     width: 40%;
