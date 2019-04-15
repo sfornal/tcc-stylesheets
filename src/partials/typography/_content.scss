@@ -57,6 +57,10 @@
         color: $tcc-teal;
     }
 
+    h5 {
+        @include font(1.1em, 'bold');
+    }
+
     h2,
     h3,
     h4,
