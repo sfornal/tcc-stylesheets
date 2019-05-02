@@ -45,16 +45,12 @@ blockquote {
 
 .dropcap,
 .articleWrap:first-of-type > p:first-of-type::first-letter {
-    @include font(3rem, 'black', normal, $secondary-font);
+    @include font(6rem, 'black', normal, $secondary-font);
     color: $tcc-green;
     display: block;
     float: left;
     line-height: 0.9;
-    margin: 0 0.3rem 0 0;//0.4rem 1.5rem 0 -10%;
-
-    @include bp(medium) { @include font(3rem); }
-    @include bp(large) { @include font(3.5rem); }
-    @include bp(x-large) { @include font(4rem); }
+    margin: -0.2rem 0.3rem 0 0;//0.4rem 1.5rem 0 -10%;
 }
 
 .textContent {
