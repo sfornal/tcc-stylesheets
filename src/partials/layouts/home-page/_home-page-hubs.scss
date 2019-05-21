@@ -49,36 +49,28 @@ $big-button-ratio: 29.837%;
         }
 
         .bigButton {
+            background-image: none;
             border-radius: 8px;
             display: block;
-            height: 0;
-            overflow: hidden;
-            padding-top: $big-button-ratio;
-            position: relative;
             width: 100%;
+
+            @include clearfix();
         }
 
         .bigButton-image,
         .bigButton-button {
+            border-radius: 8px 0 0 8px;
             display: block;
+            float: left;
             height: 100%;
-            position: absolute;
-            top: 0;
             width: auto;
         }
 
-        .bigButton-button {
-            border-radius: 0 8px 8px 0;
-            right: 0;
-            z-index: z(HIGH);
+        [class*="bigButtonText"] {
+            float: right;
+            display: block;
+            clear: right;
         }
-
-        .bigButton-image {
-            border-radius: 8px 0 0 8px;
-            left: 0;
-            z-index: z(OVER);
-        }
-
 
         // Media queries should be last, for specificity purposes,
         // but scss-linter wants them before nested elements,
