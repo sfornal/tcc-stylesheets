@@ -54,22 +54,45 @@ $big-button-ratio: 29.837%;
             display: block;
             width: 100%;
 
-            @include clearfix();
+            .flexbox & {
+                display: flex;
+                flex-direction: column wrap;
+                justify-content: flex-start;
+                align-items: stretch;
+            }
+
+            .no-flexbox & {
+                @include clearfix();
+            }
+
         }
 
-        .bigButton-image,
-        .bigButton-button {
+        .bigButton-image {
             border-radius: 8px 0 0 8px;
             display: block;
-            float: left;
             height: 100%;
             width: auto;
+
+            .flexbox & {
+                flex: 0 1 100%;
+            }
+
+            .no-flexbox & {
+                float: left;
+            }
         }
 
-        [class*="bigButtonText"] {
-            float: right;
+        .bigButtonTextWrap {
             display: block;
-            clear: right;
+
+            .flexbox & {
+                flex: 1 1 100%;
+            }
+
+            .no-flexbox & {
+                float: right;
+                clear: right;
+            }
         }
 
         // Media queries should be last, for specificity purposes,
