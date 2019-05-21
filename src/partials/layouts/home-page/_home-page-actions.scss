@@ -56,11 +56,36 @@
     }
 
     .tile-button {
-        border-radius: 4% / 9%;
+        background-image: none;
+        border-radius: 8px;
         display: block;
         margin: 0;
-        padding: 0;
+        padding: 1rem;
+        text-decoration: none;
         width: 100%;
+
+        .flexbox & {
+            align-items: center;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+        }
+
+        [class*="buttonText"] {
+            display: block;
+            line-height: 1;
+            margin: 0;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .buttonText--small {
+            @include font(1.5rem, 700);
+        }
+
+        .buttonText--large {
+            @include font(2.6rem, 800);
+        }
 
         img {
             border: none;
