@@ -1,6 +1,8 @@
 // This is a value calculated based on the current
 // big button design as of 5-7-2016
 $big-button-ratio: 29.837%;
+$picture-ratio: (240 / 213); //Button image width:height ratio, not pixel size per se
+$picture-percentage-width: ($big-button-ratio * $picture-ratio);
 
 .homePage {
 
@@ -36,11 +38,9 @@ $big-button-ratio: 29.837%;
 
     .bigButton-wrap {
         border-radius: 8px;
-        height: 0;
         margin: 0;
-        padding: $big-button-ratio 0 0;
+        padding: 10px;
         transition: transform 0.2s ease-in;
-        position: relative;
         width: 100%;
 
         &:hover,
@@ -54,53 +54,60 @@ $big-button-ratio: 29.837%;
             background-image: none;
             border-radius: 8px;
             display: block;
-            position: absolute;
-            top: 10px;
-            bottom: 10px;
-            left: 10px;
-            right: 10px;
+            height: 0;
+            overflow:hidden;
+            padding-top: $big-button-ratio;
+            position: relative;
             text-decoration: none;
-
-            .flexbox & {
-                align-items: stretch;
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: space-between;
-            }
-
-            .no-flexbox & {
-                @include clearfix();
-            }
-
+            width: 100%;
         }
 
         .bigButton-image {
             border-radius: 8px 0 0 8px;
             display: block;
             height: 100%;
+            left: 0;
             max-height: 100%;
+            position: absolute;
+            top: 0;
             width: auto;
-
-            .flexbox & {
-                flex: 0 0 auto;
-            }
-
-            .no-flexbox & {
-                float: left;
-            }
         }
 
         .bigButtonTextWrap {
-            display: block;
+            bottom: 0;
+            padding: 10px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: calc(100% - #{$picture-percentage-width});
+
 
             .flexbox & {
-                flex: 1 1;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
             }
+        }
 
-            .no-flexbox & {
-                clear: right;
-                float: right;
-            }
+        [class*="bigButtonText"] {
+            display: block;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+            line-height: 1.05;
+        }
+
+        .bigButtonText--large {
+            @include font(2.1rem, 800);
+        }
+
+        .bigButtonText--medium {
+            @include font(1.4rem, 800);
+        }
+
+        .bigButtonText--small {
+            @include font(1.1rem, 500);
         }
 
         // Media queries should be last, for specificity purposes,
@@ -129,7 +136,17 @@ $big-button-ratio: 29.837%;
                 justify-content: space-between;
 
                 &:nth-of-type(1),
-                &:nth-of-type(2) { flex: 1 1 50%; }
+                &:nth-of-type(2) {
+                    flex: 1 1 50%;
+
+                    .bigButtonText--large {
+                        @include font(2.7rem);
+                    }
+
+                    .bigButtonText--small {
+                        @include font(1.5rem);
+                    }
+                }
             }
         }
     }
