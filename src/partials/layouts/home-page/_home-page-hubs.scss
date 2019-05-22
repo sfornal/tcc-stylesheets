@@ -36,9 +36,11 @@ $big-button-ratio: 29.837%;
 
     .bigButton-wrap {
         border-radius: 8px;
+        height: 0;
         margin: 0;
-        padding: 10px;
+        padding: $big-button-ratio 0 0;
         transition: transform 0.2s ease-in;
+        position: relative;
         width: 100%;
 
         &:hover,
@@ -52,13 +54,18 @@ $big-button-ratio: 29.837%;
             background-image: none;
             border-radius: 8px;
             display: block;
-            width: 100%;
+            position: absolute;
+            top: 10px;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            text-decoration: none;
 
             .flexbox & {
-                display: flex;
-                flex-direction: column wrap;
-                justify-content: flex-start;
                 align-items: stretch;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
             }
 
             .no-flexbox & {
@@ -71,10 +78,11 @@ $big-button-ratio: 29.837%;
             border-radius: 8px 0 0 8px;
             display: block;
             height: 100%;
+            max-height: 100%;
             width: auto;
 
             .flexbox & {
-                flex: 0 1 100%;
+                flex: 0 0 auto;
             }
 
             .no-flexbox & {
@@ -86,12 +94,12 @@ $big-button-ratio: 29.837%;
             display: block;
 
             .flexbox & {
-                flex: 1 1 100%;
+                flex: 1 1;
             }
 
             .no-flexbox & {
-                float: right;
                 clear: right;
+                float: right;
             }
         }
 
@@ -118,7 +126,7 @@ $big-button-ratio: 29.837%;
 
             .flexbox & {
                 flex: 0 1 33.3333%;
-                justify-content: flex-end;
+                justify-content: space-between;
 
                 &:nth-of-type(1),
                 &:nth-of-type(2) { flex: 1 1 50%; }
