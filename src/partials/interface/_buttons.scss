@@ -17,19 +17,19 @@
 }
 
 .button--orange {
-    background-color: darken($tcc-orange, 10%);
+    background-color: $tcc-orange-darker-a11y;
     // background-image: linear-gradient(to bottom, $tcc-orange, darken($tcc-orange, 10%));
     color: $pure-white;
 }
 
 .button--green {
-    background-color: #50830B;
+    background-color: $tcc-green-darker-a11y;
     // background-image: linear-gradient(to bottom, $tcc-green, darken($tcc-green, 10%));
     color: $pure-white;
 }
 
 .button--beige {
-    background-color: #84753A;
+    background-color: $tcc-beige-darker-a11y;
     // background-image: linear-gradient(to bottom, $tcc-beige, darken($tcc-beige, 10%));
     color: $pure-white;
 }

@@ -14,15 +14,18 @@ $tcc-burgundy-darker: #6a0316 !default;
 $tcc-beige: #d0c391 !default;
 $tcc-beige-lighter: #ffedb3 !default;
 $tcc-beige-darker: #99926d !default;
+$tcc-beige-darker-a11y: #84753A !default;
 
 //Secondary color pallet
 $tcc-green: #8dc63f !default;
 $tcc-green-lighter: #b7f752 !default;
 $tcc-green-darker: #66952e !default;
+$tcc-green-darker-a11y: #50830B !default;
 
 $tcc-orange: #f05a28 !default;
 $tcc-orange-lighter: #ff795f !default;
 $tcc-orange-darker: #99926d !default;
+$tcc-orange-darker-a11y: darken($tcc-orange, 10%) !default;
 
 //Tertiary Color pallet
 $tcc-yellow: #f2db00 !default;
