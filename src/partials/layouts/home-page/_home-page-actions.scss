@@ -3,11 +3,11 @@
     .callToAction-buttons {
 
         margin: 0 auto;
-        max-width: 285px;
+        max-width: 330px;
         padding: 14px 10px 20px;
         width: 90%;
 
-        @include bp(medium) {
+        @include bp($custom: "(min-width: 780px)") {
             max-width: 100%;
             // padding-left: 0; //Removed to fix alignment of top button area
         }
@@ -38,11 +38,7 @@
         }
 
         .flexbox & {
-            flex: 1 1 100%;
-
-            @include bp(medium) {
-                flex: 1 1 33%;
-            }
+            flex: 1 0 330px;
         }
 
         .no-flexbox & {
@@ -50,7 +46,7 @@
 
             @include bp(medium) {
                 float: left;
-                width: 33%;
+                width: 330px;
             }
         }
     }
@@ -85,19 +81,6 @@
 
         .buttonText--large {
             @include font(2.6rem, 800);
-        }
-
-        img {
-            border: none;
-            display: block;
-            margin: 0 auto;
-            max-width: 400px;
-            outline: 0;
-            width: 100%;
-
-            @include bp(medium) {
-                max-width: 100%;
-            }
         }
     }
 }
