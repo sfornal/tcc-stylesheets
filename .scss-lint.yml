@@ -185,7 +185,7 @@ linters:
           'ms', 's',                       # Duration
           'Hz', 'kHz',                     # Frequency
           'dpi', 'dpcm', 'dppx',           # Resolution
-          '%']                             # Other
+          '%', 'fr']                             # Other
         properties:
             line-height: []                # Only unit-less line-height
             border: ['px']                 # Only pixel borders
@@ -215,7 +215,7 @@ linters:
     # Shorthand properties are a-okay, and should be used when possible
     Shorthand:
         enabled: true
-        allowed_shorthands: [1, 2, 3]
+        allowed_shorthands: [1, 2, 3, 4]
 
     # One property per line, or everything including braces on one line
     # Example of everything on one line:

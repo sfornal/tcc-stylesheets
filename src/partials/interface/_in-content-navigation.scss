@@ -1,0 +1,57 @@
+// One off color for navigation background
+$nav-background-color: #caf5ff;
+
+.inContentNavigation {
+    background-color: $nav-background-color;
+    border: 1px solid $dark-gray;
+    margin-top: 1em;
+    max-width: calc(100% - 40px);
+    padding: 20px;
+
+    @include bp(medium) {
+        max-width: calc(100% - 60px);
+    }
+
+    .inContentNavigation-heading {
+        margin-top: 0;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .inContentNavigation-contentWrap {
+        margin: 1em 0 0;
+
+        @include bp(medium) {
+            column-count: auto;
+            column-gap: 1em;
+            column-width: 16em;
+        }
+
+        > ul,
+        > ol {
+            margin: 0;
+            padding-left: 1em;
+        }
+    }
+
+    .inContentNavigation-backToTopButton {
+        align-items: center;
+        background-color: $tcc-blue;
+        border-radius: 4px;
+        bottom: 2em;
+        color: $pure-white;
+        display: flex;
+        font-weight: 700;
+        height: 40px;
+        justify-content: center;
+        position: fixed;
+        right: 2em;
+        text-decoration: none;
+        width: 40px;
+        z-index: z(HIGH);
+
+        @include bp(medium) {
+            display: none;
+        }
+    }
+}

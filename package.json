@@ -3,7 +3,7 @@
     "version": "1.9.0",
     "description": "The SCSS source for the TCC official CSS, used on the main website. Includes a framework system for quickly creating other stylesheets for subsites based on standard colors, etc.",
     "scripts": {
-        "start": "gulp compile",
+        "start": "gulp local-build",
         "test": "gulp lint"
     },
     "repository": {
