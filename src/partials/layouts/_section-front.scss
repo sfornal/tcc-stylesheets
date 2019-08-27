@@ -1,10 +1,12 @@
+$section-front-white-stripe: rgba(255, 255, 255, 0.075);
+
 [class*="sectionFront--"] {
     background-image: repeating-linear-gradient(
         -60deg,
         transparent,
         transparent 3%,
-        rgba(255, 255, 255, 0.075) 3%,
-        rgba(255, 255, 255, 0.075) 6%
+        $section-front-white-stripe 3%,
+        $section-front-white-stripe 6%
     );
 }
 

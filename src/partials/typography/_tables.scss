@@ -200,31 +200,20 @@
     width: 15%;
 }
 
-// 30% / 10% / 10% / 50%
-
-.table-snippet-cols--30-10-10-50 tbody tr th:nth-child(1) {
-    width: 30%;
-}
-
-.table-snippet-cols--30-10-10-50 tbody tr th:nth-child(2) {
-    width: 10%;
-}
-
-.table-snippet-cols--30-10-10-50 tbody tr th:nth-child(3) {
-    width: 10%;
-}
-
 // 20% / 50% / 15% / 15%
 
 .table-snippet-cols--20-50-15-15 tbody tr th:nth-child(1) {
     width: 20%;
 }
+
 .table-snippet-cols--20-50-15-15 tbody tr th:nth-child(2) {
     width: 50%;
 }
+
 .table-snippet-cols--20-50-15-15 tbody tr th:nth-child(3) {
     width: 15%;
 }
+
 .table-snippet-cols--20-50-15-15 tbody tr th:nth-child(4) {
     width: 15%;
 }
@@ -505,12 +494,12 @@
 
 // Styles for Senior Education Tables
 
-.senior-table td:first-child{
+.senior-table td:first-child {
     width: 90px;
 }
 
-.senior-location-title{
-    font-weight: bold;
+.senior-location-title {
     font-size: larger;
+    font-weight: bold;
 }
 

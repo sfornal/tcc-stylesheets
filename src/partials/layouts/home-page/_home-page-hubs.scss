@@ -3,6 +3,7 @@
 $big-button-ratio: 29.837%;
 $picture-ratio: (240 / 213); //Button image width:height ratio, not pixel size per se
 $picture-percentage-width: ($big-button-ratio * $picture-ratio);
+$big-button-white-stripes: rgba(255, 255, 255, 0.075);
 
 .homePage {
 
@@ -55,13 +56,13 @@ $picture-percentage-width: ($big-button-ratio * $picture-ratio);
                 -60deg,
                 transparent,
                 transparent 3%,
-                rgba(255, 255, 255, 0.075) 3%,
-                rgba(255, 255, 255, 0.075) 6%
+                $big-button-white-stripes 3%,
+                $big-button-white-stripes 6%
             );
             border-radius: 8px;
             display: block;
             height: 0;
-            overflow:hidden;
+            overflow: hidden;
             padding-top: $big-button-ratio;
             position: relative;
             text-decoration: none;
@@ -89,19 +90,19 @@ $picture-percentage-width: ($big-button-ratio * $picture-ratio);
 
 
             .flexbox & {
+                align-items: center;
                 display: flex;
                 flex-flow: column nowrap;
                 justify-content: center;
-                align-items: center;
             }
         }
 
         [class*="bigButtonText"] {
             display: block;
+            line-height: 1.05;
+            margin: 0;
             text-align: center;
             text-transform: uppercase;
-            margin: 0;
-            line-height: 1.05;
         }
 
         .bigButtonText--large {

@@ -7,7 +7,7 @@
         padding: 14px 10px 20px;
         width: 90%;
 
-        @include bp($custom: "(min-width: 780px)") {
+        @include bp($custom: '(min-width: 780px)') {
             max-width: 100%;
             // padding-left: 0; //Removed to fix alignment of top button area
         }
