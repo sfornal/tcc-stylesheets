@@ -1,75 +1,78 @@
+// Ignore space after linter rule for grid-template-areas, due to multi-line syntax
+// scss-lint:disable SpaceAfterPropertyColon
 .pathwayTile {
-    width: auto;
-    padding: 20px;
     border: 1px solid $light-gray;
     border-left: 6px solid $tcc-green;
     border-radius: 5px;
-    margin-top: 2em;
-    margin-bottom: 2em;
-
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 1fr;
     grid-template-areas:
         "header"
         "image"
         "descr"
         "aside"
         "link";
+    grid-template-columns: 1fr;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    padding: 20px;
+    width: auto;
 
     @include bp(large) {
-        max-width: calc(100% - 60px);
-        width: calc(100% - 60px);
-        grid-template-columns: 200px 2fr 1fr;
         grid-template-areas:
             "header header header"
             "image  descr  aside"
             "image  link   aside";
+        grid-template-columns: 200px 2fr 1fr;
+        max-width: calc(100% - 60px);
+        width: calc(100% - 60px);
     }
 
+    // Qualifying element needed for specificty
+    // scss-lint:disable QualifyingElement
     h3.pathwayTitle {
+        background-color: $tcc-blue-darker;
+        border-top-right-radius: 5px;
+        color: $pure-white;
         grid-area: header;
         margin: -20px -20px 0;
         padding: 10px;
-        background-color: $tcc-blue-darker;
-        color: $pure-white;
-        border-top-right-radius: 5px;
     }
 
     .pathwayImage {
         grid-area: image;
 
         @include bp(large) {
-            margin: -20px 0 -20px -20px;
             border-bottom-left-radius: 5px;
+            margin: -20px 0 -20px -20px;
         }
 
         img {
             display: block;
+            height: 100%;
             object-fit: cover;
             object-position: center;
             width: 100%;
-            height: 100%;
         }
     }
 
     .pathwayDescription {
         grid-area: descr;
 
-        &>*:first-child {
+        > *:first-child {
             margin-top: 0;
         }
     }
 
     .pathwayCallToAction {
-        grid-area: link;
-        display: flex;
-        justify-content: flex-start;
         align-items: flex-end;
+        display: flex;
+        grid-area: link;
+        justify-content: flex-start;
 
         .learn-more {
-            float: none;
             display: block;
+            float: none;
         }
     }
 

@@ -1,5 +1,5 @@
 // One off color for navigation background
-$nav-background-color: #caf5ff;
+$nav-background-color: #d0f4fc;
 
 .inContentNavigation {
     background-color: $nav-background-color;
@@ -21,7 +21,7 @@ $nav-background-color: #caf5ff;
     .inContentNavigation-contentWrap {
         margin: 1em 0 0;
 
-        @include bp(medium) {
+        &.multi-columns {
             column-count: auto;
             column-gap: 1em;
             column-width: 16em;
