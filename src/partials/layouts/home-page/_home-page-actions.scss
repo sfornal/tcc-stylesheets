@@ -3,32 +3,39 @@
     .callToAction-buttons {
 
         margin: 0 auto;
-        max-width: 330px;
+        max-width: 400px;
         padding: 14px 10px 20px;
-        width: 90%;
-
-        @include bp($custom: '(min-width: 780px)') {
-            max-width: 100%;
-            // padding-left: 0; //Removed to fix alignment of top button area
-        }
+        width: 100%;
 
         .flexbox & {
-            align-items: center;
             display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
+            flex-direction: column;
+            flex-wrap: wrap;
         }
 
         .no-flexbox & {
             @include clearfix();
+        }
+
+        // Media queries should be last, for specificity purposes,
+        // but scss-linter wants them before nested elements,
+        // so we have to disable linter check for DeclarationOrder
+        // scss-lint:disable DeclarationOrder
+        @include bp(medium) {
+            max-width: 90%;
+
+            .flexbox & {
+                flex-direction: row;
+            }
         }
     }
 
 
     .button-wrap {
         margin: 0;
-        padding: 5px;
+        padding: 10px;
         transition: transform 0.2s ease-out;
+        width: 100%;
 
         &:hover,
         &:focus,
@@ -37,16 +44,30 @@
             transition: transform 0.15s ease-in;
         }
 
-        .flexbox & {
-            flex: 1 0 330px;
+        // Media queries should be last, for specificity purposes,
+        // but scss-linter wants them before nested elements,
+        // so we have to disable linter check for DeclarationOrder
+        // scss-lint:disable DeclarationOrder
+        @include bp(medium) {
+            .no-flexbox & { float: left; width: 50%; }
+
+            .flexbox & {
+                flex: 1 1 50%;
+                justify-content: space-between;
+            }
         }
 
-        .no-flexbox & {
-            width: 100%;
+        // Media queries should be last, for specificity purposes,
+        // but scss-linter wants them before nested elements,
+        // so we have to disable linter check for DeclarationOrder
+        // scss-lint:disable DeclarationOrder
+        @include bp(large) {
 
-            @include bp(medium) {
-                float: left;
-                width: 330px;
+            .no-flexbox & { width: 33.3333%; }
+
+            .flexbox & {
+                flex: 0 1 33.3333%;
+                justify-content: space-between;
             }
         }
     }
@@ -77,6 +98,10 @@
 
         .buttonText--small {
             @include font(1.5rem, 700);
+        }
+
+        .buttonText--medium {
+            @include font(2.2rem, 800);
         }
 
         .buttonText--large {
