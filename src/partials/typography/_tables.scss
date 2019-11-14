@@ -61,6 +61,14 @@
     }
 }
 
+caption {
+    caption-side: bottom;
+    font-size: 0.8em;
+    font-style: italic;
+    text-align: right;
+    margin: 0.5em 0;
+}
+
 //------------ Two Columns ------------
 // 20% | 80%
 .table-snippet-cols--20-80 tbody tr th:first-child {
