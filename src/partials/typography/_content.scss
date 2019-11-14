@@ -86,8 +86,12 @@
         + ol,
         + ul,
         + dl {
-            margin-top: 0.55;
+            margin-top: 0.55em;
         }
+    }
+
+    p + p {
+        margin-top: 0.8em;;
     }
 
     li {
