@@ -62,12 +62,25 @@
 }
 
 caption {
-    caption-side: bottom;
-    font-size: 0.8em;
-    font-style: italic;
+    caption-side: top;
+    font-size: 1.1em;
+    font-weight: bold;
     margin: 0.5em 0;
-    text-align: right;
+    text-align: left;
+
+    .captionFootnote & {
+        caption-side: bottom;
+        font-size: 0.8em;
+        font-weight: 400;
+        text-align: right;
+    }
+
+    .captionHeading & {
+        font-size: 1.5rem;
+        color: $tcc-green;
+    }
 }
+
 
 //------------ Two Columns ------------
 // 20% | 80%
@@ -181,6 +194,19 @@ caption {
 
 .table-snippet-cols--30-20-20-30 tbody tr th:nth-child(3) {
     width: 20%;
+}
+
+// 35% | 35% | 15% | 15%
+.table-snippet-cols--35-35-15-15 tbody tr th:nth-child(1) {
+    width: 35%;
+}
+
+.table-snippet-cols--35-35-15-15 tbody tr th:nth-child(2) {
+    width: 25%;
+}
+
+.table-snippet-cols--35-35-15-15 tbody tr th:nth-child(3) {
+    width: 15%;
 }
 
 // 5% | 5% | 85% | 5%
