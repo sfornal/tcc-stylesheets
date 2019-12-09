@@ -1,0 +1,46 @@
+// Ignore color being a literal value, false positive
+// scss-lint:disable VariableForProperty
+toggle-section {
+    display: block;
+
+    &[role="region"] {
+        --buttonBackgroundColor: #{$tcc-blue-pale};
+        --buttonTextColor: #{$tcc-blue};
+        --contentBackgroundColor: transparent;
+        background-color: var(--contentBackgroundColor);
+        border: 3px solid var(--buttonBackgroundColor);
+        border-radius: 4px;
+        margin-bottom: 0;
+        margin-top: 1em;
+    }
+
+    &[open="true"] {
+        padding-bottom: 1em;
+    }
+}
+
+.toggle-section-controls {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li:first-of-type {
+        margin-right: 0.5em;
+    }
+
+    button {
+        -webkit-appearance: none;
+        background-color: inherit;
+        border: 1px solid currentColor;
+        border-radius: 4px;
+        color: inherit;
+
+        &:hover,
+        &:focus,
+        &:active {
+            outline: 2px dotted;
+        }
+    }
+}
