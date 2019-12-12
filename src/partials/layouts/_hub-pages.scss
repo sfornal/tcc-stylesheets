@@ -1,59 +1,15 @@
 $tile-gray: #b9b9b9;
 
 .main-tiles {
-
-    .flexbox & {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .no-flexbox & {
-        @include clearfix(); //Floated columns used in flexbox unavailable
-    }
+    display: block;
 }
 
 .tile {
-    padding: 10px 20px;
-    width: 100%;
-
-    @include bp(medium) {
-        padding: 20px;
-        width: 50%;
-
-        .no-flexbox & {
-            float: left;
-            // border-bottom: none;
-        }
-
-        .no-flexbox &:nth-of-type(2n+1) {
-            clear: both;
-        }
-    }
-
-    @include bp(large) {
-        width: 33.33333%;
-
-        .no-flexbox &:nth-of-type(2n+1) {
-            clear: none;
-        }
-
-        .no-flexbox &:nth-of-type(3n+1) {
-            clear: both;
-        }
-    }
-
-    .flexbox & {
-        display: flex;
-    }
-}
-
-.tile-wrap {
     border: 1px solid $tile-gray;
     border-left: 12px solid $tcc-green;
     border-radius: 5px;
     box-shadow: 3px 4px 10px -3px $shadow-light;
     padding: 20px 15px;
-    width: 100%;
 
     .no-flexbox & {
         @include clearfix();
@@ -69,4 +25,15 @@ $tile-gray: #b9b9b9;
     > *:nth-last-child(2) {
         margin-bottom: 1em;
     }
+
+    .learn-more {
+        margin-top: auto;
+    }
+}
+
+.tileWrapper-v2 {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(40ch, 1fr));
+    list-style-type: none;
 }
