@@ -1,37 +1,40 @@
 // Styles for the special message banner that goes directly under the hero
 
 .specialNotice {
-    background-color: $tcc-teal;
+    background-color: $tcc-burgundy;
     color: $pure-white;
-    margin: 0;
+    margin: 18px 0 0;
     padding: 0;
     text-align: center;
     width: 100%;
 
-    .marketingContent + & {
-        margin-top: 0;
-    }
-
     .specialNotice-innerWrap {
+        font-size: 1.5em;
         margin: 0 auto;
         max-width: $max-container-width;
-        padding: 10px 20px;
+        padding: 40px 20px;
         text-align: center;
         width: 100%;
 
         p {
-            font-weight: 700;
             margin: 0;
             padding: 0;
 
             img {
-                height: 16px;
-                margin-right: 8px;
+                height: 1em;
+                margin-right: 0.5em;
                 position: relative;
                 top: -2px;
                 vertical-align: middle;
-                width: 16px;
+                width: 1em;
             }
+        }
+
+        a {
+            color: inherit;
+            font-weight: 700;
+            text-decoration: underline;
+            text-decoration: solid underline currentColor 2px;
         }
     }
 }
