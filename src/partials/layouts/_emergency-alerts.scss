@@ -1,13 +1,14 @@
 .emergency-top,
 .emergency-full {
     background-color: $tcc-burgundy;
-    display: block;
+    display: flex;
     margin-top: 59px; //Magic number for the size of the fixed top menu bar in mobile
-    padding: 40px;
+    padding: 20px;
     width: 100%;
 
     @include bp(medium) {
         margin-top: 0;
+        padding: 30px;
     }
 }
 
@@ -24,30 +25,43 @@
     background-color: $pure-white;
     display: flex;
     flex: 1 1 auto;
-    height: 100%;
     justify-content: center;
+    min-height: 100%;
     width: 100%;
 }
 
 .emergency-content {
     background-color: $pure-white;
     color: $pure-black;
-    max-width: 30rem;
+    font-size: 1.2rem;
+    max-width: 50rem;
     padding: 20px;
     text-align: center;
+
+    @include bp(medium) {
+        font-size: 1.3rem;
+    }
 }
 
 .emergencyHeading {
-    @include font(3rem, 'black');
+    @include font(2.4rem, 'black');
     color: $tcc-blue-darker;
     line-height: 1.1;
     margin: 0 auto 1rem;
     text-transform: uppercase;
+
+    @include bp(medium) {
+        font-size: 3rem;
+    }
 }
 
 .emergencySubheading {
-    @include font(2rem, 'bold');
+    @include font(1.8rem, 'bold');
     color: $tcc-burgundy;
     line-height: 1.1;
     margin: 0 auto 1rem;
+
+    @include bp(medium) {
+        font-size: 2rem;
+    }
 }
