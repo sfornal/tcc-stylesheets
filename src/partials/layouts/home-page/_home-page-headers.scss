@@ -9,7 +9,7 @@
     width: 100%;
 
     .specialNotice-innerWrap {
-        font-size: 1.5em;
+        font-size: 1em;
         margin: 0 auto;
         max-width: $max-container-width;
         padding: 40px 20px;
@@ -17,8 +17,12 @@
         width: 100%;
 
         p {
-            margin: 0;
+            margin: 0 0 0.5em;
             padding: 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
 
             img {
                 height: 1em;
@@ -49,6 +53,12 @@
 
     @include bp(medium) {
         // TODO: Make it look as good on desktop
+        background-color: change-color($color: $tcc-blue, $alpha: 0.8);
+        border: 3px solid change-color($color: $pure-white, $alpha: 0.5);
+        border-radius: 4px;
+        left: 5vw;
+        position: absolute;
+        top: 50vh;
     }
 }
 
@@ -59,8 +69,8 @@
     width: 100%;
 }
 
-.marketContent-header {
-    //TODO: Style the header somehow
+.marketingContent-header > *:first-child {
+    margin: 0 0 1em;
 }
 
 .marketingContent-copy {
@@ -68,11 +78,23 @@
     text-transform: uppercase;
 
     p {
-        margin: 0;
+        margin: 0 0 0.5em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     a {
         @include font($weight: 'bold');
         color: inherit;
+    }
+}
+
+.marketingContent + .specialNotice {
+    margin-top: 0;
+
+    @include bp(medium) {
+        margin-top: 18px;
     }
 }
