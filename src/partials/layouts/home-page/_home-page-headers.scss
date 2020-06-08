@@ -8,6 +8,10 @@
     text-align: center;
     width: 100%;
 
+    @include bp(medium) {
+        margin-top: 0;
+    }
+
     .specialNotice-innerWrap {
         font-size: 1em;
         margin: 0 auto;
@@ -44,6 +48,10 @@
 }
 
 //Styles for the marketing copy that is superimposed over the header of the page
+.headerWrap {
+    position: relative;
+}
+
 
 .marketingContent {
     background-color: $tcc-blue;
@@ -56,9 +64,9 @@
         background-color: change-color($color: $tcc-blue, $alpha: 0.8);
         border: 3px solid change-color($color: $pure-white, $alpha: 0.5);
         border-radius: 4px;
-        left: 5vw;
+        left: 20px;
         position: absolute;
-        top: 50vh;
+        bottom: 20px;
     }
 }
 
