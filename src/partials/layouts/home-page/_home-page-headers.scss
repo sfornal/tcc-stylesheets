@@ -3,14 +3,10 @@
 .specialNotice {
     background-color: $tcc-teal; //Per RH 6-2-20
     color: $pure-white;
-    margin: 0;
+    margin: 18px 0 0;
     padding: 0;
     text-align: center;
     width: 100%;
-
-    @include bp(medium) {
-        margin-top: 18px;
-    }
 
     .specialNotice-innerWrap {
         font-size: 1em;
@@ -78,12 +74,14 @@
 }
 
 .marketingContent-header > *:first-child {
-    margin: 0 0 1em;
+    margin: 0 0 0.5em;
+    font-size: 1.5rem;
 }
 
 .marketingContent-copy {
     @include font($weight: 'bold');
     text-transform: uppercase;
+    font-size: 1.2rem;
 
     p {
         margin: 0 0 0.5em;
@@ -99,7 +97,7 @@
     }
 }
 
-.marketingContent + .specialNotice {
+.headerWrap.marketingOn + .specialNotice {
     margin-top: 0;
 
     @include bp(medium) {
