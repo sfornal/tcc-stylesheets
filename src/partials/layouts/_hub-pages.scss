@@ -28,12 +28,13 @@ $tile-gray: #b9b9b9;
 
     .learn-more {
         margin-top: auto;
+        align-self: flex-end;
     }
 }
 
 .tileWrapper-v2 {
     display: grid;
-    gap: 20px;
+    gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(35ch, 1fr));
     list-style-type: none;
     max-width: calc(100% - 40px);
