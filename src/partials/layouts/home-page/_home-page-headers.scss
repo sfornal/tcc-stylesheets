@@ -3,13 +3,13 @@
 .specialNotice {
     background-color: $tcc-teal; //Per RH 6-2-20
     color: $pure-white;
-    margin: 18px 0 0;
+    margin: 0;
     padding: 0;
     text-align: center;
     width: 100%;
 
     @include bp(medium) {
-        margin-top: 0;
+        margin-top: 18px;
     }
 
     .specialNotice-innerWrap {
