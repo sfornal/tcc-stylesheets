@@ -69,18 +69,24 @@
 .marketingContent-innerWrap {
     margin: 0 auto;
     max-width: $max-container-width;
-    padding: 10px 20px;
+    padding: 20px;
     width: 100%;
 }
 
 .marketingContent-header > *:first-child {
-    margin: 0 0 0.5em;
-    font-size: 1.5rem;
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.1;
+
+    @include bp(medium) {
+        font-size: 2.2rem;
+    }
 }
 
 .marketingContent-copy {
     @include font($weight: 'bold');
     font-size: 1.2rem;
+    line-height: 1.3;
 
     p {
         margin: 0 0 0.5em;
@@ -93,6 +99,10 @@
     a {
         @include font($weight: 'bold');
         color: inherit;
+    }
+
+    @include bp(medium) {
+        font-size: 1.3rem;
     }
 }
 
