@@ -108,6 +108,14 @@
         }
     }
 
+    dd {
+        margin-left: 0;
+    }
+
+    dd + dt {
+        margin-top: 1em;
+    }
+
     blockquote {
         border-left: 6px solid $tcc-teal;
         padding: 0.5em 2em;
