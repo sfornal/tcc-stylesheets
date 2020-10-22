@@ -90,6 +90,15 @@
         }
     }
 
+    ol,
+    ul {
+        &.no-bullets {
+            margin-top: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+    }
+
     p + p {
         margin-top: 0.8em;
     }
@@ -106,6 +115,14 @@
         > dl {
             margin-top: 0.55em;
         }
+    }
+
+    dd {
+        margin-left: 0;
+    }
+
+    dd + dt {
+        margin-top: 1em;
     }
 
     blockquote {
