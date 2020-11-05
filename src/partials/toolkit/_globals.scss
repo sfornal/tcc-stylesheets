@@ -87,3 +87,9 @@ input:not([type="submit"]) {
 :-ms-input-placeholder {
     @include font($weight: 'thin', $style: italic);
 }
+
+// A fix for our CMS's WYSIWYG editor
+/* OU Just Edit BUG FIX */
+.ou-justedit-region {
+	max-width: none !important;
+}
