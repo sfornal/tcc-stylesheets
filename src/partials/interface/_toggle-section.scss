@@ -47,16 +47,30 @@ toggle-section {
 
 // Styles for OU usage
 div[data-toggle-section] {
-    border: 1px dotted $tcc-blue-lighter;
+    outline: 3px $tcc-blue-lighter dashed;
     padding: 1rem;
 
     &::before {
-        @include font($weight: 'bold');
-        background: $tcc-blue-pale;
-        color: $tcc-blue-darker;
+        @include font($size: 1rem, $style: italic);
+        background: $tcc-yellow-lighter;
+        color: $pure-black;
         content: 'This is a toggle-section. In Preview or on Publication, it will look and behave as expected. The first element inside a toggle-section MUST be a heading of the appropriate level for your document.';
+        cursor: not-allowed;
         display: block;
-        margin-bottom: 1rem;
+        margin-bottom: -1rem -1rem 1rem;
         padding: 1rem;
+        text-align: center;
+    }
+
+    &::before {
+        @include font($size: 0.75rem, $style: italic);
+        background: $tcc-yellow-lighter;
+        color: $pure-black;
+        content: 'This is a end of the toggle-section. If you need to add any attributes, such as id=, please use the source editor';
+        cursor: not-allowed;
+        display: block;
+        margin-bottom: 1rem -1rem -1rem;
+        padding: 1rem;
+        text-align: center;
     }
 }
