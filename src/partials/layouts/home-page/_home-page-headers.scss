@@ -12,7 +12,7 @@
         font-size: 1em;
         margin: 0 auto;
         max-width: $max-container-width;
-        padding: 20px 20px;
+        padding: 20px;
         text-align: center;
         width: 100%;
 
@@ -34,6 +34,9 @@
             }
         }
 
+        // Double declaration of text-decoration is intentional as a fallback
+        // for older browsers that don't support advanced text-decoration
+        // scss-lint:disable DuplicateProperty
         a {
             color: inherit;
             font-weight: 700;
@@ -46,9 +49,20 @@
 //Styles for the marketing copy that is superimposed over the header of the page
 .headerWrap {
     position: relative;
+
+    &.marketingOn + .specialNotice {
+        margin-top: 0;
+
+        @include bp(medium) {
+            margin-top: 18px;
+        }
+    }
+
 }
 
-
+// change-color is a built-in scss function that the linter doesn't understand
+// for some reason
+// scss-lint:disable VariableForProperty
 .marketingContent {
     background-color: $tcc-blue;
     color: $pure-white;
@@ -60,9 +74,9 @@
         background-color: change-color($color: $tcc-blue-darker, $alpha: 0.93);
         border: 3px solid change-color($color: $pure-white, $alpha: 0.6);
         border-radius: 4px;
+        bottom: 20px;
         left: 20px;
         position: absolute;
-        bottom: 20px;
     }
 }
 
@@ -74,9 +88,9 @@
 }
 
 .marketingContent-header > *:first-child {
-    margin: 0;
     font-size: 1.8rem;
     line-height: 1.1;
+    margin: 0;
 
     @include bp(medium) {
         font-size: 2.2rem;
@@ -87,6 +101,10 @@
     @include font($weight: 'bold');
     font-size: 1.2rem;
     line-height: 1.3;
+
+    @include bp(medium) {
+        font-size: 1.3rem;
+    }
 
     p {
         margin: 0 0 0.5em;
@@ -100,24 +118,5 @@
         @include font($weight: 'bold');
         color: inherit;
     }
-
-    @include bp(medium) {
-        font-size: 1.3rem;
-    }
 }
 
-.headerWrap.marketingOn + .specialNotice {
-    margin-top: 0;
-
-    @include bp(medium) {
-        margin-top: 18px;
-    }
-}
-
-.headerWrap.marketingOn + .specialNotice {
-    margin-top: 0;
-
-    @include bp(medium) {
-        margin-top: 18px;
-    }
-}
