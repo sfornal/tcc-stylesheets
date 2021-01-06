@@ -172,7 +172,9 @@ linters:
     # We can add new/experimental properties to the array if needed
     PropertySpelling:
         enabled: true
-        extra_properties: []
+        extra_properties: [
+            'gap'
+        ]
 
     # Allowed unit values
     PropertyUnits:
