@@ -86,6 +86,8 @@
 }
 
 // Styles pertaining to Burning Glass Embeds
+// ID selector required for their iframes due to precedence issues
+// scss-lint:disable IdSelector
 #ci iframe {
     border:none;
     margin: 1em 0;

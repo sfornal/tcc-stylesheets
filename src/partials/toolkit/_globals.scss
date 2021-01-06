@@ -89,7 +89,8 @@ input:not([type="submit"]) {
 }
 
 // A fix for our CMS's WYSIWYG editor
-/* OU Just Edit BUG FIX */
+// OU Just Edit BUG FIX
+// scss-lint:disable ImportantRule
 .ou-justedit-region {
-	max-width: none !important;
+    max-width: none !important;
 }
