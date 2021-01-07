@@ -1,0 +1,70 @@
+// This file contains styles for the student application process checklists
+// Added 2021-01-07
+
+// ID selector used to ensure specificity, since the main content area
+// has complex class specificty issues
+// scss-lint:disable IdSelector
+#app-steps {
+    counter-reset: step;
+    list-style-type: none;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    max-width: 100%;
+    padding: 0;
+
+    > li {
+        border: 1px solid $light-gray;
+        border-radius: 5px;
+        box-shadow: 3px 4px 10px -3px $shadow-light;
+        counter-increment: step;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+        margin: 2rem 0;
+        padding: 0 0 20px;
+
+        &::before {
+            background: $tcc-blue;
+            color: $pure-white;
+            content: 'Step ' counter(step);
+            display: block;
+            font-size: 1.5em;
+            font-weight: 700;
+            grid-column: 1 / -1;
+            padding: 0.5em 20px;
+            position: sticky;
+            text-align: center;
+            text-transform: uppercase;
+            top: 59px;
+
+            @include bp(medium) {
+                top: 0;
+            }
+        }
+
+        > * {
+            grid-column: 1 / -1;
+            margin: 0;
+            padding: 0 20px;
+        }
+
+        ol,
+        ul {
+            padding-left: 2em;
+        }
+
+        > ol,
+        > ul {
+            list-style-type: initial;
+            padding-left: calc(20px + 2em);
+        }
+
+        > .subStep {
+            grid-column: auto / auto;
+        }
+
+        > *:last-child {
+            margin-bottom: 1rem;
+        }
+    }
+}
