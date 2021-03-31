@@ -27,6 +27,10 @@
         width: 100%;
     }
 
+    &:last-of-type::after {
+        display: none;
+    }
+
     //Specificty... have to nest to beat out a rule from the universal sheet
     .factBlock-title {
         @include font(2.4rem, 'black');
@@ -159,4 +163,32 @@
 
 .contentUpdated {
     display: none; // Not needed on this page
+}
+
+// Additions for Rankings on the Why Choose page, 2021-03-31
+.recognition .factBlock-fact-innerWrap ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+
+    li {
+        border-bottom: 3px dotted $tcc-green;
+        margin: 0 0 1em;
+        padding: 0 0 1em;
+
+        &:last-of-type {
+            border: none;
+        }
+
+        &::first-letter {
+            @include font(3em, 'black', normal);
+            color: $tcc-blue;
+            display: block;
+            float: left;
+            line-height: 0.9;
+            margin: 0.04em 0.15em 0;
+            padding: 0;
+        }
+    }
 }

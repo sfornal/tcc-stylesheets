@@ -8,7 +8,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://trtc1143.all.disttccd.net:8443/scm/tccwwwsit/tcc-stylesheets.git"
+        "url": "https://github.com/sfornal/tcc-stylesheets.git"
     },
     "keywords": [
         "scss",
