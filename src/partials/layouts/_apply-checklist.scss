@@ -19,7 +19,7 @@
         counter-increment: step;
         display: grid;
         grid-gap: 20px;
-        grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));
         margin: 2rem 0;
         padding: 0 0 20px;
 
@@ -61,6 +61,11 @@
 
         > .subStep {
             grid-column: auto / auto;
+
+            > ol,
+            > ul {
+                list-style-type: initial;
+            }
         }
 
         > *:last-child {
