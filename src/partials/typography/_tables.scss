@@ -135,6 +135,15 @@ caption {
     width: 40%;
 }
 
+// 20% | 20% | 60%
+.table-snippet-cols--20-20-60 tbody tr th:nth-child(1) {
+    width: 20%;
+}
+
+.table-snippet-cols--20-20-60 tbody tr th:nth-child(2) {
+    width: 20%;
+}
+
 // 34% | 33% | 33%
 .table-snippet-cols--34-33-33 tbody tr th:nth-child(1) {
     width: 34%;
