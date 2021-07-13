@@ -26,3 +26,14 @@
     line-height: 1.3;
     margin: 0;
 }
+
+.tagHeadingMain {
+    @include font(2rem, 'black', normal, $secondary-font);
+    color: $tcc-blue;
+    line-height: 1.2;
+    margin: 0.5rem 0;
+}
+
+.tagHeadingSub {
+    margin: 0 0 0.5rem;
+}
