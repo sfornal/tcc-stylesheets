@@ -1,0 +1,24 @@
+// New icon system. Icons are used inline with other text.
+// The icon markup is <span class="icon iconName"><span>Label </span></span>
+
+.icon {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 1em;
+    margin-right: 0.5em;
+    position: relative;
+    top: -0.06em;
+    vertical-align: middle;
+    width: 1em;
+
+    > span {
+        @include visuallyhidden();
+    }
+}
+
+.iconRoom { background-image: url('https://www.tccd.edu/_resources/images/icons/room.svg'); }
+.iconPhone { background-image: url('https://www.tccd.edu/_resources/images/icons/phone.svg'); }
+.iconFax { background-image: url('https://www.tccd.edu/_resources/images/icons/fax.svg'); }
+.iconEmail { background-image: url('https://www.tccd.edu/_resources/images/icons/email.svg'); }

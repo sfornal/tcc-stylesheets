@@ -22,3 +22,35 @@
         margin: 0 0 1rem;
     }
 }
+
+// Styles for contact blocks in the new contactTile format for use inside a galleryContainer
+// Added 2021-07-21
+// Scoping to main-content for specificity
+$tile-gray: #b9b9b9;
+
+.main-content {
+    .contactTile {
+        border: 1px solid $tile-gray;
+        border-left: 12px solid $tcc-green;
+        border-radius: 5px;
+        box-shadow: 3px 4px 10px -3px $shadow-light;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 20px 15px;
+
+        h3 {
+            font-size: 1.5rem;
+
+            &:first-child { margin-top: 0; }
+        }
+
+        h4 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            margin-top: 0.3rem;
+        }
+    }
+}
