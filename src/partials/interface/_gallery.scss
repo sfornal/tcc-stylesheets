@@ -1,6 +1,7 @@
 // Styles for a gridded Gallery container
 $gallery-gap: 1rem;
 $min-size: 300px;
+$min-size-two-columns: 350px;
 
 .galleryContainer {
     display: grid;
@@ -10,6 +11,10 @@ $min-size: 300px;
     margin-top: 2rem;
     max-width: none;
     width: auto;
+}
+
+.galleryContainer.galleryContainer--two-columns {
+    grid-template-columns: repeat(auto-fill, minmax($min-size-two-columns, 1fr));
 }
 
 .galleryItem {
