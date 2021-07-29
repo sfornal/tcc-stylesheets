@@ -1,20 +1,32 @@
 // Styles for a gridded Gallery container
 $gallery-gap: 1rem;
-$min-size: 300px;
-$min-size-two-columns: 350px;
 
 .galleryContainer {
     display: grid;
     grid-gap: $gallery-gap;
-    grid-template-columns: repeat(auto-fill, minmax($min-size, 1fr));
+    grid-template-columns: 1fr;
     margin-bottom: 2rem;
     margin-top: 2rem;
     max-width: none;
     width: auto;
-}
 
-.galleryContainer.galleryContainer--two-columns {
-    grid-template-columns: repeat(auto-fill, minmax($min-size-two-columns, 1fr));
+    @include bp($custom: 'only screen and (min-width: 550px) and (max-width:699px)') {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include bp($custom: 'only screen and (min-width: 820px)') {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include bp(x-large) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &.galleryContainer--two-columns {
+        @include bp(x-large) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
 }
 
 .galleryItem {
