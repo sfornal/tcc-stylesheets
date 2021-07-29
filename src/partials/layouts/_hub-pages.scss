@@ -38,13 +38,15 @@ $tile-gray: #b9b9b9;
     grid-template-columns: 1fr;
     list-style-type: none;
     max-width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
     padding: 0;
 
     @include bp($custom: 'only screen and (min-width: 550px) and (max-width:699px)') {
         grid-template-columns: 1fr 1fr;
     }
 
-    @include bp($custom: 'only screen and (min-width: 820px)') {
+    @include bp(large) {
         grid-template-columns: repeat(auto-fill, minmax(35ch, 1fr));
     }
 }
