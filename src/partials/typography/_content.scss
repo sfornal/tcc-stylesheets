@@ -228,7 +228,7 @@
         margin-top: 1em;
 
         // Uses generated content to label the steps
-        & > :first-child::before {
+        > :first-child::before {
             content: counter(letter, lower-alpha) '. ';
         }
 

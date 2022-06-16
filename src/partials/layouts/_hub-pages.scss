@@ -37,9 +37,9 @@ $tile-gray: #b9b9b9;
     gap: 1rem;
     grid-template-columns: 1fr;
     list-style-type: none;
-    max-width: calc(100% - 40px);
     margin-left: 20px;
     margin-right: 20px;
+    max-width: calc(100% - 40px);
     padding: 0;
 
     @include bp($custom: 'only screen and (min-width: 570px)') {
