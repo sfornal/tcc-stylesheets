@@ -214,6 +214,35 @@
     }
 }
 
+//Special styling for lists of step-by-step instructions with alphabetic numbering
+.steps--alpha {
+    // Custom counter for labelling steps in a process
+    counter-reset: letter;
+    list-style-type: none;
+    padding: 0;
+
+    > li {
+        // Increment the counter on each top-level list item, but
+        // not nested lists (child selector)
+        counter-increment: letter;
+        margin-top: 1em;
+
+        // Uses generated content to label the steps
+        & > :first-child::before {
+            content: counter(letter, lower-alpha) '. ';
+        }
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    ol,
+    ul {
+        padding-left: 40px;
+    }
+}
+
 .sideBar--relatedLinks {
     > ul,
     > ol {
